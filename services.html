@@ -4,12 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services | Eli Web Solutions</title>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0f172a;
+      background: linear-gradient(to bottom, #0f172a, #1e293b);
       color: #f8fafc;
     }
 
@@ -38,7 +41,7 @@
 
     .services-section h2 {
       text-align: center;
-      font-size: 2.4rem;
+      font-size: 2.5rem;
       color: #facc15;
       margin-bottom: 40px;
     }
@@ -53,14 +56,15 @@
       background-color: #1e293b;
       padding: 30px;
       border-radius: 12px;
-      transition: transform 0.3s ease, background 0.3s ease;
       text-align: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
 
     .service-card:hover {
-      transform: translateY(-8px);
-      background-color: #334155;
+      transform: translateY(-10px) scale(1.02);
+      background: linear-gradient(135deg, #334155, #1e293b);
+      box-shadow: 0 15px 30px rgba(250, 204, 21, 0.2);
     }
 
     .service-card i {
@@ -71,7 +75,7 @@
 
     .service-card h3 {
       margin-bottom: 10px;
-      color: #f8fafc;
+      font-size: 1.3rem;
     }
 
     .service-card p {
@@ -79,13 +83,34 @@
       color: #cbd5e1;
     }
 
+    .cta-container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .cta-btn {
+      background: #facc15;
+      color: #0f172a;
+      padding: 14px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #fde68a;
+    }
+
     footer {
       background: #020617;
       color: #94a3b8;
       text-align: center;
       padding: 20px;
-      font-size: 0.9em;
       margin-top: 60px;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -105,36 +130,40 @@
   <section class="services-section">
     <h2>Our Services</h2>
     <div class="services-grid">
-      <div class="service-card">
+      <div class="service-card" data-aos="fade-up">
         <i class="fas fa-code"></i>
         <h3>Website Design</h3>
-        <p>We build responsive and visually stunning websites tailored to your brand and audience.</p>
+        <p>Beautiful, responsive websites built to impress and convert visitors into customers.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
         <i class="fas fa-paint-brush"></i>
         <h3>Logo & Branding</h3>
-        <p>Stand out with custom-designed logos, brand colors, and identity systems that leave a mark.</p>
+        <p>Custom logos and full brand identities that represent your unique business story.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
         <i class="fas fa-wrench"></i>
-        <h3>Website Management</h3>
-        <p>We handle updates, security, performance and content so you can focus on your business.</p>
+        <h3>Website Maintenance</h3>
+        <p>Ongoing updates, bug fixes, security patches, and performance optimizations.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
         <i class="fas fa-mobile-alt"></i>
         <h3>Mobile Optimization</h3>
-        <p>Ensure your site works and looks great across all devices, especially smartphones and tablets.</p>
+        <p>Optimized for speed and usability across smartphones, tablets, and desktops.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="400">
         <i class="fas fa-chart-line"></i>
         <h3>SEO & Analytics</h3>
-        <p>Improve your visibility online and understand your visitors with powerful tracking and tools.</p>
+        <p>Rank higher on Google, understand your audience, and drive more traffic.</p>
       </div>
-      <div class="service-card">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="500">
         <i class="fas fa-handshake"></i>
         <h3>Consultation</h3>
-        <p>Not sure what you need? We’ll guide you through the digital landscape and help define your path.</p>
+        <p>Need guidance? We offer digital consultations tailored to your goals.</p>
       </div>
+    </div>
+
+    <div class="cta-container">
+      <a href="contact.html" class="cta-btn">Let’s Work Together</a>
     </div>
   </section>
 
@@ -142,5 +171,9 @@
     <p>© 2025 Eli Web Solutions. All rights reserved.</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
