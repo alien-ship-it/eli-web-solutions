@@ -4,6 +4,76 @@
   <meta charset="UTF-8">
   <title>Services | Eli Web Solutions</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      background: #0f172a;
+      color: #f1f5f9;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background: #020617;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #f1f5f9;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 60px 20px;
+      animation: fadeIn 1.2s ease;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5em;
+      color: #facc15;
+      margin-bottom: 40px;
+    }
+
+    .service {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .service h3 {
+      color: #facc15;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #020617;
+      color: #9ca3af;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -18,39 +88,37 @@
   </header>
 
   <main>
-    <section>
-      <h2>Our Services</h2>
+    <h2>Our Services</h2>
 
+    <div class="service">
       <h3>🌐 Website Design & Development</h3>
-      <p>
-        We build responsive, modern, and user-friendly websites that work perfectly across all devices. Whether it’s a landing page, a company site, or an online portfolio — we’ll bring your vision to life.
-      </p>
+      <p>Responsive, modern, and user-friendly websites built for all devices — landing pages, portfolios, and more.</p>
+    </div>
 
-      <h3>🎨 Logo & Brand Identity Design</h3>
-      <p>
-        First impressions matter. We design unique, professional logos and brand assets that make your business unforgettable — and consistent across platforms.
-      </p>
+    <div class="service">
+      <h3>🎨 Logo & Brand Identity</h3>
+      <p>Custom logos and branding assets designed to make your business stand out.</p>
+    </div>
 
-      <h3>📄 Business Cards & Digital Flyers</h3>
-      <p>
-        We design custom business cards, digital flyers, posters, and promotional materials that align with your brand and speak to your audience.
-      </p>
+    <div class="service">
+      <h3>📄 Business Cards & Flyers</h3>
+      <p>High-quality promotional materials like cards, posters, and digital flyers tailored to your audience.</p>
+    </div>
 
-      <h3>🛠 Website Management & Maintenance</h3>
-      <p>
-        From content updates to security monitoring and bug fixes — we provide ongoing support to keep your site running smoothly and efficiently.
-      </p>
+    <div class="service">
+      <h3>🛠 Website Management</h3>
+      <p>Regular updates, bug fixes, and technical support to keep your site running smooth 24/7.</p>
+    </div>
 
-      <h3>📈 Digital Setup & Consultation</h3>
-      <p>
-        We help you get started with a professional email, Google Business Profile, social media setup, and digital tools that boost your online visibility.
-      </p>
+    <div class="service">
+      <h3>📈 Digital Presence Setup</h3>
+      <p>Professional email, Google Business, maps, and social media pages set up for visibility.</p>
+    </div>
 
-      <h3>🛍️ E-commerce Store Setup</h3>
-      <p>
-        Ready to sell online? We can create simple online shops, product catalogs, or booking systems so your business can start generating sales 24/7.
-      </p>
-    </section>
+    <div class="service">
+      <h3>🛍 E-commerce Store Setup</h3>
+      <p>Sell products online through functional and easy-to-manage online shops.</p>
+    </div>
   </main>
 
   <footer>
