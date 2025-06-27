@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ | Eli Web Solutions</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
+    }
+
+    header {
+      background: #020617;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #f8fafc;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #facc15;
+    }
+
+    .faq-section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .faq-section h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      color: #facc15;
+      margin-bottom: 40px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #334155;
+      margin-bottom: 20px;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: #f8fafc;
+      font-size: 1.1rem;
+      text-align: left;
+      padding: 15px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-question i {
+      margin-left: 10px;
+    }
+
+    .faq-question:hover {
+      color: #facc15;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 15px 15px;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #cbd5e1;
+    }
+
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Eli Web Solutions</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">What services do you offer? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>We provide website design, development, logo design, branding, and ongoing maintenance for small businesses.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How long does it take to build a website? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Most websites take between 1–2 weeks depending on size, complexity, and how fast we receive your content.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I get a custom design for my brand? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Yes! Every design we create is customized to match your brand vision, goals, and industry.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Do you offer ongoing support and updates? <i class="fas fa-chevron-down"></i></button>
+      <div class="faq-answer">
+        <p>Absolutely. We offer affordable maintenance plans that include updates, backups, and support.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Eli Web Solutions. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const questions = document.querySelectorAll(".faq-question");
+    questions.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const answer = btn.nextElementSibling;
+        const icon = btn.querySelector("i");
+        const isOpen = answer.style.display === "block";
+
+        document.querySelectorAll(".faq-answer").forEach(ans => ans.style.display = "none");
+        document.querySelectorAll(".faq-question i").forEach(ic => {
+          ic.classList.remove("fa-chevron-up");
+          ic.classList.add("fa-chevron-down");
+        });
+
+        if (!isOpen) {
+          answer.style.display = "block";
+          icon.classList.remove("fa-chevron-down");
+          icon.classList.add("fa-chevron-up");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
