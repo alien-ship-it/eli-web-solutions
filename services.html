@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services | Eli Web Solutions</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #1e293b, #0f172a);
+      background-color: #0f172a;
       color: #f8fafc;
     }
 
@@ -30,48 +30,53 @@
       color: #facc15;
     }
 
-    .services {
+    .services-section {
       padding: 60px 20px;
-      text-align: center;
+      max-width: 1200px;
+      margin: auto;
     }
 
-    .services h2 {
-      font-size: 2.8rem;
+    .services-section h2 {
+      text-align: center;
+      font-size: 2.4rem;
       color: #facc15;
       margin-bottom: 40px;
     }
 
-    .service-grid {
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
-      max-width: 1100px;
-      margin: 0 auto;
     }
 
     .service-card {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 25px;
+      background-color: #1e293b;
+      padding: 30px;
       border-radius: 12px;
-      transition: transform 0.3s, box-shadow 0.3s;
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, background 0.3s ease;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     .service-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+      background-color: #334155;
     }
 
-    .service-card h3 {
+    .service-card i {
+      font-size: 2.5rem;
       color: #facc15;
-      font-size: 1.5rem;
       margin-bottom: 15px;
     }
 
+    .service-card h3 {
+      margin-bottom: 10px;
+      color: #f8fafc;
+    }
+
     .service-card p {
-      line-height: 1.6;
       font-size: 0.95rem;
+      color: #cbd5e1;
     }
 
     footer {
@@ -80,44 +85,55 @@
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
-      margin-top: 40px;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
-  <header>
-  <h1>Eli Web Solutions</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
 
-  <section class="services">
-    <h2>What We Offer</h2>
-    <div class="service-grid">
+  <header>
+    <h1>Eli Web Solutions</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="services-section">
+    <h2>Our Services</h2>
+    <div class="services-grid">
       <div class="service-card">
+        <i class="fas fa-code"></i>
         <h3>Website Design</h3>
-        <p>Responsive and modern websites tailored to your brand. We ensure your site looks great on every screen size and converts visitors into clients.</p>
+        <p>We build responsive and visually stunning websites tailored to your brand and audience.</p>
       </div>
       <div class="service-card">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Logo & Branding</h3>
+        <p>Stand out with custom-designed logos, brand colors, and identity systems that leave a mark.</p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-wrench"></i>
         <h3>Website Management</h3>
-        <p>We take the stress off by handling updates, backups, security, and content so you can focus on growing your business.</p>
+        <p>We handle updates, security, performance and content so you can focus on your business.</p>
       </div>
       <div class="service-card">
-        <h3>Logo Design</h3>
-        <p>Stand out with a unique, professional logo that reflects your business identity and builds lasting recognition.</p>
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Mobile Optimization</h3>
+        <p>Ensure your site works and looks great across all devices, especially smartphones and tablets.</p>
       </div>
       <div class="service-card">
-        <h3>Business Branding</h3>
-        <p>From color schemes to typography and voice, we help you develop a consistent and impactful brand across all platforms.</p>
+        <i class="fas fa-chart-line"></i>
+        <h3>SEO & Analytics</h3>
+        <p>Improve your visibility online and understand your visitors with powerful tracking and tools.</p>
       </div>
       <div class="service-card">
-        <h3>Consultation & Strategy</h3>
-        <p>Get expert advice on how to position your business online, optimize for growth, and stay ahead of your competitors.</p>
+        <i class="fas fa-handshake"></i>
+        <h3>Consultation</h3>
+        <p>Not sure what you need? We’ll guide you through the digital landscape and help define your path.</p>
       </div>
     </div>
   </section>
@@ -125,5 +141,6 @@
   <footer>
     <p>© 2025 Eli Web Solutions. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
