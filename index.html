@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home | Eli Web Solutions</title>
+
+  <!-- External Styles -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
@@ -51,11 +53,55 @@
       margin: auto;
     }
 
-    /* Testimonials */
+    .parallax-section {
+      background-image: url('images/about-image.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      padding: 120px 20px;
+      text-align: center;
+      position: relative;
+      color: #f8fafc;
+    }
+
+    .parallax-overlay {
+      background: rgba(15, 23, 42, 0.8);
+      padding: 60px 20px;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .parallax-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #facc15;
+    }
+
+    .parallax-section p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background-color: #facc15;
+      color: #0f172a;
+      padding: 12px 28px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      margin: 0 10px;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #eab308;
+    }
+
     .testimonials {
       padding: 60px 20px;
       background: #1e293b;
-      color: #f8fafc;
     }
 
     .testimonials h2 {
@@ -94,6 +140,11 @@
       .hero h1 {
         font-size: 2rem;
       }
+
+      .cta-button {
+        display: block;
+        margin: 10px auto;
+      }
     }
   </style>
 </head>
@@ -114,7 +165,15 @@
     <p>Custom websites, branding, and digital solutions for small businesses and entrepreneurs.</p>
   </section>
 
-  <!-- Testimonials Section -->
+  <section class="parallax-section">
+    <div class="parallax-overlay">
+      <h2>Let’s Elevate Your Brand</h2>
+      <p>Professional websites, bold branding, and smart solutions tailored for your business.</p>
+      <a href="services.html" class="cta-button">See Our Services</a>
+      <a href="contact.html" class="cta-button">Get Started</a>
+    </div>
+  </section>
+
   <section class="testimonials">
     <h2>What Our Clients Say</h2>
     <div class="swiper mySwiper" style="max-width: 900px; margin: auto;">
@@ -140,7 +199,7 @@
     <p>© 2025 Eli Web Solutions. All rights reserved.</p>
   </footer>
 
-  <!-- Swiper + Init -->
+  <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script>
     const swiper = new Swiper(".mySwiper", {
