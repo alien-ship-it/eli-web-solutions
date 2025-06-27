@@ -2,21 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | Eli Web Solutions</title>
-
-  <!-- ✅ Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yNcC1NdvP7kqGULR2l5nMnGEhZfQH8DeemWEDj4TQ6Am0GvnSspONsreIQE+3z+rbO5uGpLtD++DfdWgGDZHgQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- ✅ External stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
-
   <style>
     body {
-      background-color: #0f172a;
-      color: #f1f5f9;
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f172a, #1e293b);
+      color: #f8fafc;
     }
 
     header {
@@ -26,7 +20,7 @@
     }
 
     nav a {
-      color: #f1f5f9;
+      color: #f8fafc;
       margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
@@ -36,60 +30,77 @@
       color: #facc15;
     }
 
-    main {
-      max-width: 900px;
-      background: #f8fafc;
-      color: #1e293b;
-      padding: 60px 30px;
-      border-radius: 10px;
-      margin: 50px auto;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
     }
 
-    h2 {
-      text-align: center;
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+      padding: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .about-text h2 {
+      font-size: 2.8rem;
       color: #facc15;
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-    }
-
-    p {
-      line-height: 1.8;
       margin-bottom: 25px;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 1s ease forwards;
     }
 
-    p:nth-of-type(1) { animation-delay: 0.2s; }
-    p:nth-of-type(2) { animation-delay: 0.4s; }
-    p:nth-of-type(3) { animation-delay: 0.6s; }
-    p:nth-of-type(4) { animation-delay: 0.8s; }
-    p:nth-of-type(5) { animation-delay: 1s; }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .about-text p {
+      line-height: 1.8;
+      margin-bottom: 20px;
     }
 
-    p i {
-      margin-right: 10px;
-      color: #facc15;
+    .about-image {
+      flex: 1;
+      max-width: 500px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      animation: fadeUp 1.2s ease;
     }
 
     footer {
       background: #020617;
-      color: #9ca3af;
+      color: #94a3b8;
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+      }
+
+      .about-text, .about-image {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Eli Web Solutions</h1>
     <nav>
@@ -100,23 +111,21 @@
     </nav>
   </header>
 
-  <main>
-    <h2>About Eli Web Solutions</h2>
-
-    <p><i class="fas fa-rocket"></i> Eli Web Solutions is a creative digital agency dedicated to helping small businesses, startups, and entrepreneurs thrive in the digital space. We understand the challenges that come with growing a business online — and we’re here to make that process easier, smarter, and more effective.</p>
-
-    <p><i class="fas fa-lightbulb"></i> Founded on the belief that every business deserves a strong online identity, we offer personalized design and development services tailored to your brand’s unique needs. From beautifully crafted websites to stunning visual branding, we create digital experiences that leave a lasting impact.</p>
-
-    <p><i class="fas fa-tools"></i> We don’t just build websites — we build solutions that grow with you. Whether you're launching your first online presence or improving your current one, we work closely with you to deliver results that are fast, functional, and future-ready.</p>
-
-    <p><i class="fas fa-bullseye"></i> Our mission is simple: to provide high-quality, affordable digital solutions that help you connect with your audience, build trust, and grow your brand online.</p>
-
-    <p><i class="fas fa-handshake"></i> Let’s bring your ideas to life and take your business to the next level — together.</p>
-  </main>
+  <section class="about-container">
+    <div class="about-text">
+      <h2>About Eli Web Solutions</h2>
+      <p>Eli Web Solutions is a creative digital agency that helps small businesses, startups, and entrepreneurs thrive online. We simplify the digital journey and make business growth more efficient.</p>
+      <p>We craft stunning websites and offer tailored branding and design services, ensuring your online identity stands out.</p>
+      <p>From first-time websites to full redesigns, we offer solutions that are sleek, smart, and built for the future.</p>
+      <p>Our mission is to empower your brand with powerful, affordable digital tools and help you grow confidently online.</p>
+    </div>
+    <div class="about-image">
+      <img src="https://source.unsplash.com/featured/?web,design,technology" alt="Digital Agency" />
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Eli Web Solutions. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
