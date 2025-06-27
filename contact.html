@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | Eli Web Solutions</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>Contact Us | Eli Web Solutions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to left, #0f172a, #1e293b);
+      background-color: #0f172a;
       color: #f8fafc;
     }
 
@@ -31,70 +32,77 @@
     }
 
     .contact-container {
-      max-width: 800px;
-      margin: 50px auto;
-      background: rgba(255, 255, 255, 0.04);
-      padding: 40px 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-      backdrop-filter: blur(6px);
-      animation: slideUp 1.2s ease;
-    }
-
-    .contact-container h2 {
-      color: #facc15;
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-    }
-
-    form {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 60px auto;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .contact-form, .contact-info {
+      flex: 1 1 450px;
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: #facc15;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
     }
 
     input, textarea {
+      width: 100%;
+      padding: 12px;
       margin-bottom: 20px;
-      padding: 15px;
       border: none;
       border-radius: 8px;
-      font-size: 1rem;
-      background: #f1f5f9;
-      color: #0f172a;
+      background: #0f172a;
+      color: #f8fafc;
     }
 
     input:focus, textarea:focus {
       outline: 2px solid #facc15;
     }
 
-    button {
+    .submit-btn {
       background: #facc15;
       color: #0f172a;
-      padding: 14px;
-      font-size: 1rem;
-      font-weight: bold;
+      padding: 12px 30px;
       border: none;
       border-radius: 8px;
+      font-weight: bold;
       cursor: pointer;
-      transition: background 0.3s;
     }
 
-    button:hover {
-      background: #eab308;
+    .submit-btn:hover {
+      background: #fde68a;
+    }
+
+    .contact-info p {
+      margin-bottom: 15px;
+    }
+
+    .contact-info i {
+      color: #facc15;
+      margin-right: 10px;
     }
 
     footer {
       background: #020617;
       color: #94a3b8;
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px;
       font-size: 0.9em;
-      margin-top: 40px;
-    }
-
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(50px); }
-      to { opacity: 1; transform: translateY(0); }
+      border-top: 1px solid #1e293b;
     }
   </style>
 </head>
@@ -106,23 +114,44 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <section class="contact-container">
-    <h2>Contact Us</h2>
-    <form action="mailto:eliudjumba@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <section class="contact-container" data-aos="fade-up">
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+
+        <label for="message">Your Message</label>
+        <textarea id="message" rows="5" placeholder="Type your message..." required></textarea>
+
+        <button class="submit-btn" type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="contact-info">
+      <h2>Contact Info</h2>
+      <p><i class="fas fa-envelope"></i> hello@eliwebsolutions.com</p>
+      <p><i class="fas fa-phone-alt"></i> +254 712 345 678</p>
+      <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+      <p><i class="fas fa-clock"></i> Mon - Sat: 9am – 6pm</p>
+      <p><i class="fas fa-globe"></i> www.eliwebsolutions.com</p>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Eli Web Solutions. All rights reserved.</p>
+  <footer data-aos="fade-up">
+    <p>© 2025 Eli Web Solutions. Built with passion.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 
 </body>
 </html>
