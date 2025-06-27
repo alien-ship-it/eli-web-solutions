@@ -6,6 +6,7 @@
   <title>About | Eli Web Solutions</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <style>
     body {
@@ -104,18 +105,40 @@
   </header>
 
   <section class="about-bg">
-    <div class="about-content">
-      <h2>About Eli Web Solutions</h2>
-      <p><i class="fas fa-rocket"></i> Eli Web Solutions is a creative digital agency helping small businesses and startups thrive online with sleek and strategic solutions.</p>
-      <p><i class="fas fa-pencil-ruler"></i> From web design to branding and logos, we build memorable digital identities tailored for growth.</p>
-      <p><i class="fas fa-code"></i> Whether you need a new website or a redesign, we combine beauty and performance in every project.</p>
-      <p><i class="fas fa-handshake"></i> Let’s bring your ideas to life and take your business to the next level — together.</p>
+    <div class="about-content" data-aos="fade-up">
+      <h2 data-aos="fade-down">About Eli Web Solutions</h2>
+
+      <p data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-rocket"></i> Eli Web Solutions is a creative digital agency helping small businesses and startups thrive online with sleek and strategic solutions.
+      </p>
+
+      <p data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-pencil-ruler"></i> From web design to branding and logos, we build memorable digital identities tailored for growth.
+      </p>
+
+      <p data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-code"></i> Whether you need a new website or a redesign, we combine beauty and performance in every project.
+      </p>
+
+      <p data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-handshake"></i> Let’s bring your ideas to life and take your business to the next level — together.
+      </p>
     </div>
   </section>
 
   <footer>
     <p>© 2025 Eli Web Solutions. All rights reserved.</p>
   </footer>
+
+  <!-- AOS Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+    });
+  </script>
 
 </body>
 </html>
