@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FAQ | Eli Web Solutions</title>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
   <style>
     body {
       margin: 0;
@@ -32,60 +32,70 @@
     }
 
     .faq-section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 60px auto;
-      padding: 0 20px;
+      padding: 20px;
     }
 
     .faq-section h2 {
       text-align: center;
-      font-size: 2.4rem;
       color: #facc15;
+      font-size: 2.5rem;
       margin-bottom: 40px;
     }
 
     .faq-item {
-      border-bottom: 1px solid #334155;
-      margin-bottom: 20px;
+      background: #1e293b;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
     }
 
     .faq-question {
-      width: 100%;
-      background: none;
-      border: none;
-      color: #f8fafc;
-      font-size: 1.1rem;
-      text-align: left;
-      padding: 15px;
+      padding: 20px;
       cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .faq-question i {
-      margin-left: 10px;
+      position: relative;
+      font-weight: bold;
     }
 
     .faq-question:hover {
-      color: #facc15;
+      background: #334155;
+    }
+
+    .faq-question::after {
+      content: '\f078';
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      right: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-question::after {
+      transform: rotate(180deg);
     }
 
     .faq-answer {
-      display: none;
-      padding: 0 15px 15px;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #cbd5e1;
+      max-height: 0;
+      overflow: hidden;
+      background: #0f172a;
+      padding: 0 20px;
+      transition: max-height 0.4s ease;
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 20px;
+      max-height: 300px;
     }
 
     footer {
       background: #020617;
       color: #94a3b8;
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px;
       font-size: 0.9em;
-      margin-top: 60px;
+      border-top: 1px solid #1e293b;
     }
   </style>
 </head>
@@ -102,61 +112,48 @@
     </nav>
   </header>
 
-  <section class="faq-section">
+  <section class="faq-section" data-aos="fade-up">
     <h2>Frequently Asked Questions</h2>
 
     <div class="faq-item">
-      <button class="faq-question">What services do you offer? <i class="fas fa-chevron-down"></i></button>
-      <div class="faq-answer">
-        <p>We provide website design, development, logo design, branding, and ongoing maintenance for small businesses.</p>
-      </div>
+      <div class="faq-question">What services do you offer?</div>
+      <div class="faq-answer">We offer website design, website management, branding, logo design, and personalized digital solutions for small businesses and startups.</div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-question">How long does it take to build a website? <i class="fas fa-chevron-down"></i></button>
-      <div class="faq-answer">
-        <p>Most websites take between 1–2 weeks depending on size, complexity, and how fast we receive your content.</p>
-      </div>
+      <div class="faq-question">How long does it take to build a website?</div>
+      <div class="faq-answer">It typically takes 1–2 weeks for standard business websites. More complex projects may take longer based on features and content.</div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-question">Can I get a custom design for my brand? <i class="fas fa-chevron-down"></i></button>
-      <div class="faq-answer">
-        <p>Yes! Every design we create is customized to match your brand vision, goals, and industry.</p>
-      </div>
+      <div class="faq-question">Can I update my website later?</div>
+      <div class="faq-answer">Absolutely! We offer website management packages or can give you access to update content yourself if preferred.</div>
     </div>
 
     <div class="faq-item">
-      <button class="faq-question">Do you offer ongoing support and updates? <i class="fas fa-chevron-down"></i></button>
-      <div class="faq-answer">
-        <p>Absolutely. We offer affordable maintenance plans that include updates, backups, and support.</p>
-      </div>
+      <div class="faq-question">Do you provide support after launch?</div>
+      <div class="faq-answer">Yes, we provide ongoing support, updates, and maintenance services to keep your site secure and running smoothly.</div>
     </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do I get started?</div>
+      <div class="faq-answer">Simply reach out via our contact page. We'll schedule a free consultation to understand your goals and get started.</div>
+    </div>
+
   </section>
 
-  <footer>
-    <p>© 2025 Eli Web Solutions. All rights reserved.</p>
+  <footer data-aos="fade-up">
+    <p>© 2025 Eli Web Solutions. Built with passion.</p>
   </footer>
 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
   <script>
-    const questions = document.querySelectorAll(".faq-question");
-    questions.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const answer = btn.nextElementSibling;
-        const icon = btn.querySelector("i");
-        const isOpen = answer.style.display === "block";
-
-        document.querySelectorAll(".faq-answer").forEach(ans => ans.style.display = "none");
-        document.querySelectorAll(".faq-question i").forEach(ic => {
-          ic.classList.remove("fa-chevron-up");
-          ic.classList.add("fa-chevron-down");
-        });
-
-        if (!isOpen) {
-          answer.style.display = "block";
-          icon.classList.remove("fa-chevron-down");
-          icon.classList.add("fa-chevron-up");
-        }
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+        item.classList.toggle('active');
       });
     });
   </script>
