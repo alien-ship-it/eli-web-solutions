@@ -8,6 +8,19 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 
   <style>
+    .cta-btn {
+  background: #facc15;
+  color: #0f172a;
+  padding: 14px 28px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #fde68a;
+}
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
@@ -112,6 +125,7 @@
         flex-direction: column;
       }
     }
+
   </style>
 </head>
 <body>
@@ -127,26 +141,25 @@
     </nav>
   </header>
 
-  <section class="about-section">
-    <h2>About Eli Web Solutions</h2>
-    <div class="about-content">
-      <div class="about-text" data-aos="fade-right">
-        <p><i class="fas fa-rocket"></i> We are a passionate creative agency focused on helping startups and small businesses grow through powerful online presence.</p>
-        <p><i class="fas fa-lightbulb"></i> Whether you're launching a brand or reimagining your current one, we bring ideas to life with sleek, responsive websites and memorable branding.</p>
-        <p><i class="fas fa-cogs"></i> Our process is simple: we understand your vision, strategize, design, and deliver clean, modern solutions that drive results.</p>
-        <p><i class="fas fa-shield-alt"></i> With a strong emphasis on reliability and long-term support, we make sure your digital journey is smooth and scalable.</p>
-        <p><i class="fas fa-heart"></i> Built with love, designed with purpose — Eli Web Solutions is your go-to partner for everything digital.</p>
-      </div>
+ <section class="about-section" style="background: url('images/about-image.jpg') no-repeat center center/cover; position: relative; padding: 100px 20px;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(15, 23, 42, 0.85); z-index: 1;"></div>
 
-      <div class="about-image" data-aos="fade-left">
-        <img src="images/about-image.jpg" alt="Eli Web Solutions Team or Design Preview">
+  <div class="about-content" style="position: relative; z-index: 2; max-width: 1000px; margin: auto; color: #f8fafc;" data-aos="fade-up">
+    <h2 style="text-align: center; font-size: 2.5rem; color: #facc15; margin-bottom: 40px;">About Eli Web Solutions</h2>
+
+    <div style="background: rgba(2, 6, 23, 0.85); padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); backdrop-filter: blur(5px);">
+      <p><i class="fas fa-rocket" style="color: #facc15;"></i> We are a digital studio empowering small businesses with stunning websites and brand identities that make an impact.</p>
+      <p><i class="fas fa-lightbulb" style="color: #facc15;"></i> Whether launching or leveling up your brand, we design experiences that connect, convert, and last.</p>
+      <p><i class="fas fa-cogs" style="color: #facc15;"></i> From concept to code — we build solutions that scale with your business, not just websites.</p>
+      <p><i class="fas fa-shield-alt" style="color: #facc15;"></i> Reliability. Creativity. Partnership. That's what drives every project we deliver.</p>
+      <p><i class="fas fa-handshake" style="color: #facc15;"></i> Let’s transform your ideas into beautiful, high-performing reality — together.</p>
+
+      <div style="text-align: center; margin-top: 30px;">
+        <a href="contact.html" class="cta-btn">Let’s Work Together</a>
       </div>
     </div>
-
-    <div class="cta-about" data-aos="zoom-in-up">
-      <a href="contact.html">Let’s Build Your Dream Website</a>
-    </div>
-  </section>
+  </div>
+</section>
 
   <footer>
     <p>© 2025 Eli Web Solutions. All rights reserved.</p>
