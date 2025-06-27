@@ -66,8 +66,9 @@
 
     .about-image img {
       max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      filter: grayscale(30%) brightness(1.1);
       animation: fadeUp 1.2s ease;
     }
 
@@ -101,6 +102,7 @@
   </style>
 </head>
 <body>
+
   <header>
     <h1>Eli Web Solutions</h1>
     <nav>
@@ -111,21 +113,23 @@
     </nav>
   </header>
 
-  <section class="about-container">
-    <div class="about-text">
-      <h2>About Eli Web Solutions</h2>
-      <p>Eli Web Solutions is a creative digital agency that helps small businesses, startups, and entrepreneurs thrive online. We simplify the digital journey and make business growth more efficient.</p>
-      <p>We craft stunning websites and offer tailored branding and design services, ensuring your online identity stands out.</p>
-      <p>From first-time websites to full redesigns, we offer solutions that are sleek, smart, and built for the future.</p>
-      <p>Our mission is to empower your brand with powerful, affordable digital tools and help you grow confidently online.</p>
-    </div>
-    <div class="about-image">
-      <img src="https://source.unsplash.com/featured/?web,design,technology" alt="Digital Agency" />
-    </div>
-  </section>
+ <section class="about-container">
+  <div class="about-text">
+    <h2>About Eli Web Solutions</h2>
+    <p>Eli Web Solutions is a creative digital agency that helps small businesses, startups, and entrepreneurs thrive online. We simplify the digital journey and make business growth more efficient.</p>
+    <p>We craft stunning websites and offer tailored branding and design services, ensuring your online identity stands out.</p>
+    <p>From first-time websites to full redesigns, we offer solutions that are sleek, smart, and built for the future.</p>
+    <p>Our mission is to empower your brand with powerful, affordable digital tools and help you grow confidently online.</p>
+  </div>
+
+  <div class="about-image">
+    <img src="images/about-image.jpg" alt="Eli Web Solutions Team" style="max-width:100%; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.5); filter:grayscale(30%) brightness(1.1);" />
+  </div>
+</section>
 
   <footer>
     <p>© 2025 Eli Web Solutions. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
