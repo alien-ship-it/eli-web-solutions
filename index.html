@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Eli Web Solutions</title>
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    :root {
-      --bg-dark: #0f172a;
-      --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      --text-light: #f1f5f9;
-      --accent: #facc15;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Eli Web Solutions</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 
+  <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: var(--bg-dark);
-      color: var(--text-light);
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f172a;
+      color: #f8fafc;
     }
 
     header {
@@ -26,128 +23,76 @@
     }
 
     nav a {
+      color: #f8fafc;
       margin: 0 15px;
-      color: #f1f5f9;
       text-decoration: none;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #facc15;
     }
 
     .hero {
-      background: var(--bg-gradient);
-      color: white;
-      padding: 100px 20px 80px;
       text-align: center;
-      animation: fadeIn 1.2s ease-out;
+      padding: 100px 20px;
+      background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('images/about-image.jpg') center/cover no-repeat;
     }
 
     .hero h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #facc15;
     }
 
     .hero p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
-    }
-
-    .hero a {
-      background: var(--accent);
-      color: #111;
-      padding: 12px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .hero a:hover {
-      background: #eab308;
-    }
-
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-      animation: fadeIn 1.5s ease;
-    }
-
-    .section h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      max-width: 1000px;
+      font-size: 1.2rem;
+      max-width: 700px;
       margin: auto;
     }
 
-    .feature-box {
+    /* Testimonials */
+    .testimonials {
+      padding: 60px 20px;
       background: #1e293b;
+      color: #f8fafc;
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #facc15;
+      margin-bottom: 40px;
+    }
+
+    .swiper-slide {
+      background: #0f172a;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      width: 280px;
-      transition: transform 0.3s ease;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
     }
 
-    .feature-box:hover {
-      transform: translateY(-5px);
+    .swiper-slide p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      line-height: 1.6;
     }
 
-    .feature-box h3 {
-      margin-bottom: 10px;
-      font-size: 1.2em;
-      color: var(--accent);
-    }
-
-    .cta {
-      background: #111827;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-      animation: fadeIn 1.8s ease;
-    }
-
-    .cta a {
-  background: var(--accent);
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #111;
-  font-weight: bold;
-  transition: background 0.3s ease;
-  margin-top: 25px;
-  display: inline-block;
-}
-    .cta a:hover {
-      background: #eab308;
+    .swiper-slide strong {
+      color: #facc15;
     }
 
     footer {
       background: #020617;
-      color: #9ca3af;
+      color: #94a3b8;
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     @media (max-width: 768px) {
-      .features {
-        flex-direction: column;
-        gap: 20px;
+      .hero h1 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -165,56 +110,52 @@
   </header>
 
   <section class="hero">
-    <h1>Empowering Small Businesses Online</h1>
-    <p>We build websites, design brands, and manage your digital presence — professionally and affordably.</p>
-    <a href="contact.html">Get Started</a>
+    <h1>We Build Brands Online</h1>
+    <p>Custom websites, branding, and digital solutions for small businesses and entrepreneurs.</p>
   </section>
 
-  <section class="section">
-    <h2>What We Do</h2>
-    <div class="features">
-      <div class="feature-box">
-        <h3>💻 Web Design</h3>
-        <p>Modern, responsive websites built to impress and convert.</p>
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="swiper mySwiper" style="max-width: 900px; margin: auto;">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <p>“Eli Web Solutions transformed our online presence. Super professional!”</p>
+          <strong>- Grace M., Startup Founder</strong>
+        </div>
+        <div class="swiper-slide">
+          <p>“Fast, affordable, and reliable. Our new site looks amazing.”</p>
+          <strong>- Daniel K., Café Owner</strong>
+        </div>
+        <div class="swiper-slide">
+          <p>“Love the design and branding — it fits our business perfectly.”</p>
+          <strong>- Sheila O., Boutique Manager</strong>
+        </div>
       </div>
-      <div class="feature-box">
-        <h3>🎨 Logo Design</h3>
-        <p>Eye-catching branding to make your business stand out.</p>
-      </div>
-      <div class="feature-box">
-        <h3>🛠 Website Management</h3>
-        <p>Ongoing support to keep your site running smoothly.</p>
-      </div>
+      <div class="swiper-pagination"></div>
     </div>
-  </section>
-
-  <section class="section">
-    <h2>Why Choose Eli Web Solutions?</h2>
-    <div class="features">
-      <div class="feature-box">
-        <h3>✅ Personalized Approach</h3>
-        <p>Every project is tailored to your unique business needs.</p>
-      </div>
-      <div class="feature-box">
-        <h3>🚀 Fast Delivery</h3>
-        <p>Quick turnaround times without sacrificing quality.</p>
-      </div>
-      <div class="feature-box">
-        <h3>💡 Affordable Pricing</h3>
-        <p>Professional results that fit your budget.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta">
-    <h2>Let’s Build Something Great Together</h2>
-    <p>Ready to elevate your business online?</p>
-    <a href="contact.html">Contact Us Today</a>
   </section>
 
   <footer>
     <p>© 2025 Eli Web Solutions. All rights reserved.</p>
   </footer>
 
+  <!-- Swiper + Init -->
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      grabCursor: true,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 </body>
 </html>
