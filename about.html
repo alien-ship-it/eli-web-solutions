@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Eli Web Solutions</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Eli Web Solutions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0f172a;
+      background: #0f172a;
       color: #f8fafc;
     }
 
@@ -33,37 +32,71 @@
       color: #facc15;
     }
 
-    section.about-bg {
-      background: url('images/about-image.jpg') center/cover no-repeat;
-      padding: 80px 20px;
+    .about-section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .about-section h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      color: #facc15;
+      margin-bottom: 40px;
     }
 
     .about-content {
-      background-color: rgba(15, 23, 42, 0.85);
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      animation: fadeInSlide 1.2s ease;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 40px;
     }
 
-    .about-content h2 {
-      text-align: center;
-      font-size: 2.8rem;
-      color: #facc15;
-      margin-bottom: 30px;
+    .about-text {
+      flex: 1;
     }
 
-    .about-content p {
-      margin-bottom: 20px;
-      font-size: 1.1rem;
+    .about-text p {
+      font-size: 1rem;
       line-height: 1.8;
+      margin-bottom: 20px;
+      color: #cbd5e1;
     }
 
-    .about-content i {
-      margin-right: 10px;
+    .about-text i {
       color: #facc15;
+      margin-right: 10px;
+    }
+
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      border-radius: 15px;
+      filter: grayscale(100%);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .cta-about {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta-about a {
+      background: #facc15;
+      color: #0f172a;
+      padding: 14px 28px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .cta-about a:hover {
+      background: #fde68a;
     }
 
     footer {
@@ -74,56 +107,44 @@
       font-size: 0.9em;
     }
 
-    @keyframes fadeInSlide {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     @media (max-width: 768px) {
       .about-content {
-        padding: 25px;
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
 
- <header>
-  <h1>Eli Web Solutions</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header>
+    <h1>Eli Web Solutions</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <section class="about-bg">
-    <div class="about-content" data-aos="fade-up">
-      <h2 data-aos="fade-down">About Eli Web Solutions</h2>
+  <section class="about-section">
+    <h2>About Eli Web Solutions</h2>
+    <div class="about-content">
+      <div class="about-text" data-aos="fade-right">
+        <p><i class="fas fa-rocket"></i> We are a passionate creative agency focused on helping startups and small businesses grow through powerful online presence.</p>
+        <p><i class="fas fa-lightbulb"></i> Whether you're launching a brand or reimagining your current one, we bring ideas to life with sleek, responsive websites and memorable branding.</p>
+        <p><i class="fas fa-cogs"></i> Our process is simple: we understand your vision, strategize, design, and deliver clean, modern solutions that drive results.</p>
+        <p><i class="fas fa-shield-alt"></i> With a strong emphasis on reliability and long-term support, we make sure your digital journey is smooth and scalable.</p>
+        <p><i class="fas fa-heart"></i> Built with love, designed with purpose — Eli Web Solutions is your go-to partner for everything digital.</p>
+      </div>
 
-      <p data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-rocket"></i> Eli Web Solutions is a creative digital agency helping small businesses and startups thrive online with sleek and strategic solutions.
-      </p>
+      <div class="about-image" data-aos="fade-left">
+        <img src="images/about-image.jpg" alt="Eli Web Solutions Team or Design Preview">
+      </div>
+    </div>
 
-      <p data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-pencil-ruler"></i> From web design to branding and logos, we build memorable digital identities tailored for growth.
-      </p>
-
-      <p data-aos="fade-up" data-aos-delay="300">
-        <i class="fas fa-code"></i> Whether you need a new website or a redesign, we combine beauty and performance in every project.
-      </p>
-
-      <p data-aos="fade-up" data-aos-delay="400">
-        <i class="fas fa-handshake"></i> Let’s bring your ideas to life and take your business to the next level — together.
-      </p>
+    <div class="cta-about" data-aos="zoom-in-up">
+      <a href="contact.html">Let’s Build Your Dream Website</a>
     </div>
   </section>
 
@@ -131,15 +152,9 @@
     <p>© 2025 Eli Web Solutions. All rights reserved.</p>
   </footer>
 
-  <!-- AOS Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-    });
+    AOS.init();
   </script>
-
 </body>
 </html>
