@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Eli Web Solutions</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #0f172a, #1e293b);
+      background-color: #0f172a;
       color: #f8fafc;
     }
 
@@ -30,46 +32,37 @@
       color: #facc15;
     }
 
-    .about-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      padding: 60px 20px;
+    section.about-bg {
+      background: url('images/about-image.jpg') center/cover no-repeat;
+      padding: 80px 20px;
     }
 
-    .about-text {
-      flex: 1;
-      min-width: 300px;
-      max-width: 600px;
-      padding: 20px;
-      animation: fadeIn 1s ease-in-out;
+    .about-content {
+      background-color: rgba(15, 23, 42, 0.85);
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      animation: fadeInSlide 1.2s ease;
     }
 
-    .about-text h2 {
+    .about-content h2 {
+      text-align: center;
       font-size: 2.8rem;
       color: #facc15;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
-    .about-text p {
-      line-height: 1.8;
+    .about-content p {
       margin-bottom: 20px;
+      font-size: 1.1rem;
+      line-height: 1.8;
     }
 
-    .about-image {
-      flex: 1;
-      max-width: 500px;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .about-image img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      filter: grayscale(30%) brightness(1.1);
-      animation: fadeUp 1.2s ease;
+    .about-content i {
+      margin-right: 10px;
+      color: #facc15;
     }
 
     footer {
@@ -80,23 +73,20 @@
       font-size: 0.9em;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateX(-30px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 768px) {
-      .about-container {
-        flex-direction: column;
-      }
-
-      .about-text, .about-image {
-        text-align: center;
+      .about-content {
+        padding: 25px;
       }
     }
   </style>
@@ -113,39 +103,15 @@
     </nav>
   </header>
 
- <section class="about-container">
-  <div class="about-text">
-    <h2>About Eli Web Solutions</h2>
-    <p>Eli Web Solutions is a creative digital agency that helps small businesses, startups, and entrepreneurs thrive online. We simplify the digital journey and make business growth more efficient.</p>
-    <p>We craft stunning websites and offer tailored branding and design services, ensuring your online identity stands out.</p>
-    <p>From first-time websites to full redesigns, we offer solutions that are sleek, smart, and built for the future.</p>
-    <p>Our mission is to empower your brand with powerful, affordable digital tools and help you grow confidently online.</p>
-  </div>
-
-  <div class="about-image" style="position: relative; overflow: hidden; border-radius: 16px;">
-    <img
-      src="images/about-image.jpg"
-      alt="Eli Web Solutions Team"
-      style="
-        width: 100%;
-        border-radius: 16px;
-        box-shadow: 0 12px 40px rgba(0,0,0,0.5);
-        filter: grayscale(30%) brightness(1.05);
-        transition: transform 0.6s ease, filter 0.4s ease;
-      "
-      onmouseover="this.style.transform='scale(1.05)'; this.style.filter='brightness(1.15)'"
-      onmouseout="this.style.transform='scale(1)'; this.style.filter='grayscale(30%) brightness(1.05)'"
-    />
-    <div style="
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.06), transparent);
-      border-radius: 16px;
-      pointer-events: none;
-    "></div>
-  </div>
-</section>
+  <section class="about-bg">
+    <div class="about-content">
+      <h2>About Eli Web Solutions</h2>
+      <p><i class="fas fa-rocket"></i> Eli Web Solutions is a creative digital agency helping small businesses and startups thrive online with sleek and strategic solutions.</p>
+      <p><i class="fas fa-pencil-ruler"></i> From web design to branding and logos, we build memorable digital identities tailored for growth.</p>
+      <p><i class="fas fa-code"></i> Whether you need a new website or a redesign, we combine beauty and performance in every project.</p>
+      <p><i class="fas fa-handshake"></i> Let’s bring your ideas to life and take your business to the next level — together.</p>
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Eli Web Solutions. All rights reserved.</p>
