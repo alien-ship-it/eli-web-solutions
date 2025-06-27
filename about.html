@@ -4,7 +4,26 @@
   <meta charset="UTF-8" />
   <title>About | Eli Web Solutions</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
+    main p {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+main p:nth-child(2) { animation-delay: 0.2s; }
+main p:nth-child(3) { animation-delay: 0.4s; }
+main p:nth-child(4) { animation-delay: 0.6s; }
+main p:nth-child(5) { animation-delay: 0.8s; }
+main p:nth-child(6) { animation-delay: 1s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
     body {
       background: #0f172a;
       color: #f1f5f9;
@@ -79,24 +98,19 @@
     </nav>
   </header>
 
-  <main>
-    <h2>About Eli Web Solutions</h2>
-    <p>
-      Eli Web Solutions is a creative digital agency dedicated to helping small businesses, startups, and entrepreneurs thrive in the digital space. We understand the challenges that come with growing a business online — and we’re here to make that process easier, smarter, and more effective.
-    </p>
-    <p>
-      Founded on the belief that every business deserves a strong online identity, we offer personalized design and development services tailored to your brand’s unique needs. From beautifully crafted websites to stunning visual branding, we create digital experiences that leave a lasting impact.
-    </p>
-    <p>
-      We don’t just build websites — we build solutions that grow with you. Whether you're looking to launch your first online presence or upgrade your current one, we work closely with you to deliver results that are fast, functional, and future-ready.
-    </p>
-    <p>
-      Our mission is simple: to provide high-quality, affordable digital solutions that help you connect with your audience, build credibility, and stand out in today’s competitive market.
-    </p>
-    <p>
-      Let's bring your ideas to life and take your business to the next level — together.
-    </p>
-  </main>
+ <main>
+  <h2>About Eli Web Solutions</h2>
+  
+  <p><i class="fas fa-rocket" style="color: #facc15;"></i> Eli Web Solutions is a creative digital agency dedicated to helping small businesses, startups, and entrepreneurs thrive...</p>
+  
+  <p><i class="fas fa-lightbulb" style="color: #facc15;"></i> Founded on the belief that every business deserves a strong online identity, we offer personalized design and development...</p>
+  
+  <p><i class="fas fa-tools" style="color: #facc15;"></i> We don’t just build websites — we build solutions that grow with you...</p>
+
+  <p><i class="fas fa-bullseye" style="color: #facc15;"></i> Our mission is simple: to provide high-quality, affordable digital solutions...</p>
+  
+  <p><i class="fas fa-handshake" style="color: #facc15;"></i> Let's bring your ideas to life and take your business to the next level — together.</p>
+</main>
 
   <footer>
     <p>© 2025 Eli Web Solutions. All rights reserved.</p>
