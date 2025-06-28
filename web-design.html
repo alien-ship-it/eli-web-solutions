@@ -3,24 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <title>Website Design | Eli Web Solutions</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
   <style>
-    body { background: #0f172a; color: #f8fafc; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
-    header, footer { background: #020617; padding: 20px; text-align: center; }
-    h1 { color: #facc15; }
-    main { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-    p { color: #cbd5e1; line-height: 1.7; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+    }
+
+    header {
+      background: #020617;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #facc15;
+    }
+
+    .hero {
+      background: url('images/web-bg.jpg') center/cover no-repeat;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+    }
+
+    .cta-button {
+      margin-top: 20px;
+      background: #facc15;
+      color: #0f172a;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 20px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .feature {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .feature i {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #facc15;
+    }
+
+    .feature:hover {
+      transform: translateY(-6px);
+    }
+
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 30px;
+      color: #94a3b8;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Website Design</h1>
-  </header>
-  <main>
-    <p>We create responsive, user-focused websites from scratch that reflect your brand and communicate your value. Whether you need a personal portfolio, a business site, or an e-commerce platform, we build fast, accessible, and SEO-friendly websites tailored for your audience.</p>
-  </main>
-  <footer>
-    <p>© 2025 Eli Web Solutions</p>
-  </footer>
+
+<header>
+  <h1>Eli Web Solutions</h1>
+</header>
+
+<section class="hero" data-aos="fade-in">
+  <h2>Professional Website Design</h2>
+  <p>Custom, fast, and mobile-ready websites tailored to elevate your brand.</p>
+  <a href="contact.html" class="cta-button">Start Your Project</a>
+</section>
+
+<main data-aos="fade-up">
+  <div class="features">
+    <div class="feature">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Mobile Responsive</h3>
+      <p>Your website will look stunning on all screen sizes — from phones to desktops.</p>
+    </div>
+
+    <div class="feature">
+      <i class="fas fa-rocket"></i>
+      <h3>Blazing Fast</h3>
+      <p>Optimized for speed, performance, and SEO to rank higher and load faster.</p>
+    </div>
+
+    <div class="feature">
+      <i class="fas fa-code"></i>
+      <h3>Built from Scratch</h3>
+      <p>No templates. We hand-code and customize your site to match your unique brand.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 Eli Web Solutions. Design that delivers results.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
 </body>
 </html>
