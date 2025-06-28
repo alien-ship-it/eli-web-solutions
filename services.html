@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services | Eli Web Solutions</title>
-
+  <title>Our Services | Eli Web Solutions</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #0f172a, #1e293b);
+      background-color: #0f172a;
       color: #f8fafc;
     }
 
@@ -34,16 +32,23 @@
     }
 
     .services-section {
-      padding: 60px 20px;
       max-width: 1200px;
-      margin: auto;
+      margin: 60px auto;
+      padding: 20px;
     }
 
     .services-section h2 {
       text-align: center;
-      font-size: 2.5rem;
       color: #facc15;
-      margin-bottom: 40px;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .services-section p {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 1.1rem;
+      margin-bottom: 50px;
     }
 
     .services-grid {
@@ -53,64 +58,72 @@
     }
 
     .service-card {
-      background-color: #1e293b;
+      background: #1e293b;
       padding: 30px;
       border-radius: 12px;
       text-align: center;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .service-card:hover {
-      transform: translateY(-10px) scale(1.02);
-      background: linear-gradient(135deg, #334155, #1e293b);
-      box-shadow: 0 15px 30px rgba(250, 204, 21, 0.2);
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .service-card i {
       font-size: 2.5rem;
-      color: #facc15;
       margin-bottom: 15px;
+      color: #facc15;
     }
 
     .service-card h3 {
       margin-bottom: 10px;
       font-size: 1.3rem;
+      color: #f8fafc;
     }
 
     .service-card p {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #cbd5e1;
     }
 
-    .cta-container {
-      text-align: center;
-      margin-top: 50px;
+    .service-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      cursor: pointer;
     }
 
-    .cta-btn {
-      background: #facc15;
-      color: #0f172a;
-      padding: 14px 30px;
-      font-size: 1rem;
-      font-weight: bold;
-      border: none;
+    .service-card .tooltip {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #0f172a;
+      color: #f8fafc;
+      padding: 10px 15px;
       border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s ease;
+      white-space: nowrap;
+      transition: opacity 0.3s ease;
+      font-size: 0.9rem;
+      z-index: 10;
+      border: 1px solid #334155;
     }
 
-    .cta-btn:hover {
-      background: #fde68a;
+    .service-card:hover .tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .service-link {
+      text-decoration: none;
+      color: inherit;
     }
 
     footer {
       background: #020617;
       color: #94a3b8;
       text-align: center;
-      padding: 20px;
-      margin-top: 60px;
+      padding: 40px 20px;
       font-size: 0.9em;
+      border-top: 1px solid #1e293b;
     }
   </style>
 </head>
@@ -127,53 +140,57 @@
     </nav>
   </header>
 
-  <section class="services-section">
+  <section class="services-section" data-aos="fade-up">
     <h2>Our Services</h2>
-    <div class="services-grid">
-      <div class="service-card" data-aos="fade-up">
-        <i class="fas fa-code"></i>
-        <h3>Website Design</h3>
-        <p>Beautiful, responsive websites built to impress and convert visitors into customers.</p>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-        <i class="fas fa-paint-brush"></i>
-        <h3>Logo & Branding</h3>
-        <p>Custom logos and full brand identities that represent your unique business story.</p>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-        <i class="fas fa-wrench"></i>
-        <h3>Website Maintenance</h3>
-        <p>Ongoing updates, bug fixes, security patches, and performance optimizations.</p>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-        <i class="fas fa-mobile-alt"></i>
-        <h3>Mobile Optimization</h3>
-        <p>Optimized for speed and usability across smartphones, tablets, and desktops.</p>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-        <i class="fas fa-chart-line"></i>
-        <h3>SEO & Analytics</h3>
-        <p>Rank higher on Google, understand your audience, and drive more traffic.</p>
-      </div>
-      <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-        <i class="fas fa-handshake"></i>
-        <h3>Consultation</h3>
-        <p>Need guidance? We offer digital consultations tailored to your goals.</p>
-      </div>
-    </div>
+    <p>We offer a complete suite of digital design services — from professional websites to eye-catching posters and branding tools — helping your business stand out in every space.</p>
 
-    <div class="cta-container">
-      <a href="contact.html" class="cta-btn">Let’s Work Together</a>
+    <div class="services-grid">
+
+      <a href="web-design.html" class="service-link">
+        <div class="service-card" data-aos="fade-up">
+          <i class="fas fa-globe"></i>
+          <h3>Website Design</h3>
+          <p>Custom, responsive websites tailored to your brand and audience.</p>
+          <div class="tooltip">See more about web design</div>
+        </div>
+      </a>
+
+      <a href="web-management.html" class="service-link">
+        <div class="service-card" data-aos="fade-up">
+          <i class="fas fa-cogs"></i>
+          <h3>Website Management</h3>
+          <p>Ongoing updates, backups, and performance tuning for your site.</p>
+          <div class="tooltip">Explore management plans</div>
+        </div>
+      </a>
+
+      <a href="branding.html" class="service-link">
+        <div class="service-card" data-aos="fade-up">
+          <i class="fas fa-pen-nib"></i>
+          <h3>Logo & Branding</h3>
+          <p>Logos and brand kits that give your business a unique identity.</p>
+          <div class="tooltip">View branding services</div>
+        </div>
+      </a>
+
+      <a href="posters.html" class="service-link">
+        <div class="service-card" data-aos="fade-up">
+          <i class="fas fa-file-image"></i>
+          <h3>Posters & Flyers</h3>
+          <p>Impactful posters and flyers perfect for events and promotions.</p>
+          <div class="tooltip">See design samples</div>
+        </div>
+      </a>
+
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Eli Web Solutions. All rights reserved.</p>
+  <footer data-aos="fade-up">
+    <p>© 2025 Eli Web Solutions. Crafted with creativity and care.</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script>AOS.init();</script>
+
 </body>
 </html>
