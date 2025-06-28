@@ -3,24 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <title>Website Management | Eli Web Solutions</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
   <style>
-    body { background: #0f172a; color: #f8fafc; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #0f172a; color: #f8fafc; }
     header, footer { background: #020617; padding: 20px; text-align: center; }
-    h1 { color: #facc15; }
-    main { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-    p { color: #cbd5e1; line-height: 1.7; }
+    .hero {
+      background: url('images/management-bg.jpg') center/cover no-repeat;
+      padding: 100px 20px; text-align: center;
+    }
+    .hero h2 { font-size: 2.5rem; color: #facc15; }
+    .hero p { color: #cbd5e1; font-size: 1.1rem; }
+    .cta-button {
+      margin-top: 20px; background: #facc15; color: #0f172a; padding: 12px 30px;
+      text-decoration: none; border-radius: 6px; font-weight: bold;
+    }
+    main { max-width: 900px; margin: 60px auto; padding: 0 20px; }
+    section { margin-bottom: 60px; }
+    h3 { color: #facc15; }
+    ul { color: #cbd5e1; line-height: 1.7; }
+    ul li::before { content: "✔️ "; color: #facc15; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Website Management</h1>
-  </header>
-  <main>
-    <p>We handle updates, backups, performance optimization, and security for your site so you can focus on your business. From technical support to content updates, we ensure your website stays online, relevant, and fast-loading.</p>
-  </main>
-  <footer>
-    <p>© 2025 Eli Web Solutions</p>
-  </footer>
+
+<header><h1>Eli Web Solutions</h1></header>
+
+<section class="hero" data-aos="fade-in">
+  <h2>Website Management</h2>
+  <p>We keep your site running, updated, and protected — so you don’t have to.</p>
+  <a href="contact.html" class="cta-button">Request Management</a>
+</section>
+
+<main>
+  <section data-aos="fade-up">
+    <h3>What We Handle</h3>
+    <ul>
+      <li>Regular content updates & backups</li>
+      <li>Security checks & malware removal</li>
+      <li>Performance optimization & uptime monitoring</li>
+      <li>Plugin/theme updates (WordPress)</li>
+      <li>Technical support and minor tweaks</li>
+    </ul>
+  </section>
+
+  <section data-aos="fade-up">
+    <h3>Why Choose Us?</h3>
+    <p>When your site goes live, the work doesn’t stop. We offer full lifecycle care — so your digital presence remains smooth, secure, and stress-free.</p>
+  </section>
+
+  <section data-aos="fade-up">
+    <a href="contact.html" class="cta-button">Keep My Site Healthy</a>
+  </section>
+</main>
+
+<footer><p>© 2025 Eli Web Solutions. Peace of mind — delivered.</p></footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
 </body>
 </html>
