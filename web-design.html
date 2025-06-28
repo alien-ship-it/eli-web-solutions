@@ -13,7 +13,7 @@
       color: #f8fafc;
     }
 
-    header {
+    header, footer {
       background: #020617;
       padding: 20px;
       text-align: center;
@@ -51,9 +51,13 @@
     }
 
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 60px auto;
       padding: 20px;
+    }
+
+    section {
+      margin-bottom: 60px;
     }
 
     .features {
@@ -80,11 +84,29 @@
       transform: translateY(-6px);
     }
 
-    footer {
-      background: #020617;
-      text-align: center;
-      padding: 30px;
-      color: #94a3b8;
+    h3 {
+      margin-top: 0;
+      color: #facc15;
+    }
+
+    p {
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+
+    .process-step {
+      margin-bottom: 30px;
+    }
+
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .benefits ul li::before {
+      content: "✓";
+      margin-right: 10px;
+      color: #facc15;
     }
   </style>
 </head>
@@ -95,35 +117,66 @@
 </header>
 
 <section class="hero" data-aos="fade-in">
-  <h2>Professional Website Design</h2>
-  <p>Custom, fast, and mobile-ready websites tailored to elevate your brand.</p>
-  <a href="contact.html" class="cta-button">Start Your Project</a>
+  <h2>Website Design Services</h2>
+  <p>Custom, fast, and mobile-ready websites that convert visitors into loyal clients.</p>
+  <a href="contact.html" class="cta-button">Request a Quote</a>
 </section>
 
-<main data-aos="fade-up">
-  <div class="features">
+<main>
+
+  <section class="features" data-aos="fade-up">
     <div class="feature">
       <i class="fas fa-mobile-alt"></i>
       <h3>Mobile Responsive</h3>
-      <p>Your website will look stunning on all screen sizes — from phones to desktops.</p>
+      <p>Looks perfect on any device — phone, tablet, or desktop.</p>
     </div>
-
     <div class="feature">
       <i class="fas fa-rocket"></i>
       <h3>Blazing Fast</h3>
-      <p>Optimized for speed, performance, and SEO to rank higher and load faster.</p>
+      <p>Speed matters. Our sites are optimized for lightning-fast performance.</p>
     </div>
-
     <div class="feature">
-      <i class="fas fa-code"></i>
-      <h3>Built from Scratch</h3>
-      <p>No templates. We hand-code and customize your site to match your unique brand.</p>
+      <i class="fas fa-shield-alt"></i>
+      <h3>Secure</h3>
+      <p>HTTPS, SSL, and anti-spam protection ensure your users are always safe.</p>
     </div>
-  </div>
+    <div class="feature">
+      <i class="fas fa-user-cog"></i>
+      <h3>Custom Built</h3>
+      <p>Every site is uniquely crafted to match your business vision and goals.</p>
+    </div>
+  </section>
+
+  <section class="process" data-aos="fade-up">
+    <h3>Our Web Design Process</h3>
+    <div class="process-step">
+      <p><strong>1. Discovery:</strong> We discuss your goals, target audience, and vision.</p>
+      <p><strong>2. Wireframing:</strong> We design a structure that’s clear, user-friendly, and strategic.</p>
+      <p><strong>3. Development:</strong> The code comes to life using modern HTML, CSS, and JavaScript.</p>
+      <p><strong>4. Testing:</strong> Speed, responsiveness, and bug checks before going live.</p>
+      <p><strong>5. Launch & Support:</strong> Your site goes live with continuous support available.</p>
+    </div>
+  </section>
+
+  <section class="benefits" data-aos="fade-up">
+    <h3>Why Invest in a Professional Website?</h3>
+    <ul>
+      <li>Build trust and credibility with your audience</li>
+      <li>Generate more leads and conversions</li>
+      <li>Boost visibility with SEO-optimized pages</li>
+      <li>Showcase your brand in a memorable way</li>
+      <li>Make managing your business easier with automation</li>
+    </ul>
+  </section>
+
+  <section data-aos="fade-up">
+    <a href="contact.html" class="cta-button">Let's Build Your Website</a>
+  </section>
+
 </main>
 
 <footer>
-  <p>© 2025 Eli Web Solutions. Design that delivers results.</p>
+  <p>© 2025 Eli Web Solutions. Your digital journey starts here.</p>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
