@@ -268,25 +268,21 @@
   });
 </script>
 <script>
-  function toggleMenu() {
-    const links = document.getElementById('nav-links');
-    if (links.style.display === 'flex' || links.style.display === '') {
-      links.style.display = 'none';
-    } else {
-      links.style.display = 'flex';
-      links.style.flexDirection = 'column';
-      links.style.marginTop = '10px';
-    }
-  }
+  const navLinks = document.getElementById("nav-links");
+  const hamburger = document.querySelector(".hamburger");
 
-  // Hide nav links by default on mobile
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  // Optional: reset on window resize
   window.addEventListener("resize", () => {
-    const links = document.getElementById("nav-links");
     if (window.innerWidth > 768) {
-      links.style.display = "flex";
-      links.style.flexDirection = "row";
+      navLinks.classList.remove("active");
+      navLinks.style.display = "flex";
+      navLinks.style.flexDirection = "row";
     } else {
-      links.style.display = "none";
+      navLinks.style.display = "";
     }
   });
 </script>

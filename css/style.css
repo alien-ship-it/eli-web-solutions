@@ -203,3 +203,14 @@ nav a:hover {
     width: 100%;
   }
 }
+#nav-links {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  flex-direction: column;
+}
+
+#nav-links.active {
+  max-height: 500px; /* adjust as needed */
+  transition: max-height 0.4s ease-in;
+}
