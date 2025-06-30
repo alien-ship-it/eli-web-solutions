@@ -129,10 +129,15 @@
 </head>
 <body>
 
-<header style="position: sticky; top: 0; background: #020617; z-index: 1000; padding: 15px 20px;">
-  <nav style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+<header style="background: #020617; padding: 15px 20px; position: sticky; top: 0; z-index: 1000;">
+  <nav style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center;">
     <div style="color: #facc15; font-weight: bold; font-size: 1.5rem;">Eli Web Solutions</div>
-    <ul style="display: flex; list-style: none; gap: 25px; flex-wrap: wrap; margin: 0;">
+
+    <div class="hamburger" onclick="toggleMenu()" style="display: none; cursor: pointer;">
+      <i class="fas fa-bars" style="color: #f8fafc; font-size: 24px;"></i>
+    </div>
+
+    <ul id="nav-links" style="list-style: none; display: flex; gap: 25px; flex-wrap: wrap; margin: 0;">
       <li><a href="index.html" style="color: #f8fafc; text-decoration: none;">Home</a></li>
       <li><a href="about.html" style="color: #f8fafc; text-decoration: none;">About</a></li>
       <li><a href="services.html" style="color: #f8fafc; text-decoration: none;">Services</a></li>
@@ -237,6 +242,28 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
+<script>
+  function toggleMenu() {
+    const links = document.getElementById('nav-links');
+    if (links.style.display === 'flex' || links.style.display === '') {
+      links.style.display = 'none';
+    } else {
+      links.style.display = 'flex';
+      links.style.flexDirection = 'column';
+      links.style.marginTop = '10px';
+    }
+  }
 
+  // Hide nav links by default on mobile
+  window.addEventListener("resize", () => {
+    const links = document.getElementById("nav-links");
+    if (window.innerWidth > 768) {
+      links.style.display = "flex";
+      links.style.flexDirection = "row";
+    } else {
+      links.style.display = "none";
+    }
+  });
+</script>
 </body>
 </html>
