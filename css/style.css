@@ -182,3 +182,7 @@ form {
     font-size: 1rem;
   }
 }
+nav a:hover {
+  color: #facc15;
+  transition: 0.3s;
+}
