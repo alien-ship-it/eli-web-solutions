@@ -29,11 +29,13 @@
   <nav style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center;">
     <div style="color: #facc15; font-weight: bold; font-size: 1.5rem;">Eli Web Solutions</div>
 
+    <!-- Hamburger Icon -->
     <div class="hamburger" onclick="toggleMenu()" style="display: none; cursor: pointer;">
       <i class="fas fa-bars" style="color: #f8fafc; font-size: 24px;"></i>
     </div>
 
-    <ul id="nav-links" style="list-style: none; display: flex; gap: 25px; flex-wrap: wrap; margin: 0;">
+    <!-- Navigation Links -->
+    <ul id="nav-links" style="list-style: none; display: flex; gap: 25px; margin: 0; padding: 0;">
       <li><a href="index.html" style="color: #f8fafc; text-decoration: none;">Home</a></li>
       <li><a href="about.html" style="color: #f8fafc; text-decoration: none;">About</a></li>
       <li><a href="services.html" style="color: #f8fafc; text-decoration: none;">Services</a></li>
@@ -145,6 +147,17 @@
     const navLinks = document.getElementById("nav-links");
     navLinks.classList.toggle("active");
   }
+
+  window.addEventListener("resize", () => {
+    const navLinks = document.getElementById("nav-links");
+    if (window.innerWidth > 768) {
+      navLinks.classList.remove("active");
+      navLinks.style.display = "flex";
+      navLinks.style.flexDirection = "row";
+    } else {
+      navLinks.style.display = "";
+    }
+  });
 </script>
 </body>
 </html>
