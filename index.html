@@ -9,28 +9,29 @@
 </head>
 <body>
 
-  <!-- ✅ Responsive Header/Navbar -->
-  <header>
-    <nav>
-      <div style="color: #facc15; font-weight: bold; font-size: 1.5rem;">Eli Web Solutions</div>
-      <div class="hamburger" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-      </div>
-      <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- ✅ Navbar -->
+<header>
+  <nav>
+    <div style="color: #facc15; font-weight: bold; font-size: 1.5rem;">Eli Web Solutions</div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 <!-- ✅ Hero Section -->
-<section class="hero-section">
+<section class="hero-section" style="text-align: center; padding: 80px 20px; background: #1e293b;">
   <h1>Welcome to <span style="color: #facc15;">Eli Web Solutions</span></h1>
-  <h3 id="typed-text"></h3>
+  <h3><span id="typed-text"></span></h3>
   <a href="contact.html" class="cta-btn">Get Started</a>
 </section>
+<!-- ✅ Services Section -->
 <section style="padding: 60px 20px; background: #1e293b; text-align: center;">
   <h2 style="color: #facc15;">Our Core Services</h2>
   <p style="color: #cbd5e1;">Helping businesses shine online through:</p>
@@ -38,20 +39,20 @@
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 40px;">
     <div style="background: #0f172a; padding: 20px; border-radius: 10px; width: 280px;">
       <i class="fas fa-code fa-2x" style="color: #facc15;"></i>
-      <h3>Website Design</h3>
-      <p>Clean, responsive websites built from scratch tailored to your brand.</p>
+      <h3 style="color: #f8fafc;">Website Design</h3>
+      <p style="color: #cbd5e1;">Clean, responsive websites built from scratch tailored to your brand.</p>
     </div>
 
     <div style="background: #0f172a; padding: 20px; border-radius: 10px; width: 280px;">
       <i class="fas fa-paint-brush fa-2x" style="color: #facc15;"></i>
-      <h3>Branding & Logo</h3>
-      <p>Professional logo design and brand styling to make your business stand out.</p>
+      <h3 style="color: #f8fafc;">Branding & Logo</h3>
+      <p style="color: #cbd5e1;">Professional logo design and brand styling to make your business stand out.</p>
     </div>
 
     <div style="background: #0f172a; padding: 20px; border-radius: 10px; width: 280px;">
       <i class="fas fa-bullhorn fa-2x" style="color: #facc15;"></i>
-      <h3>Posters & Flyers</h3>
-      <p>Promotional graphics for events, marketing, and announcements.</p>
+      <h3 style="color: #f8fafc;">Posters & Flyers</h3>
+      <p style="color: #cbd5e1;">Promotional graphics for events, marketing, and announcements.</p>
     </div>
   </div>
 </section>
@@ -77,26 +78,10 @@
 
     <div style="flex: 1; min-width: 250px;">
       <h4 style="color: #facc15;">Contact</h4>
-      <p>
-        <a href="mailto:eliwebsolutions01@gmail.com" style="color: #f8fafc;">
-          <i class="fas fa-envelope"></i> eliwebsolutions01@gmail.com
-        </a>
-      </p>
-      <p>
-        <a href="tel:+254740674079" style="color: #f8fafc;">
-          <i class="fas fa-phone-alt"></i> +254 740 674 079
-        </a>
-      </p>
-      <p>
-        <a href="https://www.instagram.com/eli.web.solutions" target="_blank" style="color: #f8fafc;">
-          <i class="fab fa-instagram"></i> @eli.web.solutions
-        </a>
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #f8fafc;">
-          <i class="fab fa-linkedin"></i> LinkedIn Profile
-        </a>
-      </p>
+      <p><a href="mailto:eliwebsolutions01@gmail.com" style="color: #f8fafc;"><i class="fas fa-envelope"></i> eliwebsolutions01@gmail.com</a></p>
+      <p><a href="tel:+254740674079" style="color: #f8fafc;"><i class="fas fa-phone-alt"></i> +254 740 674 079</a></p>
+      <p><a href="https://www.instagram.com/eli.web.solutions" target="_blank" style="color: #f8fafc;"><i class="fab fa-instagram"></i> @eli.web.solutions</a></p>
+      <p><a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #f8fafc;"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></p>
     </div>
   </div>
 
@@ -108,19 +93,26 @@
 <!-- ✅ Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script>
-  const typed = new Typed("#typed-text", {
-    strings: [
-      "We design experiences.",
-      "We build digital identities.",
-      "We create solutions that scale."
-    ],
-    typeSpeed: 60,
-    backSpeed: 30,
-    loop: true
-  });
-</script>
+  document.addEventListener("DOMContentLoaded", () => {
+    new Typed("#typed-text", {
+      strings: [
+        "We design experiences.",
+        "We build digital identities.",
+        "We create solutions that scale."
+      ],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true
+    });
 
-<script>
+    // nav menu display fix
+    const navLinks = document.getElementById("nav-links");
+    if (window.innerWidth > 768) {
+      navLinks.style.display = "flex";
+      navLinks.style.flexDirection = "row";
+    }
+  });
+
   function toggleMenu() {
     const navLinks = document.getElementById("nav-links");
     navLinks.classList.toggle("active");
@@ -134,14 +126,6 @@
       navLinks.style.flexDirection = "row";
     } else {
       navLinks.style.display = "";
-    }
-  });
-
-  window.addEventListener("DOMContentLoaded", () => {
-    const navLinks = document.getElementById("nav-links");
-    if (window.innerWidth > 768) {
-      navLinks.style.display = "flex";
-      navLinks.style.flexDirection = "row";
     }
   });
 </script>
