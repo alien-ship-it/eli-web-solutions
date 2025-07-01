@@ -3,333 +3,123 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Eli Web Solutions</title>
-
-  <!-- External Styles -->
+  <title>Eli Web Solutions</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0f172a;
-      color: #f8fafc;
-    }
-
-    header {
-      background: #020617;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav a {
-      color: #f8fafc;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      color: #facc15;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('images/about-image.jpg') center/cover no-repeat;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #facc15;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .parallax-section {
-      background-image: url('images/about-image.jpg');
-      background-attachment: fixed;
-      background-position: center;
-      background-size: cover;
-      padding: 120px 20px;
-      text-align: center;
-      position: relative;
-      color: #f8fafc;
-    }
-
-    .parallax-overlay {
-      background: rgba(15, 23, 42, 0.8);
-      padding: 60px 20px;
-      border-radius: 12px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .parallax-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #facc15;
-    }
-
-    .parallax-section p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-
-    .cta-button {
-      background-color: #facc15;
-      color: #0f172a;
-      padding: 12px 28px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      margin: 0 10px;
-      display: inline-block;
-      transition: background 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #eab308;
-    }
-
-    .testimonials {
-      padding: 60px 20px;
-      background: #1e293b;
-    }
-
-    .testimonials h2 {
-      text-align: center;
-      font-size: 2.2rem;
-      color: #facc15;
-      margin-bottom: 40px;
-    }
-
-    .swiper-slide {
-      background: #0f172a;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-    }
-
-    .swiper-slide p {
-      font-size: 1.1rem;
-      margin-bottom: 15px;
-      line-height: 1.6;
-    }
-
-    .swiper-slide strong {
-      color: #facc15;
-    }
-
-    footer {
-      background: #020617;
-      color: #94a3b8;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .cta-button {
-        display: block;
-        margin: 10px auto;
-      }
-    }
-    footer {
-  background: #020617;
-  color: #cbd5e1;
-  padding: 40px 20px 20px;
-}
-
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.footer-column {
-  flex: 1 1 250px;
-  margin: 20px;
-}
-
-.footer-column h3,
-.footer-column h4 {
-  color: #facc15;
-  margin-bottom: 15px;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li a {
-  color: #cbd5e1;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.footer-column ul li a:hover {
-  color: #facc15;
-}
-
-.social-icons a {
-  color: #facc15;
-  font-size: 18px;
-  margin-right: 10px;
-  text-decoration: none;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 30px;
-  font-size: 0.9rem;
-  color: #64748b;
-  border-top: 1px solid #1e293b;
-  padding-top: 20px;
-}
-
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-column {
-    text-align: center;
-  }
-
-  .social-icons {
-    margin-top: 10px;
-  }
-}
-  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header style="background: #020617; padding: 15px 20px; position: sticky; top: 0; z-index: 1000;">
-  <nav style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center;">
-    <div style="color: #facc15; font-weight: bold; font-size: 1.5rem;">Eli Web Solutions</div>
 
-    <!-- Hamburger Icon -->
-    <div class="hamburger" onclick="toggleMenu()" style="display: none; cursor: pointer;">
-      <i class="fas fa-bars" style="color: #f8fafc; font-size: 24px;"></i>
-    </div>
-
-    <!-- Navigation Links -->
-    <ul id="nav-links" style="list-style: none; display: flex; gap: 25px; margin: 0; padding: 0;">
-      <li><a href="index.html" style="color: #f8fafc; text-decoration: none;">Home</a></li>
-      <li><a href="about.html" style="color: #f8fafc; text-decoration: none;">About</a></li>
-      <li><a href="services.html" style="color: #f8fafc; text-decoration: none;">Services</a></li>
-      <li><a href="faq.html" style="color: #f8fafc; text-decoration: none;">FAQ</a></li>
-      <li><a href="contact.html" style="color: #f8fafc; text-decoration: none;">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-  <section class="hero">
-    <h1>We Build Brands Online</h1>
-    <p>Custom websites, branding, and digital solutions for small businesses and entrepreneurs.</p>
-  </section>
-
-  <section class="parallax-section">
-    <div class="parallax-overlay">
-      <h2>Let’s Elevate Your Brand</h2>
-      <p>Professional websites, bold branding, and smart solutions tailored for your business.</p>
-      <a href="services.html" class="cta-button">See Our Services</a>
-      <a href="contact.html" class="cta-button">Get Started</a>
-    </div>
-  </section>
-
-  <section class="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="swiper mySwiper" style="max-width: 900px; margin: auto;">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <p>“Eli Web Solutions transformed our online presence. Super professional!”</p>
-          <strong>- Grace M., Startup Founder</strong>
-        </div>
-        <div class="swiper-slide">
-          <p>“Fast, affordable, and reliable. Our new site looks amazing.”</p>
-          <strong>- Daniel K., Café Owner</strong>
-        </div>
-        <div class="swiper-slide">
-          <p>“Love the design and branding — it fits our business perfectly.”</p>
-          <strong>- Sheila O., Boutique Manager</strong>
-        </div>
+  <!-- ✅ Responsive Header/Navbar -->
+  <header>
+    <nav>
+      <div style="color: #facc15; font-weight: bold; font-size: 1.5rem;">Eli Web Solutions</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
       </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-
-<footer>
-  <div class="footer-container">
-    <div class="footer-column">
-      <h3>Eli Web Solutions</h3>
-      <p>Building websites and brands that leave a mark.</p>
-    </div>
-
-    <div class="footer-column">
-      <h4>Quick Links</h4>
-      <ul>
+      <ul id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<!-- ✅ Hero Section -->
+<section class="hero-section">
+  <h1>Welcome to <span style="color: #facc15;">Eli Web Solutions</span></h1>
+  <h3 id="typed-text"></h3>
+  <a href="contact.html" class="cta-btn">Get Started</a>
+</section>
+<section style="padding: 60px 20px; background: #1e293b; text-align: center;">
+  <h2 style="color: #facc15;">Our Core Services</h2>
+  <p style="color: #cbd5e1;">Helping businesses shine online through:</p>
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 40px;">
+    <div style="background: #0f172a; padding: 20px; border-radius: 10px; width: 280px;">
+      <i class="fas fa-code fa-2x" style="color: #facc15;"></i>
+      <h3>Website Design</h3>
+      <p>Clean, responsive websites built from scratch tailored to your brand.</p>
+    </div>
+
+    <div style="background: #0f172a; padding: 20px; border-radius: 10px; width: 280px;">
+      <i class="fas fa-paint-brush fa-2x" style="color: #facc15;"></i>
+      <h3>Branding & Logo</h3>
+      <p>Professional logo design and brand styling to make your business stand out.</p>
+    </div>
+
+    <div style="background: #0f172a; padding: 20px; border-radius: 10px; width: 280px;">
+      <i class="fas fa-bullhorn fa-2x" style="color: #facc15;"></i>
+      <h3>Posters & Flyers</h3>
+      <p>Promotional graphics for events, marketing, and announcements.</p>
+    </div>
+  </div>
+</section>
+<!-- ✅ Footer -->
+<footer style="background: #020617; color: #f8fafc; padding: 50px 20px;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+    
+    <div style="flex: 1; min-width: 250px;">
+      <h3 style="color: #facc15;">Eli Web Solutions</h3>
+      <p style="color: #94a3b8;">We build websites, brands, and marketing graphics that help businesses grow and stand out online.</p>
+    </div>
+
+    <div style="flex: 1; min-width: 200px;">
+      <h4 style="color: #facc15;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; line-height: 2;">
+        <li><a href="index.html" style="color: #f8fafc;">Home</a></li>
+        <li><a href="about.html" style="color: #f8fafc;">About</a></li>
+        <li><a href="services.html" style="color: #f8fafc;">Services</a></li>
+        <li><a href="faq.html" style="color: #f8fafc;">FAQ</a></li>
+        <li><a href="contact.html" style="color: #f8fafc;">Contact</a></li>
       </ul>
     </div>
 
-    <div class="footer-column">
-      <h4>Contact</h4>
-      <p><i class="fas fa-envelope"></i> <a href="mailto:eliwebsolutions01@gmail.com" style="color: #facc15;">eliwebsolutions01@gmail.com</a></p>
-      <p><i class="fas fa-phone"></i> <a href="tel:+254740674079" style="color: #facc15;">+254 740 674 079</a></p>
-
-      <div class="social-icons" style="margin-top: 10px;">
-        <a href="https://www.instagram.com/eli.web.solutions" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-      </div>
+    <div style="flex: 1; min-width: 250px;">
+      <h4 style="color: #facc15;">Contact</h4>
+      <p>
+        <a href="mailto:eliwebsolutions01@gmail.com" style="color: #f8fafc;">
+          <i class="fas fa-envelope"></i> eliwebsolutions01@gmail.com
+        </a>
+      </p>
+      <p>
+        <a href="tel:+254740674079" style="color: #f8fafc;">
+          <i class="fas fa-phone-alt"></i> +254 740 674 079
+        </a>
+      </p>
+      <p>
+        <a href="https://www.instagram.com/eli.web.solutions" target="_blank" style="color: #f8fafc;">
+          <i class="fab fa-instagram"></i> @eli.web.solutions
+        </a>
+      </p>
+      <p>
+        <a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #f8fafc;">
+          <i class="fab fa-linkedin"></i> LinkedIn Profile
+        </a>
+      </p>
     </div>
   </div>
 
-  <div class="footer-bottom">
+  <div style="text-align: center; margin-top: 30px; color: #64748b;">
     <p>© 2025 Eli Web Solutions. All rights reserved.</p>
   </div>
 </footer>
 
-  <!-- Swiper JS -->
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
- <script>
-  const navLinks = document.getElementById("nav-links");
-  const hamburger = document.querySelector(".hamburger");
-
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
-
-  // Optional: reset on window resize
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 768) {
-      navLinks.classList.remove("active");
-      navLinks.style.display = "flex";
-      navLinks.style.flexDirection = "row";
-    } else {
-      navLinks.style.display = "";
-    }
+<!-- ✅ Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  const typed = new Typed("#typed-text", {
+    strings: [
+      "We design experiences.",
+      "We build digital identities.",
+      "We create solutions that scale."
+    ],
+    typeSpeed: 60,
+    backSpeed: 30,
+    loop: true
   });
 </script>
+
 <script>
   function toggleMenu() {
     const navLinks = document.getElementById("nav-links");
@@ -346,6 +136,15 @@
       navLinks.style.display = "";
     }
   });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.getElementById("nav-links");
+    if (window.innerWidth > 768) {
+      navLinks.style.display = "flex";
+      navLinks.style.flexDirection = "row";
+    }
+  });
 </script>
+
 </body>
 </html>

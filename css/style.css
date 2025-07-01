@@ -1,233 +1,53 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body Styling */
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 20px;
-  }
-  
-  /* Header */
-  header {
-    background-color: #162649;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  header h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
-  
-  nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Main Section */
-  main {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  }
-  
-  /* Footer */
-  footer {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #111827;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-  }
-/* RESPONSIVE DESIGN FOR SMALL SCREENS */
-@media (max-width: 768px) {
-    body {
-      padding: 10px;
-    }
-  
-    header h1 {
-      font-size: 24px;
-    }
-  
-    nav a {
-      display: block;
-      margin: 10px 0;
-    }
-  
-    main {
-      padding: 15px;
-    }
-  
-    footer {
-      padding: 15px;
-      font-size: 14px;
-    }
-  }
-    /* Contact Form Styling */
-form {
-    background: #f3f4f6;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  }
-  
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  button {
-    background-color: #111827;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 6px;
-  }
-  
-  button:hover {
-    background-color: #1f2937;
-  }
-  /* HERO SECTION BASE STYLE */
-.hero-section {
-  background: url('images/hero-bg.jpg') center/cover no-repeat;
-  height: 100vh;
+/* === BASE STYLES === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* === NAVIGATION BAR === */
+header {
+  position: sticky;
+  top: 0;
+  background: #020617;
+  padding: 15px 20px;
+  z-index: 1000;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
-  padding: 20px;
 }
 
-/* TEXT STYLES */
-.hero-section h1 {
-  font-size: 3rem;
-  color: #ffffff;
-  margin-bottom: 10px;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
-.hero-section h3 {
-  font-size: 1.5rem;
-  color: #facc15;
-}
-
-/* CTA BUTTON */
-.cta-btn {
-  margin-top: 25px;
-  padding: 12px 30px;
-  background: #facc15;
-  color: #0f172a;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
+nav a {
+  color: #f8fafc;
   text-decoration: none;
-  font-size: 1rem;
-  transition: background 0.3s ease;
+  transition: color 0.3s ease;
 }
 
-.cta-btn:hover {
-  background: #fde68a;
-}
-
-/* ✅ MOBILE RESPONSIVENESS */
-@media (max-width: 768px) {
-  .hero-section h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-section h3 {
-    font-size: 1.1rem;
-  }
-
-  .cta-btn {
-    font-size: 0.95rem;
-    padding: 10px 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    height: auto;
-    padding: 80px 20px;
-  }
-
-  .hero-section h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-section h3 {
-    font-size: 1rem;
-  }
-}
 nav a:hover {
   color: #facc15;
-  transition: 0.3s;
-}
-@media (max-width: 768px) {
-  .hamburger {
-    display: block !important;
-  }
-
-  #nav-links {
-    display: none;
-    width: 100%;
-    text-align: center;
-    gap: 15px;
-    margin-top: 10px;
-  }
-
-  #nav-links li {
-    width: 100%;
-  }
-}
-#nav-links {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-out;
-  flex-direction: column;
 }
 
-#nav-links.active {
-  max-height: 500px; /* adjust as needed */
-  transition: max-height 0.4s ease-in;
-}
-#nav-links {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
-  flex-direction: column;
+/* === HAMBURGER TOGGLE === */
+.hamburger {
+  display: none;
+  cursor: pointer;
 }
 
-#nav-links.active {
-  max-height: 500px;
-  opacity: 1;
-  transition: max-height 0.4s ease-in, opacity 0.4s ease-in;
-}
-/* Mobile nav animation */
+/* === RESPONSIVE NAVIGATION === */
 #nav-links {
   max-height: 0;
   opacity: 0;
@@ -264,3 +84,6 @@ nav a:hover {
     width: 100%;
   }
 }
+
+/* === FOOTER / OTHER GLOBAL ELEMENTS (optional) === */
+/* Add your footer styles, card designs, and section layouts here */
