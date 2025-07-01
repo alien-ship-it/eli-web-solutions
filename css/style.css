@@ -84,6 +84,20 @@ nav a:hover {
     width: 100%;
   }
 }
+.cta-btn {
+  background: #facc15;
+  color: #020617;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background: #eab308;
+}
+
 
 /* === FOOTER / OTHER GLOBAL ELEMENTS (optional) === */
 /* Add your footer styles, card designs, and section layouts here */
