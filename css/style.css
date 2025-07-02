@@ -84,6 +84,7 @@ nav a:hover {
     width: 100%;
   }
 }
+/* === CTA BUTTON FIX === */
 .cta-btn {
   background: #facc15;
   color: #020617;
@@ -91,11 +92,46 @@ nav a:hover {
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background 0.3s ease;
 }
 
 .cta-btn:hover {
   background: #eab308;
+}
+
+/* === ENSURE NAV LINKS SHOW PROPERLY === */
+#nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+    background: #020617;
+    width: 100%;
+    text-align: center;
+  }
+
+  #nav-links.active {
+    display: flex;
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 0.4s ease-in, opacity 0.4s ease-in;
+  }
+
+  .hamburger {
+    display: block !important;
+    cursor: pointer;
+  }
 }
 
 
