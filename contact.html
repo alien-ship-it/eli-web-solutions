@@ -2,72 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us | Eli Web Solutions</title>
- <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Eli Web Solutions</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header>
-  <nav class="navbar">
-    <div class="logo">Eli Web Solutions</div>
 
-    <div class="hamburger" onclick="toggleMenu()">
-      <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
-        <rect width="100" height="10"></rect>
-        <rect y="30" width="100" height="10"></rect>
-        <rect y="60" width="100" height="10"></rect>
-      </svg>
+  <!-- Reuse your global header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Eli Web Solutions</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
+          <rect width="100" height="10"></rect>
+          <rect y="30" width="100" height="10"></rect>
+          <rect y="60" width="100" height="10"></rect>
+        </svg>
+      </div>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ✅ Contact Section -->
+  <section style="padding: 60px 20px; background: #1e293b; text-align: center;">
+    <h2 style="color: #facc15;">Get In Touch</h2>
+    <p style="color: #cbd5e1;">Have a project or need a creative solution? Let’s talk.</p>
+
+    <div style="max-width: 800px; margin: 40px auto; background: #0f172a; padding: 30px; border-radius: 12px;">
+      <form action="https://formspree.io/f/mjkrlwkq" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+        <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; border-radius: 8px; border: none;">
+        <input type="email" name="email" placeholder="Your Email" required style="padding: 12px; border-radius: 8px; border: none;">
+        <textarea name="message" rows="5" placeholder="Your Message" required style="padding: 12px; border-radius: 8px; border: none;"></textarea>
+        <button type="submit" class="cta-btn">Send Message</button>
+      </form>
+
+      <div style="margin-top: 40px; text-align: left;">
+        <p><strong>Email:</strong> <a href="mailto:eliwebsolutions01@gmail.com" style="color: #facc15;">eliwebsolutions01@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+254740674079" style="color: #facc15;">+254 740 674 079</a></p>
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/eli.web.solutions" target="_blank" style="color: #facc15;">@eli.web.solutions</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #facc15;">LinkedIn Profile</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+<footer style="background: #020617; color: #f8fafc; padding: 50px 20px;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
+    
+    <div style="flex: 1; min-width: 250px;">
+      <h3 style="color: #facc15;">Eli Web Solutions</h3>
+      <p style="color: #94a3b8;">We build websites, brands, and marketing graphics that help businesses grow and stand out online.</p>
     </div>
 
-    <ul id="nav-links" class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+    <div style="flex: 1; min-width: 200px;">
+      <h4 style="color: #facc15;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; line-height: 2;">
+        <li><a href="index.html" style="color: #f8fafc;">Home</a></li>
+        <li><a href="about.html" style="color: #f8fafc;">About</a></li>
+        <li><a href="services.html" style="color: #f8fafc;">Services</a></li>
+        <li><a href="faq.html" style="color: #f8fafc;">FAQ</a></li>
+        <li><a href="contact.html" style="color: #f8fafc;">Contact</a></li>
+      </ul>
+    </div>
 
- <section class="contact-container" data-aos="fade-up">
-  <div class="contact-form">
-    <h2>Send Us a Message</h2>
-   <form action="https://formspree.io/f/mjkrlwkq" method="POST">
-  <label for="name">Your Name</label>
-  <input type="text" name="name" id="name" required>
-
-  <label for="email">Your Email</label>
-  <input type="email" name="email" id="email" required>
-
-  <label for="message">Your Message</label>
-  <textarea name="message" id="message" rows="5" required></textarea>
-
-  <button class="submit-btn" type="submit">Send Message</button>
-</form>
+    <div style="flex: 1; min-width: 250px;">
+      <h4 style="color: #facc15;">Contact</h4>
+      <p><a href="mailto:eliwebsolutions01@gmail.com" style="color: #f8fafc;"><i class="fas fa-envelope"></i> eliwebsolutions01@gmail.com</a></p>
+      <p><a href="tel:+254740674079" style="color: #f8fafc;"><i class="fas fa-phone-alt"></i> +254 740 674 079</a></p>
+      <p><a href="https://www.instagram.com/eli.web.solutions" target="_blank" style="color: #f8fafc;"><i class="fab fa-instagram"></i> @eli.web.solutions</a></p>
+      <p><a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #f8fafc;"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></p>
+    </div>
   </div>
 
-  <div class="contact-info">
-    <h2>Contact Info</h2>
-    <p><i class="fas fa-envelope"></i> <a href="mailto:eliwebsolutions01@gmail.com" style="color: #facc15;">eliwebsolutions01@gmail.com</a></p>
-    <p><i class="fas fa-phone-alt"></i> <a href="tel:+254740674079" style="color: #facc15;">+254 740 674 079</a></p>
-    <p><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/eli.web.solutions" style="color: #facc15;" target="_blank">@eli.web.solutions</a></p>
-    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" style="color: #facc15;" target="_blank">LinkedIn Profile</a></p>
+  <div style="text-align: center; margin-top: 30px; color: #64748b;">
+    <p>© 2025 Eli Web Solutions. All rights reserved.</p>
   </div>
-</section>
+</footer>
 
-  <footer data-aos="fade-up">
-    <p>© 2025 Eli Web Solutions. Built with passion.</p>
-  </footer>
+  <!-- Script -->
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("active");
+    }
+  </script>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active");
-  }
-</script>
 </body>
 </html>

@@ -2,63 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Logo & Branding | Eli Web Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Branding & Logo Design | Eli Web Solutions</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
- 
+  <style>
+    .service-hero {
+      background: url('images/branding-bg.jpg') no-repeat center center/cover;
+      padding: 120px 20px;
+      text-align: center;
+      color: #f8fafc;
+    }
+
+    .service-hero h1 {
+      font-size: 3rem;
+      color: #facc15;
+    }
+
+    .service-content {
+      padding: 60px 20px;
+      background: #1e293b;
+      color: #cbd5e1;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .service-content h2 {
+      color: #facc15;
+      margin-bottom: 20px;
+    }
+
+    .service-content p {
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <nav class="navbar">
-    <div class="logo">Eli Web Solutions</div>
 
-    <div class="hamburger" onclick="toggleMenu()">
-      <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
-        <rect width="100" height="10"></rect>
-        <rect y="30" width="100" height="10"></rect>
-        <rect y="60" width="100" height="10"></rect>
-      </svg>
-    </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Eli Web Solutions</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
+          <rect width="100" height="10"></rect>
+          <rect y="30" width="100" height="10"></rect>
+          <rect y="60" width="100" height="10"></rect>
+        </svg>
+      </div>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <ul id="nav-links" class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<section class="hero" data-aos="fade-in">
-  <h2>Logo & Branding</h2>
-  <p>Your brand is your identity. Let’s make it unforgettable.</p>
-  <a href="contact.html" class="cta-button">Let’s Brand You</a>
-</section>
-
-<main>
-  <section data-aos="fade-up">
-    <h3>Our Branding Services</h3>
-    <ul>
-      <li>Logo design (from minimalist to expressive)</li>
-      <li>Brand color schemes & typography</li>
-      <li>Social media identity kits</li>
-      <li>Business card & stationary design</li>
-      <li>Brand consistency guidelines</li>
-    </ul>
+  <section class="service-hero">
+    <h1>Branding & Logo Design</h1>
+    <p>Crafting powerful, memorable visual identities.</p>
   </section>
 
-  <section data-aos="fade-up">
-    <h3>Stand Out in a Crowded Market</h3>
-    <p>We build brands that connect emotionally. It’s not just about visuals — it’s about meaning, value, and lasting impressions.</p>
+  <section class="service-content">
+    <h2>Make Your Brand Unforgettable</h2>
+    <p>Your brand is more than a logo — it’s your story, personality, and voice. We help bring that story to life with modern branding packages tailored to your market and mission.</p>
+
+    <p>From logo concepts to complete brand kits (typography, color palettes, assets), we ensure your business is presented consistently and professionally everywhere it appears.</p>
+
+    <p>Whether you're launching something new or refreshing your image — we've got you covered.</p>
+
+    <a href="contact.html" class="cta-btn">Start Branding</a>
   </section>
 
-  <section data-aos="fade-up">
-    <a href="contact.html" class="cta-button">Start Your Brand Journey</a>
-  </section>
-</main>
-
-<footer style="background: #020617; color: #f8fafc; padding: 50px 20px;">
+   <footer style="background: #020617; color: #f8fafc; padding: 50px 20px;">
   <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
     
     <div style="flex: 1; min-width: 250px;">
@@ -72,32 +93,17 @@
         <li><a href="index.html" style="color: #f8fafc;">Home</a></li>
         <li><a href="about.html" style="color: #f8fafc;">About</a></li>
         <li><a href="services.html" style="color: #f8fafc;">Services</a></li>
+        <li><a href="faq.html" style="color: #f8fafc;">FAQ</a></li>
         <li><a href="contact.html" style="color: #f8fafc;">Contact</a></li>
       </ul>
     </div>
 
     <div style="flex: 1; min-width: 250px;">
       <h4 style="color: #facc15;">Contact</h4>
-      <p>
-        <a href="mailto:eliwebsolutions01@gmail.com" style="color: #f8fafc;">
-          <i class="fas fa-envelope"></i> eliwebsolutions01@gmail.com
-        </a>
-      </p>
-      <p>
-        <a href="tel:+254740674079" style="color: #f8fafc;">
-          <i class="fas fa-phone-alt"></i> +254 740 674 079
-        </a>
-      </p>
-      <p>
-        <a href="https://www.instagram.com/eli.web.solutions" target="_blank" style="color: #f8fafc;">
-          <i class="fab fa-instagram"></i> @eli.web.solutions
-        </a>
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #f8fafc;">
-          <i class="fab fa-linkedin"></i> LinkedIn Profile
-        </a>
-      </p>
+      <p><a href="mailto:eliwebsolutions01@gmail.com" style="color: #f8fafc;"><i class="fas fa-envelope"></i> eliwebsolutions01@gmail.com</a></p>
+      <p><a href="tel:+254740674079" style="color: #f8fafc;"><i class="fas fa-phone-alt"></i> +254 740 674 079</a></p>
+      <p><a href="https://www.instagram.com/eli.web.solutions" target="_blank" style="color: #f8fafc;"><i class="fab fa-instagram"></i> @eli.web.solutions</a></p>
+      <p><a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #f8fafc;"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></p>
     </div>
   </div>
 
@@ -106,13 +112,12 @@
   </div>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active");
-  }
-</script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+
 </body>
 </html>

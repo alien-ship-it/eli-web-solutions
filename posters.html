@@ -2,61 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Posters & Flyers | Eli Web Solutions</title>
- <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-  
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .service-hero {
+      background: url('images/posters-bg.jpg') no-repeat center center/cover;
+      padding: 120px 20px;
+      text-align: center;
+      color: #f8fafc;
+    }
+
+    .service-hero h1 {
+      font-size: 3rem;
+      color: #facc15;
+    }
+
+    .service-content {
+      padding: 60px 20px;
+      background: #1e293b;
+      color: #cbd5e1;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .service-content h2 {
+      color: #facc15;
+      margin-bottom: 20px;
+    }
+
+    .service-content p {
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .cta-btn {
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-<header>
-  <nav class="navbar">
-    <div class="logo">Eli Web Solutions</div>
 
-    <div class="hamburger" onclick="toggleMenu()">
-      <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
-        <rect width="100" height="10"></rect>
-        <rect y="30" width="100" height="10"></rect>
-        <rect y="60" width="100" height="10"></rect>
-      </svg>
-    </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Eli Web Solutions</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
+          <rect width="100" height="10"></rect>
+          <rect y="30" width="100" height="10"></rect>
+          <rect y="60" width="100" height="10"></rect>
+        </svg>
+      </div>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <ul id="nav-links" class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<section class="hero" data-aos="fade-in">
-  <h2>Posters & Flyers Design</h2>
-  <p>Captivating designs that promote your business and events with style.</p>
-  <a href="contact.html" class="cta-button">Get Designs Made</a>
-</section>
-
-<main>
-  <section data-aos="fade-up">
-    <h3>What We Design</h3>
-    <ul>
-      <li>Event posters</li>
-      <li>Business promotions & adverts</li>
-      <li>Social media flyer templates</li>
-      <li>Print-ready PDF/PNG files</li>
-      <li>Custom sizing & layout</li>
-    </ul>
+  <section class="service-hero">
+    <h1>Posters & Flyers</h1>
+    <p>Visual designs that make your message stand out.</p>
   </section>
 
-  <section data-aos="fade-up">
-    <h3>Why Work With Us?</h3>
-    <p>We design for impact. Our work is tailored to get attention, communicate fast, and convert viewers into action — online or on the street.</p>
-  </section>
+  <section class="service-content">
+    <h2>Promote Like a Pro</h2>
+    <p>Whether it’s an event, product, campaign, or announcement — we design posters and flyers that get attention. Every layout is crafted to match your goals and target audience.</p>
 
-  <section data-aos="fade-up">
-    <a href="contact.html" class="cta-button">Get Your Flyer Now</a>
+    <p>We blend creativity with clarity — ensuring your key message is seen, remembered, and acted on. Digital or print-ready, you’ll always have bold visuals that represent you well.</p>
+
+    <p>Need it fast? We also offer express delivery options with professional results.</p>
+
+    <a href="contact.html" class="cta-btn">Request a Design</a>
   </section>
-</main>
 
 <footer style="background: #020617; color: #f8fafc; padding: 50px 20px;">
   <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
@@ -72,32 +93,17 @@
         <li><a href="index.html" style="color: #f8fafc;">Home</a></li>
         <li><a href="about.html" style="color: #f8fafc;">About</a></li>
         <li><a href="services.html" style="color: #f8fafc;">Services</a></li>
+        <li><a href="faq.html" style="color: #f8fafc;">FAQ</a></li>
         <li><a href="contact.html" style="color: #f8fafc;">Contact</a></li>
       </ul>
     </div>
 
     <div style="flex: 1; min-width: 250px;">
       <h4 style="color: #facc15;">Contact</h4>
-      <p>
-        <a href="mailto:eliwebsolutions01@gmail.com" style="color: #f8fafc;">
-          <i class="fas fa-envelope"></i> eliwebsolutions01@gmail.com
-        </a>
-      </p>
-      <p>
-        <a href="tel:+254740674079" style="color: #f8fafc;">
-          <i class="fas fa-phone-alt"></i> +254 740 674 079
-        </a>
-      </p>
-      <p>
-        <a href="https://www.instagram.com/eli.web.solutions" target="_blank" style="color: #f8fafc;">
-          <i class="fab fa-instagram"></i> @eli.web.solutions
-        </a>
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #f8fafc;">
-          <i class="fab fa-linkedin"></i> LinkedIn Profile
-        </a>
-      </p>
+      <p><a href="mailto:eliwebsolutions01@gmail.com" style="color: #f8fafc;"><i class="fas fa-envelope"></i> eliwebsolutions01@gmail.com</a></p>
+      <p><a href="tel:+254740674079" style="color: #f8fafc;"><i class="fas fa-phone-alt"></i> +254 740 674 079</a></p>
+      <p><a href="https://www.instagram.com/eli.web.solutions" target="_blank" style="color: #f8fafc;"><i class="fab fa-instagram"></i> @eli.web.solutions</a></p>
+      <p><a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #f8fafc;"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></p>
     </div>
   </div>
 
@@ -106,13 +112,12 @@
   </div>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active");
-  }
-</script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+
 </body>
 </html>

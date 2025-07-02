@@ -2,67 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQ | Eli Web Solutions</title>
- <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-  
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .faq-section {
+      background: #1e293b;
+      padding: 60px 20px;
+      color: #f8fafc;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .faq-item {
+      background: #0f172a;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .faq-answer {
+      padding: 0 20px 20px;
+      display: none;
+      animation: fadeIn 0.3s ease;
+      color: #cbd5e1;
+    }
+
+    .faq-question::after {
+      content: "+";
+      position: absolute;
+      right: 20px;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-question::after {
+      content: "-";
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <nav class="navbar">
-    <div class="logo">Eli Web Solutions</div>
+  <!-- Reuse header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Eli Web Solutions</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
+          <rect width="100" height="10"></rect>
+          <rect y="30" width="100" height="10"></rect>
+          <rect y="60" width="100" height="10"></rect>
+        </svg>
+      </div>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="hamburger" onclick="toggleMenu()">
-      <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
-        <rect width="100" height="10"></rect>
-        <rect y="30" width="100" height="10"></rect>
-        <rect y="60" width="100" height="10"></rect>
-      </svg>
-    </div>
-
-    <ul id="nav-links" class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-  <section class="faq-section" data-aos="fade-up">
-    <h2>Frequently Asked Questions</h2>
+  <!-- ✅ FAQ Section -->
+  <section class="faq-section">
+    <h2 style="color: #facc15; text-align: center;">Frequently Asked Questions</h2>
 
     <div class="faq-item">
       <div class="faq-question">What services do you offer?</div>
-      <div class="faq-answer">We offer website design, website management, branding, logo design, and personalized digital solutions for small businesses and startups.</div>
+      <div class="faq-answer">We offer website design and management, branding and logo design, poster and flyer creation, and more.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-question">How long does it take to build a website?</div>
-      <div class="faq-answer">It typically takes 1–2 weeks for standard business websites. More complex projects may take longer based on features and content.</div>
+      <div class="faq-question">How long does it take to complete a website?</div>
+      <div class="faq-answer">Most basic websites take 1–2 weeks depending on requirements. More advanced features may take longer.</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-question">Can I update my website later?</div>
-      <div class="faq-answer">Absolutely! We offer website management packages or can give you access to update content yourself if preferred.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question">Do you provide support after launch?</div>
-      <div class="faq-answer">Yes, we provide ongoing support, updates, and maintenance services to keep your site secure and running smoothly.</div>
+      <div class="faq-question">Do you provide ongoing support after launch?</div>
+      <div class="faq-answer">Yes! We offer ongoing maintenance and support packages for updates, backups, and edits.</div>
     </div>
 
     <div class="faq-item">
       <div class="faq-question">How do I get started?</div>
-      <div class="faq-answer">Simply reach out via our contact page. We'll schedule a free consultation to understand your goals and get started.</div>
+      <div class="faq-answer">Simply contact us through the contact page or email us directly at eliwebsolutions01@gmail.com.</div>
     </div>
-
   </section>
 
- <footer style="background: #020617; color: #f8fafc; padding: 50px 20px;">
+  <!-- Footer -->
+  <footer style="background: #020617; color: #f8fafc; padding: 50px 20px;">
   <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
     
     <div style="flex: 1; min-width: 250px;">
@@ -76,32 +118,17 @@
         <li><a href="index.html" style="color: #f8fafc;">Home</a></li>
         <li><a href="about.html" style="color: #f8fafc;">About</a></li>
         <li><a href="services.html" style="color: #f8fafc;">Services</a></li>
+        <li><a href="faq.html" style="color: #f8fafc;">FAQ</a></li>
         <li><a href="contact.html" style="color: #f8fafc;">Contact</a></li>
       </ul>
     </div>
 
     <div style="flex: 1; min-width: 250px;">
       <h4 style="color: #facc15;">Contact</h4>
-      <p>
-        <a href="mailto:eliwebsolutions01@gmail.com" style="color: #f8fafc;">
-          <i class="fas fa-envelope"></i> eliwebsolutions01@gmail.com
-        </a>
-      </p>
-      <p>
-        <a href="tel:+254740674079" style="color: #f8fafc;">
-          <i class="fas fa-phone-alt"></i> +254 740 674 079
-        </a>
-      </p>
-      <p>
-        <a href="https://www.instagram.com/eli.web.solutions" target="_blank" style="color: #f8fafc;">
-          <i class="fab fa-instagram"></i> @eli.web.solutions
-        </a>
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #f8fafc;">
-          <i class="fab fa-linkedin"></i> LinkedIn Profile
-        </a>
-      </p>
+      <p><a href="mailto:eliwebsolutions01@gmail.com" style="color: #f8fafc;"><i class="fas fa-envelope"></i> eliwebsolutions01@gmail.com</a></p>
+      <p><a href="tel:+254740674079" style="color: #f8fafc;"><i class="fas fa-phone-alt"></i> +254 740 674 079</a></p>
+      <p><a href="https://www.instagram.com/eli.web.solutions" target="_blank" style="color: #f8fafc;"><i class="fab fa-instagram"></i> @eli.web.solutions</a></p>
+      <p><a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #f8fafc;"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></p>
     </div>
   </div>
 
@@ -110,22 +137,20 @@
   </div>
 </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
-
+  <!-- Scripts -->
   <script>
-    const faqItems = document.querySelectorAll('.faq-item');
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("active");
+    }
+
+    const faqItems = document.querySelectorAll(".faq-item");
     faqItems.forEach(item => {
-      item.querySelector('.faq-question').addEventListener('click', () => {
-        item.classList.toggle('active');
+      item.querySelector(".faq-question").addEventListener("click", () => {
+        item.classList.toggle("active");
       });
     });
   </script>
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active");
-  }
-</script>
+
 </body>
 </html>

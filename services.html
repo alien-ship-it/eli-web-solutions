@@ -2,82 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Services | Eli Web Solutions</title>
- <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
- 
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<header>
-  <nav class="navbar">
-    <div class="logo">Eli Web Solutions</div>
+  <!-- Reuse your updated nav -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Eli Web Solutions</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
+          <rect width="100" height="10"></rect>
+          <rect y="30" width="100" height="10"></rect>
+          <rect y="60" width="100" height="10"></rect>
+        </svg>
+      </div>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="hamburger" onclick="toggleMenu()">
-      <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
-        <rect width="100" height="10"></rect>
-        <rect y="30" width="100" height="10"></rect>
-        <rect y="60" width="100" height="10"></rect>
-      </svg>
-    </div>
+  <!-- ✅ Services Section -->
+  <section style="padding: 60px 20px; background: #1e293b; text-align: center;">
+    <h2 style="color: #facc15;">What We Offer</h2>
+    <p style="color: #cbd5e1;">Explore the services we specialize in below.</p>
 
-    <ul id="nav-links" class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-  <section class="services-section" data-aos="fade-up">
-    <h2>Our Services</h2>
-    <p>We offer a complete suite of digital design services — from professional websites to eye-catching posters and branding tools — helping your business stand out in every space.</p>
-
-    <div class="services-grid">
-
-      <a href="web-design.html" class="service-link">
-        <div class="service-card" data-aos="fade-up">
-          <i class="fas fa-globe"></i>
-          <h3>Website Design</h3>
-          <p>Custom, responsive websites tailored to your brand and audience.</p>
-          <div class="tooltip">See more about web design</div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 40px;">
+      <a href="web-design.html" style="text-decoration: none;">
+        <div style="background: #0f172a; padding: 30px; border-radius: 12px; width: 280px; transition: transform 0.3s; color: inherit;">
+          <i class="fas fa-code fa-2x" style="color: #facc15;"></i>
+          <h3 style="margin-top: 15px;">Website Design</h3>
+          <p>Fully responsive, optimized websites for individuals and businesses.</p>
         </div>
       </a>
 
-      <a href="web-management.html" class="service-link">
-        <div class="service-card" data-aos="fade-up">
-          <i class="fas fa-cogs"></i>
-          <h3>Website Management</h3>
-          <p>Ongoing updates, backups, and performance tuning for your site.</p>
-          <div class="tooltip">Explore management plans</div>
+      <a href="branding.html" style="text-decoration: none;">
+        <div style="background: #0f172a; padding: 30px; border-radius: 12px; width: 280px; transition: transform 0.3s; color: inherit;">
+          <i class="fas fa-palette fa-2x" style="color: #facc15;"></i>
+          <h3 style="margin-top: 15px;">Branding & Logo</h3>
+          <p>Modern, professional brand identity and logo design services.</p>
         </div>
       </a>
 
-      <a href="branding.html" class="service-link">
-        <div class="service-card" data-aos="fade-up">
-          <i class="fas fa-pen-nib"></i>
-          <h3>Logo & Branding</h3>
-          <p>Logos and brand kits that give your business a unique identity.</p>
-          <div class="tooltip">View branding services</div>
+      <a href="posters.html" style="text-decoration: none;">
+        <div style="background: #0f172a; padding: 30px; border-radius: 12px; width: 280px; transition: transform 0.3s; color: inherit;">
+          <i class="fas fa-bullhorn fa-2x" style="color: #facc15;"></i>
+          <h3 style="margin-top: 15px;">Posters & Flyers</h3>
+          <p>Promotional graphics for events, campaigns, and businesses.</p>
         </div>
       </a>
 
-      <a href="posters.html" class="service-link">
-        <div class="service-card" data-aos="fade-up">
-          <i class="fas fa-file-image"></i>
-          <h3>Posters & Flyers</h3>
-          <p>Impactful posters and flyers perfect for events and promotions.</p>
-          <div class="tooltip">See design samples</div>
-        </div>
-      </a>
+      <a href="web-management.html" style="text-decoration: none;">
+  <div style="background: #0f172a; padding: 30px; border-radius: 12px; width: 280px; transition: transform 0.3s; color: inherit;">
+    <i class="fas fa-tools fa-2x" style="color: #facc15;"></i>
+    <h3 style="margin-top: 15px;">Website Management</h3>
+    <p>Ongoing care, updates, and optimization to keep your website at its best.</p>
+  </div>
+</a>
 
     </div>
   </section>
 
-<footer style="background: #020617; color: #f8fafc; padding: 50px 20px;">
+  <!-- Reuse your footer -->
+ <footer style="background: #020617; color: #f8fafc; padding: 50px 20px;">
   <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
     
     <div style="flex: 1; min-width: 250px;">
@@ -91,32 +85,17 @@
         <li><a href="index.html" style="color: #f8fafc;">Home</a></li>
         <li><a href="about.html" style="color: #f8fafc;">About</a></li>
         <li><a href="services.html" style="color: #f8fafc;">Services</a></li>
+        <li><a href="faq.html" style="color: #f8fafc;">FAQ</a></li>
         <li><a href="contact.html" style="color: #f8fafc;">Contact</a></li>
       </ul>
     </div>
 
     <div style="flex: 1; min-width: 250px;">
       <h4 style="color: #facc15;">Contact</h4>
-      <p>
-        <a href="mailto:eliwebsolutions01@gmail.com" style="color: #f8fafc;">
-          <i class="fas fa-envelope"></i> eliwebsolutions01@gmail.com
-        </a>
-      </p>
-      <p>
-        <a href="tel:+254740674079" style="color: #f8fafc;">
-          <i class="fas fa-phone-alt"></i> +254 740 674 079
-        </a>
-      </p>
-      <p>
-        <a href="https://www.instagram.com/eli.web.solutions" target="_blank" style="color: #f8fafc;">
-          <i class="fab fa-instagram"></i> @eli.web.solutions
-        </a>
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #f8fafc;">
-          <i class="fab fa-linkedin"></i> LinkedIn Profile
-        </a>
-      </p>
+      <p><a href="mailto:eliwebsolutions01@gmail.com" style="color: #f8fafc;"><i class="fas fa-envelope"></i> eliwebsolutions01@gmail.com</a></p>
+      <p><a href="tel:+254740674079" style="color: #f8fafc;"><i class="fas fa-phone-alt"></i> +254 740 674 079</a></p>
+      <p><a href="https://www.instagram.com/eli.web.solutions" target="_blank" style="color: #f8fafc;"><i class="fab fa-instagram"></i> @eli.web.solutions</a></p>
+      <p><a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #f8fafc;"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></p>
     </div>
   </div>
 
@@ -125,13 +104,12 @@
   </div>
 </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
-<script>
-  function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active");
-  }
-</script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("active");
+    }
+  </script>
+
 </body>
 </html>
