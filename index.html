@@ -37,7 +37,7 @@
   <!-- 🔹 Hero Section -->
   <section class="hero" style="background: url('images/hero-bg.jpg') no-repeat center center/cover; padding: 120px 20px; color: #f8fafc; text-align: center;">
     <h1>Welcome to <span style="color: #facc15;">Eli Web Solutions</span></h1>
-    <p style="font-size: 1.2rem;">We build digital identities for growing businesses.</p>
+    <p style="font-size: 1.2rem; color: #facc15;">We build digital identities for growing businesses.</p>
     <a href="services.html" class="cta-btn" style="margin-top: 30px;">Explore Our Services</a>
   </section>
 <!-- 🔹 Services Overview -->
@@ -136,6 +136,11 @@
 
   // Init
   showSlide(current);
+
+  // Auto-slide every 6 seconds
+  setInterval(() => {
+    nextTestimonial();
+  }, 6000);
 </script>
 
 <style>
