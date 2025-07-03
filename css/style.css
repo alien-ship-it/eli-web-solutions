@@ -1,4 +1,4 @@
-/* === GENERAL RESET === */
+/* === RESET === */
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +9,8 @@ html, body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #0f172a;
   color: #f8fafc;
-  overflow-x: hidden;
   max-width: 100vw;
+  overflow-x: hidden;
 }
 
 /* === NAVIGATION === */
@@ -25,17 +25,20 @@ header {
 .navbar {
   max-width: 1200px;
   margin: auto;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
   flex-wrap: wrap;
 }
 
-.logo {
-  color: #facc15;
-  font-weight: bold;
-  font-size: 1.5rem;
+.logo img {
+  height: 48px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -50,30 +53,68 @@ header {
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: #facc15;
 }
 
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-/* === CTA BUTTON === */
+/* === HERO CTA BUTTON === */
 .cta-btn {
   background: #facc15;
-  color: #020617;
+  color: #0f172a;
   padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
-  margin-top: 20px;
   transition: background 0.3s ease;
 }
 
 .cta-btn:hover {
   background: #eab308;
+}
+
+/* === SERVICE CARDS === */
+.service-card {
+  background: #0f172a;
+  padding: 30px;
+  border-radius: 12px;
+  width: 280px;
+  transition: transform 0.3s ease;
+  color: inherit;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  background: #1e293b;
+}
+
+/* === TESTIMONIAL SLIDES === */
+.testimonial-slide {
+  display: none;
+  transition: opacity 0.5s ease;
+}
+
+.testimonial-slide.active {
+  display: block;
+}
+
+/* === FOOTER === */
+footer {
+  background: #020617;
+  padding: 40px 20px;
+  text-align: center;
+  color: #94a3b8;
+}
+
+footer a {
+  color: #facc15;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* === RESPONSIVE === */

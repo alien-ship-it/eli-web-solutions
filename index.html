@@ -2,122 +2,165 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Eli Web Solutions</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-<header>
-  <nav class="navbar">
-    <div class="logo">Eli Web Solutions</div>
 
-    <div class="hamburger" onclick="toggleMenu()">
-      <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
-        <rect width="100" height="10"></rect>
-        <rect y="30" width="100" height="10"></rect>
-        <rect y="60" width="100" height="10"></rect>
-      </svg>
-    </div>
+  <!-- 🔹 Navigation with Logo -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Eli Web Solutions Logo" style="height: 48px; width: auto;" />
+        </a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
+          <rect width="100" height="10"></rect>
+          <rect y="30" width="100" height="10"></rect>
+          <rect y="60" width="100" height="10"></rect>
+        </svg>
+      </div>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <ul id="nav-links" class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-<!-- ✅ Hero Section -->
-<section class="hero-section" style="text-align: center; padding: 80px 20px; background: #1e293b;">
-  <h1>Welcome to <span style="color: #facc15;">Eli Web Solutions</span></h1>
-  <h3><span id="typed-text"></span></h3>
-  <a href="contact.html" class="cta-btn">Get Started</a>
-</section>
-<!-- ✅ Services Section -->
+  <!-- 🔹 Hero Section -->
+  <section class="hero" style="background: url('images/hero-bg.jpg') no-repeat center center/cover; padding: 120px 20px; color: #f8fafc; text-align: center;">
+    <h1>Welcome to <span style="color: #facc15;">Eli Web Solutions</span></h1>
+    <p style="font-size: 1.2rem;">We build digital identities for growing businesses.</p>
+    <a href="services.html" class="cta-btn" style="margin-top: 30px;">Explore Our Services</a>
+  </section>
+<!-- 🔹 Services Overview -->
 <section style="padding: 60px 20px; background: #1e293b; text-align: center;">
   <h2 style="color: #facc15;">Our Core Services</h2>
   <p style="color: #cbd5e1;">Helping businesses shine online through:</p>
-  
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-top: 40px;">
-    <div style="background: #0f172a; padding: 20px; border-radius: 10px; width: 280px;">
-      <i class="fas fa-code fa-2x" style="color: #facc15;"></i>
-      <h3 style="color: #f8fafc;">Website Design</h3>
-      <p style="color: #cbd5e1;">Clean, responsive websites built from scratch tailored to your brand.</p>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px;">
+    
+    <!-- Web Design -->
+    <a href="web-design.html" class="service-card">
+      <div>
+        <i class="fas fa-laptop-code fa-2x" style="color: #facc15;"></i>
+        <h3>Website Design</h3>
+        <p>Custom-built websites tailored to your goals and brand.</p>
+      </div>
+    </a>
+
+    <!-- Branding -->
+    <a href="branding.html" class="service-card">
+      <div>
+        <i class="fas fa-palette fa-2x" style="color: #facc15;"></i>
+        <h3>Branding & Logo</h3>
+        <p>Powerful visual identities that make your business memorable.</p>
+      </div>
+    </a>
+
+    <!-- Posters -->
+    <a href="posters.html" class="service-card">
+      <div>
+        <i class="fas fa-bullhorn fa-2x" style="color: #facc15;"></i>
+        <h3>Posters & Flyers</h3>
+        <p>Eye-catching graphics for promos, events, and ads.</p>
+      </div>
+    </a>
+
+    <!-- Web Management -->
+    <a href="web-management.html" class="service-card">
+      <div>
+        <i class="fas fa-tools fa-2x" style="color: #facc15;"></i>
+        <h3>Website Management</h3>
+        <p>Ongoing updates, backups & care to keep your site running smoothly.</p>
+      </div>
+    </a>
+
+  </div>
+</section>
+<!-- 🔹 Testimonials Carousel -->
+<section style="background: #0f172a; padding: 60px 20px; color: #f8fafc; text-align: center;">
+  <h2 style="color: #facc15;">What Our Clients Say</h2>
+
+  <div class="carousel" style="margin-top: 40px; max-width: 700px; margin-inline: auto; position: relative;">
+    <div class="testimonial-slide active">
+      <p style="font-size: 1.2rem;">"Eli Web Solutions helped bring our brand to life with a professional logo that perfectly fits our vision. Super creative and easy to work with!"</p>
+      <h4 style="margin-top: 10px; color: #facc15;">— ThriftKids Kenya</h4>
     </div>
 
-    <div style="background: #0f172a; padding: 20px; border-radius: 10px; width: 280px;">
-      <i class="fas fa-paint-brush fa-2x" style="color: #facc15;"></i>
-      <h3 style="color: #f8fafc;">Branding & Logo</h3>
-      <p style="color: #cbd5e1;">Professional logo design and brand styling to make your business stand out.</p>
+    <div class="testimonial-slide">
+      <p style="font-size: 1.2rem;">"The website they built for me was clean, responsive, and exactly what I needed to start attracting clients. Highly recommend!"</p>
+      <h4 style="margin-top: 10px; color: #facc15;">— Happy Client</h4>
     </div>
 
-    <div style="background: #0f172a; padding: 20px; border-radius: 10px; width: 280px;">
-      <i class="fas fa-bullhorn fa-2x" style="color: #facc15;"></i>
-      <h3 style="color: #f8fafc;">Posters & Flyers</h3>
-      <p style="color: #cbd5e1;">Promotional graphics for events, marketing, and announcements.</p>
+    <div class="testimonial-slide">
+      <p style="font-size: 1.2rem;">"From design to delivery, Eli was professional and efficient. My business got a serious upgrade."</p>
+      <h4 style="margin-top: 10px; color: #facc15;">— Anonymous Startup</h4>
+    </div>
+
+    <!-- Carousel nav -->
+    <div style="margin-top: 20px;">
+      <button onclick="prevTestimonial()" style="margin: 0 10px;">⬅</button>
+      <button onclick="nextTestimonial()" style="margin: 0 10px;">➡</button>
     </div>
   </div>
 </section>
-<!-- ✅ Footer -->
-<footer style="background: #020617; color: #f8fafc; padding: 50px 20px;">
-  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px;">
-    
-    <div style="flex: 1; min-width: 250px;">
-      <h3 style="color: #facc15;">Eli Web Solutions</h3>
-      <p style="color: #94a3b8;">We build websites, brands, and marketing graphics that help businesses grow and stand out online.</p>
-    </div>
 
-    <div style="flex: 1; min-width: 200px;">
-      <h4 style="color: #facc15;">Quick Links</h4>
-      <ul style="list-style: none; padding: 0; line-height: 2;">
-        <li><a href="index.html" style="color: #f8fafc;">Home</a></li>
-        <li><a href="about.html" style="color: #f8fafc;">About</a></li>
-        <li><a href="services.html" style="color: #f8fafc;">Services</a></li>
-        <li><a href="faq.html" style="color: #f8fafc;">FAQ</a></li>
-        <li><a href="contact.html" style="color: #f8fafc;">Contact</a></li>
-      </ul>
-    </div>
+<script>
+  let current = 0;
+  const slides = document.querySelectorAll(".testimonial-slide");
 
-    <div style="flex: 1; min-width: 250px;">
-      <h4 style="color: #facc15;">Contact</h4>
-      <p><a href="mailto:eliwebsolutions01@gmail.com" style="color: #f8fafc;"><i class="fas fa-envelope"></i> eliwebsolutions01@gmail.com</a></p>
-      <p><a href="tel:+254740674079" style="color: #f8fafc;"><i class="fas fa-phone-alt"></i> +254 740 674 079</a></p>
-      <p><a href="https://www.instagram.com/eli.web.solutions" target="_blank" style="color: #f8fafc;"><i class="fab fa-instagram"></i> @eli.web.solutions</a></p>
-      <p><a href="https://www.linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #f8fafc;"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></p>
-    </div>
-  </div>
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      slide.style.display = i === index ? "block" : "none";
+    });
+  }
 
-  <div style="text-align: center; margin-top: 30px; color: #64748b;">
-    <p>© 2025 Eli Web Solutions. All rights reserved.</p>
-  </div>
+  function nextTestimonial() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  function prevTestimonial() {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  }
+
+  // Init
+  showSlide(current);
+</script>
+
+<style>
+  .testimonial-slide {
+    display: none;
+    transition: opacity 0.5s ease;
+  }
+
+  .testimonial-slide.active {
+    display: block;
+  }
+</style>
+<!-- 🔹 Footer -->
+<footer style="background: #020617; padding: 40px 20px; text-align: center; color: #94a3b8;">
+  <img src="images/logo.png" alt="Logo" style="height: 40px; margin-bottom: 10px;" />
+  <p>&copy; 2025 Eli Web Solutions. All rights reserved.</p>
+  <p>
+    <a href="mailto:eliwebsolutions01@gmail.com" style="color: #facc15;">eliwebsolutions01@gmail.com</a> |
+    <a href="tel:+254740674079" style="color: #facc15;">+254 740 674 079</a> |
+    <a href="https://instagram.com/eli.web.solutions" target="_blank" style="color: #facc15;">Instagram</a> |
+    <a href="https://linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #facc15;">LinkedIn</a>
+  </p>
 </footer>
 
-<!-- ✅ Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    new Typed("#typed-text", {
-      strings: [
-        "We design experiences.",
-        "We build digital identities.",
-        "We create solutions that scale."
-      ],
-      typeSpeed: 60,
-      backSpeed: 30,
-      loop: true
-    });
-
-    // nav menu display fix
-    const navLinks = document.getElementById("nav-links");
-    if (window.innerWidth > 768) {
-      navLinks.style.display = "flex";
-      navLinks.style.flexDirection = "row";
-    }
-  });
-
-</script>
+<!-- 🔹 Hamburger Script -->
 <script>
   function toggleMenu() {
     const navLinks = document.getElementById("nav-links");
