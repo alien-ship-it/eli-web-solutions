@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Branding & Logo Design | Eli Web Solutions</title>
+  <title>Branding | Eli Web Solutions</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     .service-hero {
       background: url('images/branding-bg.jpg') no-repeat center center/cover;
@@ -20,7 +21,7 @@
 
     .service-content {
       padding: 60px 20px;
-      background: #1e293b;
+      background: rgba(30, 41, 59, 0.65);
       color: #cbd5e1;
       max-width: 900px;
       margin: auto;
@@ -37,19 +38,38 @@
     }
 
     .cta-btn {
-      margin-top: 30px;
+      background: #facc15;
+      color: #0f172a;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #eab308;
     }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <nav class="navbar">
-     <div class="logo">
-  <a href="index.html">
-    <img src="images/logo.png" alt="Eli Web Solutions Logo" style="height: 48px;" />
-  </a>
-</div>
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Eli Web Solutions Logo" style="height: 48px;" />
+        </a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
       <div class="hamburger" onclick="toggleMenu()">
         <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
           <rect width="100" height="10"></rect>
@@ -57,49 +77,99 @@
           <rect y="60" width="100" height="10"></rect>
         </svg>
       </div>
-      <ul id="nav-links" class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="service-hero">
-    <h1>Branding & Logo Design</h1>
-    <p>Crafting powerful, memorable visual identities.</p>
+    <h1>Branding & Identity</h1>
   </section>
 
-  <section class="service-content">
-    <h2>Make Your Brand Unforgettable</h2>
-    <p>Your brand is more than a logo — it’s your story, personality, and voice. We help bring that story to life with modern branding packages tailored to your market and mission.</p>
+  <!-- Content Section -->
+  <div class="service-content" data-aos="fade-up" data-aos-duration="800">
+    <h2>Define Your Brand</h2>
+    <p>Our branding service helps businesses build a recognizable, consistent identity. From logo design to brand colors and typography, we ensure your visual presence communicates your message.</p>
+    <p>Whether you're just starting out or refreshing an existing brand, we’ll craft elements that align with your mission, values, and audience.</p>
+    <p data-aos="fade-right" data-aos-duration="700">
+  Every brand we create is built with strategy and purpose — combining visual appeal with clarity and consistency. From conceptual sketches to polished identity systems, we help businesses show up with confidence.
+</p>
+    <a href="contact.html" class="cta-btn">Start Your Brand Journey</a>
+  </div>
+  <!-- Branding Portfolio Section -->
+<section style="padding: 60px 20px; text-align: center;" data-aos="fade-up">
+  <h2 style="color: #facc15;">Branding Portfolio</h2>
+  <p style="color: #cbd5e1; max-width: 700px; margin: 20px auto;">
+    Here's a look at some of our logo designs</p>
 
-    <p>From logo concepts to complete brand kits (typography, color palettes, assets), we ensure your business is presented consistently and professionally everywhere it appears.</p>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+    <div class="portfolio-item logo" data-aos="zoom-in">
+      <a href="images/thriftkids-logo.jpg" data-lightbox="branding" data-title="ThriftKids Kenya Logo">
+        <img src="images/thriftkids-logo.jpg" alt="ThriftKids Logo" />
+      </a>
+      <p style="color: #f8fafc;">ThriftKids Kenya</p>
+    </div>
 
-    <p>Whether you're launching something new or refreshing your image — we've got you covered.</p>
+    <div class="portfolio-item logo" data-aos="zoom-in" data-aos-delay="100">
+      <a href="images/logo4.jpg" data-lightbox="branding" data-title="Tech Consultancy Logo">
+        <img src="images/logo4.jpg" alt="Tech Logo" />
+      </a>
+      <p style="color: #f8fafc;">Tech Consultancy</p>
+    </div>
 
-    <a href="contact.html" class="cta-btn">Start Branding</a>
-  </section>
+    <div class="portfolio-item logo" data-aos="zoom-in" data-aos-delay="200">
+      <a href="images/logo5.jpg" data-lightbox="branding" data-title="Wellness Brand Logo">
+        <img src="images/logo5.jpg" alt="Wellness Logo" />
+      </a>
+      <p style="color: #f8fafc;">Food & Beverage</p>
+    </div>
+  </div>
+</section>
 
-  <footer style="background: #020617; padding: 40px 20px; text-align: center; color: #94a3b8;">
-  <img src="images/logo.png" alt="Logo" style="height: 40px; margin-bottom: 10px;" />
-  <p>&copy; 2025 Eli Web Solutions. All rights reserved.</p>
-  <p>
-    <a href="mailto:eliwebsolutions01@gmail.com" style="color: #facc15;">eliwebsolutions01@gmail.com</a> |
-    <a href="tel:+254740674079" style="color: #facc15;">+254 740 674 079</a> |
-    <a href="https://instagram.com/eli.web.solutions" target="_blank" style="color: #facc15;">Instagram</a> |
-    <a href="https://linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #facc15;">LinkedIn</a>
-  </p>
+<footer style="background: #020617; padding: 60px 20px; color: #94a3b8; text-align: center;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 40px;">
+    
+    <!-- Logo & Tagline -->
+    <div style="flex: 1; min-width: 200px;">
+      <img src="images/logo.png" alt="Logo" style="height: 40px; margin-bottom: 10px;" />
+      <p style="margin-top: 10px; font-size: 14px;">We build digital identities & visual brands for small businesses & startups.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1; min-width: 150px; text-align: left;">
+      <h4 style="color: #facc15;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; margin-top: 10px;">
+        <li><a href="index.html" style="color: #94a3b8; text-decoration: none;">Home</a></li>
+        <li><a href="about.html" style="color: #94a3b8; text-decoration: none;">About</a></li>
+        <li><a href="services.html" style="color: #94a3b8; text-decoration: none;">Services</a></li>
+        <li><a href="portfolio.html" style="color: #94a3b8; text-decoration: none;">Portfolio</a></li>
+        <li><a href="faq.html" style="color: #94a3b8; text-decoration: none;">FAQ</a></li>
+        <li><a href="contact.html" style="color: #94a3b8; text-decoration: none;">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div style="flex: 1; min-width: 200px; text-align: left;">
+      <h4 style="color: #facc15;">Contact</h4>
+      <p style="margin-top: 10px;"><a href="mailto:eliwebsolutions01@gmail.com" style="color: #facc15;">eliwebsolutions01@gmail.com</a></p>
+      <p><a href="tel:+254740674079" style="color: #facc15;">+254 740 674 079</a></p>
+      <p><a href="https://instagram.com/eli.web.solutions" target="_blank" style="color: #facc15;">Instagram</a> | 
+         <a href="https://linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #facc15;">LinkedIn</a></p>
+    </div>
+
+  </div>
+
+  <hr style="margin: 40px 0; border: 0; border-top: 1px solid #334155;" />
+
+  <p style="font-size: 13px;">&copy; 2025 Eli Web Solutions. All rights reserved.</p>
 </footer>
 
+  <!-- AOS & Toggle Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init();
     function toggleMenu() {
-      const navLinks = document.getElementById("nav-links");
-      navLinks.classList.toggle("active");
+      document.getElementById("nav-links").classList.toggle("active");
     }
   </script>
-
 </body>
 </html>

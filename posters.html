@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Posters & Flyers | Eli Web Solutions</title>
+  <title>Poster Design | Eli Web Solutions</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     .service-hero {
       background: url('images/posters-bg.jpg') no-repeat center center/cover;
@@ -20,7 +21,7 @@
 
     .service-content {
       padding: 60px 20px;
-      background: #1e293b;
+      background: rgba(30, 41, 59, 0.65);
       color: #cbd5e1;
       max-width: 900px;
       margin: auto;
@@ -37,19 +38,36 @@
     }
 
     .cta-btn {
-      margin-top: 30px;
+      background: #facc15;
+      color: #0f172a;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #eab308;
     }
   </style>
 </head>
 <body>
-
   <header>
     <nav class="navbar">
       <div class="logo">
-  <a href="index.html">
-    <img src="images/logo.png" alt="Eli Web Solutions Logo" style="height: 48px;" />
-  </a>
-</div>
+        <a href="index.html">
+          <img src="images/logo.png" alt="Eli Web Solutions Logo" style="height: 48px;" />
+        </a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
       <div class="hamburger" onclick="toggleMenu()">
         <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
           <rect width="100" height="10"></rect>
@@ -57,49 +75,79 @@
           <rect y="60" width="100" height="10"></rect>
         </svg>
       </div>
-      <ul id="nav-links" class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
     </nav>
   </header>
 
   <section class="service-hero">
-    <h1>Posters & Flyers</h1>
-    <p>Visual designs that make your message stand out.</p>
+    <h1>Poster & Flyer Design</h1>
   </section>
-
-  <section class="service-content">
-    <h2>Promote Like a Pro</h2>
-    <p>Whether it’s an event, product, campaign, or announcement — we design posters and flyers that get attention. Every layout is crafted to match your goals and target audience.</p>
-
-    <p>We blend creativity with clarity — ensuring your key message is seen, remembered, and acted on. Digital or print-ready, you’ll always have bold visuals that represent you well.</p>
-
-    <p>Need it fast? We also offer express delivery options with professional results.</p>
-
-    <a href="contact.html" class="cta-btn">Request a Design</a>
-  </section>
-
-<<footer style="background: #020617; padding: 40px 20px; text-align: center; color: #94a3b8;">
-  <img src="images/logo.png" alt="Logo" style="height: 40px; margin-bottom: 10px;" />
-  <p>&copy; 2025 Eli Web Solutions. All rights reserved.</p>
-  <p>
-    <a href="mailto:eliwebsolutions01@gmail.com" style="color: #facc15;">eliwebsolutions01@gmail.com</a> |
-    <a href="tel:+254740674079" style="color: #facc15;">+254 740 674 079</a> |
-    <a href="https://instagram.com/eli.web.solutions" target="_blank" style="color: #facc15;">Instagram</a> |
-    <a href="https://linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #facc15;">LinkedIn</a>
+  <!-- Service Content -->
+  <div class="service-content" data-aos="fade-up" data-aos-duration="800">
+    <h2>Eye-Catching Posters & Flyers</h2>
+    <p>We design bold and vibrant posters that grab attention and communicate your message effectively. Whether you're promoting an event, product, or service — we've got you covered.</p>
+    <p>Each design is custom-made to match your brand style, using high-quality visuals that look amazing both digitally and in print.</p>
+    <a href="contact.html" class="cta-btn">Request a Poster</a>
+  </div>
+  <!-- Posters Portfolio Section -->
+<section style="padding: 60px 20px; text-align: center;" data-aos="fade-up">
+  <h2 style="color: #facc15;">Poster Portfolio</h2>
+  <p style="color: #cbd5e1; max-width: 700px; margin: 20px auto;">
+    A few poster samples from past work — designed for clarity, visual impact, and brand alignment.
   </p>
-</footer>
 
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+    <div class="portfolio-item" data-aos="zoom-in">
+      <a href="images/poster1.jpg" data-lightbox="posters" data-title="Music Event Poster">
+        <img src="images/poster1.jpg" alt="Poster Design 1" style="width: 220px; border-radius: 10px;" />
+      </a>
+      <p style="color: #f8fafc;">Music Event Poster</p>
+    </div>
+
+    <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
+      <a href="images/poster2.jpg" data-lightbox="posters" data-title="Product Launch Poster">
+        <img src="images/poster2.jpg" alt="Poster Design 2" style="width: 220px; border-radius: 10px;" />
+      </a>
+      <p style="color: #f8fafc;">Product Launch Poster</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer style="background: #020617; padding: 60px 20px; color: #94a3b8; text-align: center;">
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 40px;">
+      <div style="flex: 1; min-width: 200px;">
+        <img src="images/logo.png" alt="Logo" style="height: 40px; margin-bottom: 10px;" />
+        <p style="margin-top: 10px; font-size: 14px;">We build digital identities & visual brands for small businesses & startups.</p>
+      </div>
+      <div style="flex: 1; min-width: 150px; text-align: left;">
+        <h4 style="color: #facc15;">Quick Links</h4>
+        <ul style="list-style: none; padding: 0; margin-top: 10px;">
+          <li><a href="index.html" style="color: #94a3b8; text-decoration: none;">Home</a></li>
+          <li><a href="about.html" style="color: #94a3b8; text-decoration: none;">About</a></li>
+          <li><a href="services.html" style="color: #94a3b8; text-decoration: none;">Services</a></li>
+          <li><a href="faq.html" style="color: #94a3b8; text-decoration: none;">FAQ</a></li>
+          <li><a href="contact.html" style="color: #94a3b8; text-decoration: none;">Contact</a></li>
+        </ul>
+      </div>
+      <div style="flex: 1; min-width: 200px; text-align: left;">
+        <h4 style="color: #facc15;">Contact</h4>
+        <p style="margin-top: 10px;"><a href="mailto:eliwebsolutions01@gmail.com" style="color: #facc15;">eliwebsolutions01@gmail.com</a></p>
+        <p><a href="tel:+254740674079" style="color: #facc15;">+254 740 674 079</a></p>
+        <p><a href="https://instagram.com/eli.web.solutions" target="_blank" style="color: #facc15;">Instagram</a> |
+           <a href="https://linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #facc15;">LinkedIn</a></p>
+      </div>
+    </div>
+    <hr style="margin: 40px 0; border: 0; border-top: 1px solid #334155;" />
+    <p style="font-size: 13px;">&copy; 2025 Eli Web Solutions. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init();
     function toggleMenu() {
-      const navLinks = document.getElementById("nav-links");
-      navLinks.classList.toggle("active");
+      document.getElementById("nav-links").classList.toggle("active");
     }
   </script>
-
 </body>
 </html>

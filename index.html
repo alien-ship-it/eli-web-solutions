@@ -4,8 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Eli Web Solutions</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Lightbox2 CSS & JS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 </head>
 <body>
 
@@ -34,59 +38,19 @@
     </nav>
   </header>
 
-  <!-- 🔹 Hero Section -->
-  <section class="hero" style="background: url('images/hero-bg.jpg') no-repeat center center/cover; padding: 120px 20px; color: #f8fafc; text-align: center;">
+ <section class="hero-section">
+  <div class="hero-overlay">
     <h1>Welcome to <span style="color: #facc15;">Eli Web Solutions</span></h1>
     <p style="font-size: 1.2rem; color: #facc15;">We build digital identities for growing businesses.</p>
-    <a href="services.html" class="cta-btn" style="margin-top: 30px;">Explore Our Services</a>
-  </section>
-<!-- 🔹 Services Overview -->
-<section style="padding: 60px 20px; background: #1e293b; text-align: center;">
-  <h2 style="color: #facc15;">Our Core Services</h2>
-  <p style="color: #cbd5e1;">Helping businesses shine online through:</p>
-
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px;">
-    
-    <!-- Web Design -->
-    <a href="web-design.html" class="service-card">
-      <div>
-        <i class="fas fa-laptop-code fa-2x" style="color: #facc15;"></i>
-        <h3>Website Design</h3>
-        <p>Custom-built websites tailored to your goals and brand.</p>
-      </div>
-    </a>
-
-    <!-- Branding -->
-    <a href="branding.html" class="service-card">
-      <div>
-        <i class="fas fa-palette fa-2x" style="color: #facc15;"></i>
-        <h3>Branding & Logo</h3>
-        <p>Powerful visual identities that make your business memorable.</p>
-      </div>
-    </a>
-
-    <!-- Posters -->
-    <a href="posters.html" class="service-card">
-      <div>
-        <i class="fas fa-bullhorn fa-2x" style="color: #facc15;"></i>
-        <h3>Posters & Flyers</h3>
-        <p>Eye-catching graphics for promos, events, and ads.</p>
-      </div>
-    </a>
-
-    <!-- Web Management -->
-    <a href="web-management.html" class="service-card">
-      <div>
-        <i class="fas fa-tools fa-2x" style="color: #facc15;"></i>
-        <h3>Website Management</h3>
-        <p>Ongoing updates, backups & care to keep your site running smoothly.</p>
-      </div>
-    </a>
-
+   <div style="margin-top: 30px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+  <a href="services.html" class="cta-btn">Explore Our Services</a>
+  <a href="contact.html" class="cta-btn" style="background: #0f172a; color: #facc15; border: 2px solid #facc15;">Get Started</a>
+</div>
   </div>
 </section>
+
 <!-- 🔹 Testimonials Carousel -->
-<section style="background: #0f172a; padding: 60px 20px; color: #f8fafc; text-align: center;">
+<section style="background: rgba(15, 23, 42, 0.65); padding: 60px 20px; color: #f8fafc; text-align: center;">
   <h2 style="color: #facc15;">What Our Clients Say</h2>
 
   <div class="carousel" style="margin-top: 40px; max-width: 700px; margin-inline: auto; position: relative;">
@@ -111,6 +75,121 @@
       <button onclick="nextTestimonial()" style="margin: 0 10px;">➡</button>
     </div>
   </div>
+</section>
+<!-- 🔹 Filterable Portfolio Section -->
+<section style="padding: 60px 20px; background: rgba(30, 41, 59, 0.65); text-align: center;">
+  <h2 style="color: #facc15;">Our Work</h2>
+  <p>Browse by category:</p>
+
+  <!-- Filter Buttons -->
+  <div style="margin: 20px 0;">
+    <button class="filter-btn" onclick="filterSelection('all')">All</button>
+    <button class="filter-btn" onclick="filterSelection('logo')">Logos</button>
+    <button class="filter-btn" onclick="filterSelection('poster')">Posters</button>
+  </div>
+
+  <!-- Portfolio Grid -->
+  <div class="portfolio-grid">
+
+    <div class="portfolio-item logo">
+      <a href="images/thriftkids-logo.jpg" data-lightbox="portfolio" data-title="ThriftKids Kenya Logo">
+        <img src="images/thriftkids-logo.jpg" alt="Logo" />
+      </a>
+      <p>Logo – ThriftKids Kenya</p>
+    </div>
+
+    <div class="portfolio-item logo">
+      <a href="images/logo2.jpg" data-lightbox="portfolio" data-title="Modern Startup Logo">
+        <img src="images/logo2.jpg" alt="Logo" />
+      </a>
+      <p>Logo – Modern Startup</p>
+    </div>
+
+    <div class="portfolio-item logo">
+      <a href="images/logo3.jpg" data-lightbox="portfolio" data-title="E-commerce Brand">
+        <img src="images/logo3.jpg" alt="Logo" />
+      </a>
+      <p>Logo – E-commerce Brand</p>
+    </div>
+    <div class="portfolio-item logo">
+  <a href="images/logo4.jpg" data-lightbox="portfolio" data-title="Tech Consultancy Logo">
+    <img src="images/logo4.jpg" alt="Logo 4" />
+  </a>
+  <p>Logo – Tech Consultancy</p>
+</div>
+
+<div class="portfolio-item logo">
+  <a href="images/logo5.jpg" data-lightbox="portfolio" data-title="Health & Wellness Logo">
+    <img src="images/logo5.jpg" alt="Logo 5" />
+  </a>
+  <p>Logo – Food & Beverages</p>
+</div>
+
+    <div class="portfolio-item poster">
+      <a href="images/poster1.jpg" data-lightbox="portfolio" data-title="Product Launch Poster">
+        <img src="images/poster1.jpg" alt="Poster" />
+      </a>
+      <p>Poster – Product Launch</p>
+    </div>
+
+    <div class="portfolio-item poster">
+      <a href="images/poster2.jpg" data-lightbox="portfolio" data-title="Music Event Poster">
+        <img src="images/poster2.jpg" alt="Poster" />
+      </a>
+      <p>Poster – Custom Design</p>
+    </div>
+
+  </div>
+</section>
+<!-- 🔹 Features / Capabilities Section -->
+<section data-aos="fade-right" data-aos-duration="800" style="padding: 60px 20px; background: rgba(15, 23, 42, 0.65); text-align: center;">
+  <h2 style="color: #facc15;">What Makes Us Stand Out</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+    <div style="max-width: 250px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" style="width: 60px;" alt="Design">
+      <h4 style="margin-top: 10px;">Creative Design</h4>
+      <p>We bring your ideas to life with modern and engaging visuals that captivate your audience.</p>
+    </div>
+    <div style="max-width: 250px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/3242/3242257.png" style="width: 60px;" alt="Speed">
+      <h4 style="margin-top: 10px;">Fast Turnaround</h4>
+      <p>We value time. Get your brand assets and websites delivered on time, every time.</p>
+    </div>
+    <div style="max-width: 250px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828743.png" style="width: 60px;" alt="Mobile">
+      <h4 style="margin-top: 10px;">Mobile First</h4>
+      <p>All our designs are mobile-responsive — perfect across all screens and devices.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 🔹 Our Process -->
+<section data-aos="fade-left" data-aos-duration="800" style="padding: 60px 20px; background: rgba(30, 41, 59, 0.65); text-align: center;">
+  <h2 style="color: #facc15;">How It Works</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
+    <div style="max-width: 250px;">
+      <h3 style="color: #facc15;">1</h3>
+      <h4>Let's Talk</h4>
+      <p>We begin with a conversation to understand your vision, goals, and target audience.</p>
+    </div>
+    <div style="max-width: 250px;">
+      <h3 style="color: #facc15;">2</h3>
+      <h4>We Design & Build</h4>
+      <p>From logos to full websites, we build custom designs tailored to your needs.</p>
+    </div>
+    <div style="max-width: 250px;">
+      <h3 style="color: #facc15;">3</h3>
+      <h4>Review & Launch</h4>
+      <p>You review the work, we polish it, and once you're happy, we launch it live.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 🔹 Contact CTA -->
+<section data-aos="fade-up" data-aos-duration="800" style="padding: 60px 20px; background: rgba(15, 23, 42, 0.65); text-align: center;">
+  <h2 style="color: #facc15;">Ready to Start Your Project?</h2>
+  <p>Whether you need a logo, website, or full brand strategy — we’re here to make it happen.</p>
+  <a href="contact.html" class="cta-btn" style="margin-top: 20px; display: inline-block;">Get in Touch</a>
 </section>
 
 <script>
@@ -153,16 +232,42 @@
     display: block;
   }
 </style>
-<!-- 🔹 Footer -->
-<footer style="background: #020617; padding: 40px 20px; text-align: center; color: #94a3b8;">
-  <img src="images/logo.png" alt="Logo" style="height: 40px; margin-bottom: 10px;" />
-  <p>&copy; 2025 Eli Web Solutions. All rights reserved.</p>
-  <p>
-    <a href="mailto:eliwebsolutions01@gmail.com" style="color: #facc15;">eliwebsolutions01@gmail.com</a> |
-    <a href="tel:+254740674079" style="color: #facc15;">+254 740 674 079</a> |
-    <a href="https://instagram.com/eli.web.solutions" target="_blank" style="color: #facc15;">Instagram</a> |
-    <a href="https://linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #facc15;">LinkedIn</a>
-  </p>
+<footer style="background: #020617; padding: 60px 20px; color: #94a3b8; text-align: center;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 40px;">
+    
+    <!-- Logo & Tagline -->
+    <div style="flex: 1; min-width: 200px;">
+      <img src="images/logo.png" alt="Logo" style="height: 40px; margin-bottom: 10px;" />
+      <p style="margin-top: 10px; font-size: 14px;">We build digital identities & visual brands for small businesses & startups.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1; min-width: 150px; text-align: left;">
+      <h4 style="color: #facc15;">Quick Links</h4>
+      <ul style="list-style: none; padding: 0; margin-top: 10px;">
+        <li><a href="index.html" style="color: #94a3b8; text-decoration: none;">Home</a></li>
+        <li><a href="about.html" style="color: #94a3b8; text-decoration: none;">About</a></li>
+        <li><a href="services.html" style="color: #94a3b8; text-decoration: none;">Services</a></li>
+        <li><a href="portfolio.html" style="color: #94a3b8; text-decoration: none;">Portfolio</a></li>
+        <li><a href="faq.html" style="color: #94a3b8; text-decoration: none;">FAQ</a></li>
+        <li><a href="contact.html" style="color: #94a3b8; text-decoration: none;">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div style="flex: 1; min-width: 200px; text-align: left;">
+      <h4 style="color: #facc15;">Contact</h4>
+      <p style="margin-top: 10px;"><a href="mailto:eliwebsolutions01@gmail.com" style="color: #facc15;">eliwebsolutions01@gmail.com</a></p>
+      <p><a href="tel:+254740674079" style="color: #facc15;">+254 740 674 079</a></p>
+      <p><a href="https://instagram.com/eli.web.solutions" target="_blank" style="color: #facc15;">Instagram</a> | 
+         <a href="https://linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #facc15;">LinkedIn</a></p>
+    </div>
+
+  </div>
+
+  <hr style="margin: 40px 0; border: 0; border-top: 1px solid #334155;" />
+
+  <p style="font-size: 13px;">&copy; 2025 Eli Web Solutions. All rights reserved.</p>
 </footer>
 
 <!-- 🔹 Hamburger Script -->
@@ -172,6 +277,22 @@
     navLinks.classList.toggle("active");
   }
 </script>
+<script>
+function filterSelection(category) {
+  const items = document.querySelectorAll(".portfolio-item");
+  items.forEach(item => {
+    item.classList.remove("show");
+    if (category === "all" || item.classList.contains(category)) {
+      item.classList.add("show");
+    }
+  });
+}
+
+// Show all on load
+window.onload = () => filterSelection("all");
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 
 </body>
 </html>
