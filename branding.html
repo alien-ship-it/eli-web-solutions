@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Branding | Eli Web Solutions</title>
+  <meta name="description" content="Eli Web Solutions offers website design, branding, poster design, and digital management for small businesses and startups in Kenya.">
+<meta name="keywords" content="web design Kenya, branding, poster design, website management, Eli Web Solutions">
+<meta name="author" content="Eli Web Solutions">
+<meta name="robots" content="index, follow">
+  <title>Branding Services | Eli Web Solutions  Logo & Identity Design</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
@@ -96,32 +100,14 @@
     <a href="contact.html" class="cta-btn">Start Your Brand Journey</a>
   </div>
   <!-- Branding Portfolio Section -->
-<section style="padding: 60px 20px; text-align: center;" data-aos="fade-up">
-  <h2 style="color: #facc15;">Branding Portfolio</h2>
-  <p style="color: #cbd5e1; max-width: 700px; margin: 20px auto;">
-    Here's a look at some of our logo designs</p>
-
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
-    <div class="portfolio-item logo" data-aos="zoom-in">
-      <a href="images/thriftkids-logo.jpg" data-lightbox="branding" data-title="ThriftKids Kenya Logo">
-        <img src="images/thriftkids-logo.jpg" alt="ThriftKids Logo" />
-      </a>
-      <p style="color: #f8fafc;">ThriftKids Kenya</p>
-    </div>
-
-    <div class="portfolio-item logo" data-aos="zoom-in" data-aos-delay="100">
-      <a href="images/logo4.jpg" data-lightbox="branding" data-title="Tech Consultancy Logo">
-        <img src="images/logo4.jpg" alt="Tech Logo" />
-      </a>
-      <p style="color: #f8fafc;">Tech Consultancy</p>
-    </div>
-
-    <div class="portfolio-item logo" data-aos="zoom-in" data-aos-delay="200">
-      <a href="images/logo5.jpg" data-lightbox="branding" data-title="Wellness Brand Logo">
-        <img src="images/logo5.jpg" alt="Wellness Logo" />
-      </a>
-      <p style="color: #f8fafc;">Food & Beverage</p>
-    </div>
+<section class="portfolio-carousel" style="text-align: center; padding: 60px 20px;">
+  <h2 style="color: #facc15;">Showcase</h2>
+  <div class="carousel-container" id="logo-carousel">
+    <div class="carousel-slide active"><img src="images/thriftkids-logo.jpg" /><p>ThriftKids Kenya</p></div>
+    <div class="carousel-slide"><img src="images/logo2.jpg" /><p>Tech Consultancy</p></div>
+    <div class="carousel-slide"><img src="images/logo5.jpg" /><p>Beverage shop</p></div>
+    <div class="carousel-slide"><img src="images/logo3.jpg" /><p>Retail Logo</p></div>
+    <div class="carousel-slide"><img src="images/logo4.jpg" /><p>EduTech Logo</p></div>
   </div>
 </section>
 
@@ -171,5 +157,23 @@
       document.getElementById("nav-links").classList.toggle("active");
     }
   </script>
+  <script>
+  function setupCarousel(carouselId, interval = 3500) {
+    let slides = document.querySelectorAll(`#${carouselId} .carousel-slide`);
+    let index = 0;
+
+    function showNextSlide() {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }
+
+    setInterval(showNextSlide, interval);
+  }
+
+  setupCarousel("logo-carousel");
+  setupCarousel("poster-carousel");
+</script>
+
 </body>
 </html>

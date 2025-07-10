@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Poster Design | Eli Web Solutions</title>
+  <meta name="description" content="Eli Web Solutions offers website design, branding, poster design, and digital management for small businesses and startups in Kenya.">
+<meta name="keywords" content="web design Kenya, branding, poster design, website management, Eli Web Solutions">
+<meta name="author" content="Eli Web Solutions">
+<meta name="robots" content="index, follow">
+  <title>Poster Design | Eli Web Solutions  Event & Marketing Posters</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
@@ -89,26 +93,14 @@
     <a href="contact.html" class="cta-btn">Request a Poster</a>
   </div>
   <!-- Posters Portfolio Section -->
-<section style="padding: 60px 20px; text-align: center;" data-aos="fade-up">
-  <h2 style="color: #facc15;">Poster Portfolio</h2>
-  <p style="color: #cbd5e1; max-width: 700px; margin: 20px auto;">
-    A few poster samples from past work — designed for clarity, visual impact, and brand alignment.
-  </p>
-
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
-    <div class="portfolio-item" data-aos="zoom-in">
-      <a href="images/poster1.jpg" data-lightbox="posters" data-title="Music Event Poster">
-        <img src="images/poster1.jpg" alt="Poster Design 1" style="width: 220px; border-radius: 10px;" />
-      </a>
-      <p style="color: #f8fafc;">Music Event Poster</p>
-    </div>
-
-    <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
-      <a href="images/poster2.jpg" data-lightbox="posters" data-title="Product Launch Poster">
-        <img src="images/poster2.jpg" alt="Poster Design 2" style="width: 220px; border-radius: 10px;" />
-      </a>
-      <p style="color: #f8fafc;">Product Launch Poster</p>
-    </div>
+<section class="portfolio-carousel" style="text-align: center; padding: 60px 20px;">
+  <h2 style="color: #facc15;">Highlights</h2>
+  <div class="carousel-container" id="poster-carousel">
+    <div class="carousel-slide active"><img src="images/poster2.jpg" /><p>Custom Design</p></div>
+    <div class="carousel-slide"><img src="images/poster1.jpg" /><p>Product Launch</p></div>
+    <div class="carousel-slide"><img src="images/poster3.jpg" /><p>Restaurant Flyer</p></div>
+    <div class="carousel-slide"><img src="images/poster4.jpg" /><p>Brand Awareness</p></div>
+    <div class="carousel-slide"><img src="images/poster5.jpg" /><p>Travel Poster</p></div>
   </div>
 </section>
 
@@ -149,5 +141,23 @@
       document.getElementById("nav-links").classList.toggle("active");
     }
   </script>
+  <script>
+  function setupCarousel(carouselId, interval = 3500) {
+    let slides = document.querySelectorAll(`#${carouselId} .carousel-slide`);
+    let index = 0;
+
+    function showNextSlide() {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }
+
+    setInterval(showNextSlide, interval);
+  }
+
+  setupCarousel("logo-carousel");
+  setupCarousel("poster-carousel");
+</script>
+
 </body>
 </html>

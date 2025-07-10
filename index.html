@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Eli Web Solutions</title>
+  <meta name="description" content="Eli Web Solutions offers website design, branding, poster design, and digital management for small businesses and startups in Kenya.">
+<meta name="keywords" content="web design Kenya, branding, poster design, website management, Eli Web Solutions">
+<meta name="author" content="Eli Web Solutions">
+<meta name="robots" content="index, follow">
+  <title>Eli Web Solutions  Creative Design & Digital SolutionS</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -77,70 +81,27 @@
   </div>
 </section>
 <!-- 🔹 Filterable Portfolio Section -->
-<section style="padding: 60px 20px; background: rgba(30, 41, 59, 0.65); text-align: center;">
-  <h2 style="color: #facc15;">Our Work</h2>
-  <p>Browse by category:</p>
-
-  <!-- Filter Buttons -->
-  <div style="margin: 20px 0;">
-    <button class="filter-btn" onclick="filterSelection('all')">All</button>
-    <button class="filter-btn" onclick="filterSelection('logo')">Logos</button>
-    <button class="filter-btn" onclick="filterSelection('poster')">Posters</button>
-  </div>
-
-  <!-- Portfolio Grid -->
-  <div class="portfolio-grid">
-
-    <div class="portfolio-item logo">
-      <a href="images/thriftkids-logo.jpg" data-lightbox="portfolio" data-title="ThriftKids Kenya Logo">
-        <img src="images/thriftkids-logo.jpg" alt="Logo" />
-      </a>
-      <p>Logo – ThriftKids Kenya</p>
-    </div>
-
-    <div class="portfolio-item logo">
-      <a href="images/logo2.jpg" data-lightbox="portfolio" data-title="Modern Startup Logo">
-        <img src="images/logo2.jpg" alt="Logo" />
-      </a>
-      <p>Logo – Modern Startup</p>
-    </div>
-
-    <div class="portfolio-item logo">
-      <a href="images/logo3.jpg" data-lightbox="portfolio" data-title="E-commerce Brand">
-        <img src="images/logo3.jpg" alt="Logo" />
-      </a>
-      <p>Logo – E-commerce Brand</p>
-    </div>
-    <div class="portfolio-item logo">
-  <a href="images/logo4.jpg" data-lightbox="portfolio" data-title="Tech Consultancy Logo">
-    <img src="images/logo4.jpg" alt="Logo 4" />
-  </a>
-  <p>Logo – Tech Consultancy</p>
-</div>
-
-<div class="portfolio-item logo">
-  <a href="images/logo5.jpg" data-lightbox="portfolio" data-title="Health & Wellness Logo">
-    <img src="images/logo5.jpg" alt="Logo 5" />
-  </a>
-  <p>Logo – Food & Beverages</p>
-</div>
-
-    <div class="portfolio-item poster">
-      <a href="images/poster1.jpg" data-lightbox="portfolio" data-title="Product Launch Poster">
-        <img src="images/poster1.jpg" alt="Poster" />
-      </a>
-      <p>Poster – Product Launch</p>
-    </div>
-
-    <div class="portfolio-item poster">
-      <a href="images/poster2.jpg" data-lightbox="portfolio" data-title="Music Event Poster">
-        <img src="images/poster2.jpg" alt="Poster" />
-      </a>
-      <p>Poster – Custom Design</p>
-    </div>
-
+<section class="portfolio-carousel" style="text-align: center; padding: 60px 20px;">
+  <h2 style="color: #facc15;">Logo Showcase</h2>
+  <div class="carousel-container" id="logo-carousel">
+    <div class="carousel-slide active"><img src="images/thriftkids-logo.jpg" /><p>ThriftKids Kenya</p></div>
+    <div class="carousel-slide"><img src="images/logo2.jpg" /><p>Tech Consultancy</p></div>
+    <div class="carousel-slide"><img src="images/logo5.jpg" /><p>Beverage shop</p></div>
+    <div class="carousel-slide"><img src="images/logo3.jpg" /><p>Retail Logo</p></div>
+    <div class="carousel-slide"><img src="images/logo4.jpg" /><p>EduTech Logo</p></div>
   </div>
 </section>
+<section class="portfolio-carousel" style="text-align: center; padding: 60px 20px;">
+  <h2 style="color: #facc15;">Poster Highlights</h2>
+  <div class="carousel-container" id="poster-carousel">
+    <div class="carousel-slide active"><img src="images/poster2.jpg" /><p>Custom Design</p></div>
+    <div class="carousel-slide"><img src="images/poster1.jpg" /><p>Product Launch</p></div>
+    <div class="carousel-slide"><img src="images/poster3.jpg" /><p>Restaurant Flyer</p></div>
+    <div class="carousel-slide"><img src="images/poster4.jpg" /><p>Brand Awareness</p></div>
+    <div class="carousel-slide"><img src="images/poster5.jpg" /><p>Travel Poster</p></div>
+  </div>
+</section>
+
 <!-- 🔹 Features / Capabilities Section -->
 <section data-aos="fade-right" data-aos-duration="800" style="padding: 60px 20px; background: rgba(15, 23, 42, 0.65); text-align: center;">
   <h2 style="color: #facc15;">What Makes Us Stand Out</h2>
@@ -293,6 +254,23 @@ window.onload = () => filterSelection("all");
 </script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
+<script>
+  function setupCarousel(carouselId, interval = 3500) {
+    let slides = document.querySelectorAll(`#${carouselId} .carousel-slide`);
+    let index = 0;
+
+    function showNextSlide() {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }
+
+    setInterval(showNextSlide, interval);
+  }
+
+  setupCarousel("logo-carousel");
+  setupCarousel("poster-carousel");
+</script>
 
 </body>
 </html>
