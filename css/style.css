@@ -208,57 +208,22 @@ footer a:hover {
     padding: 80px 20px;
   }
 }
-/* === PORTFOLIO CAROUSEL === */
-.carousel-container {
-  position: relative;
-  max-width: 240px;
-  margin: auto;
-}
 
-.carousel-slide {
-  display: none;
-  transition: opacity 0.5s ease;
-}
-
-.carousel-slide.active {
-  display: block;
-}
-
-.carousel-slide img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #facc15;
-  margin-bottom: 10px;
-}
-.carousel-container {
-  position: relative;
-  max-width: 260px;
-  margin: 30px auto;
-}
-
-.carousel-slide {
-  display: none;
-  text-align: center;
-  transition: opacity 0.5s ease;
-}
-
-.carousel-slide.active {
-  display: block;
-}
-
-.carousel-slide img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #facc15;
-  margin-bottom: 10px;
-}
-
-#poster-carousel .carousel-slide img {
-  width: 180px;
+.swiper-slide img {
+  width: 100%;
+  max-width: 200px;
   height: auto;
-  border-radius: 12px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  border: 2px solid #facc15;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.05);
+}
+
+.swiper-slide p {
+  margin-top: 10px;
+  color: #f8fafc;
+  font-weight: bold;
 }

@@ -10,6 +10,12 @@
   <title>Branding Services | Eli Web Solutions  Logo & Identity Design</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Lightbox CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     .service-hero {
       background: url('images/branding-bg.jpg') no-repeat center center/cover;
@@ -100,52 +106,82 @@
     <a href="contact.html" class="cta-btn">Start Your Brand Journey</a>
   </div>
   <!-- Branding Portfolio Section -->
-<section class="portfolio-carousel" style="text-align: center; padding: 60px 20px;">
+<section style="padding: 60px 20px; text-align: center;" data-aos="fade-up">
   <h2 style="color: #facc15;">Showcase</h2>
-  <div class="carousel-container" id="logo-carousel">
-    <div class="carousel-slide active"><img src="images/thriftkids-logo.jpg" /><p>ThriftKids Kenya</p></div>
-    <div class="carousel-slide"><img src="images/logo2.jpg" /><p>Tech Consultancy</p></div>
-    <div class="carousel-slide"><img src="images/logo5.jpg" /><p>Beverage shop</p></div>
-    <div class="carousel-slide"><img src="images/logo3.jpg" /><p>Retail Logo</p></div>
-    <div class="carousel-slide"><img src="images/logo4.jpg" /><p>EduTech Logo</p></div>
+  <div class="swiper-container logo-swiper" style="margin-top: 40px;">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a href="images/thriftkids-logo.jpg" data-lightbox="logos"><img src="images/thriftkids-logo.jpg" alt="ThriftKids" /></a>
+        <p>ThriftKids Kenya</p>
+      </div>
+      <div class="swiper-slide">
+        <a href="images/logo2.jpg" data-lightbox="logos"><img src="images/logo2.jpg" alt="Modern Startup" /></a>
+        <p>Modern Startup</p>
+      </div>
+      <div class="swiper-slide">
+        <a href="images/logo3.jpg" data-lightbox="logos"><img src="images/logo3.jpg" alt="E-Commerce Brand" /></a>
+        <p>E-Commerce Brand</p>
+      </div>
+      <div class="swiper-slide">
+        <a href="images/logo4.jpg" data-lightbox="logos"><img src="images/logo4.jpg" alt="Tech Logo" /></a>
+        <p>Tech Consultancy</p>
+      </div>
+      <div class="swiper-slide">
+        <a href="images/logo5.jpg" data-lightbox="logos"><img src="images/logo5.jpg" alt="Food & Beverage" /></a>
+        <p>Food & Beverage</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer style="background: #020617; padding: 60px 20px; color: #94a3b8; text-align: center;">
-  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 40px;">
+  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; align-items: flex-start;">
     
-    <!-- Logo & Tagline -->
+    <!-- Logo and description -->
     <div style="flex: 1; min-width: 200px;">
-      <img src="images/logo.png" alt="Logo" style="height: 40px; margin-bottom: 10px;" />
-      <p style="margin-top: 10px; font-size: 14px;">We build digital identities & visual brands for small businesses & startups.</p>
+      <img src="images/logo.png" alt="Logo" style="height: 48px; margin-bottom: 10px;" />
+      <p style="margin-top: 10px; font-size: 14px;">
+        We build digital identities & visual brands for small businesses & startups.
+      </p>
     </div>
 
-    <!-- Quick Links -->
+    <!-- Quick Links (no Portfolio) -->
     <div style="flex: 1; min-width: 150px; text-align: left;">
       <h4 style="color: #facc15;">Quick Links</h4>
       <ul style="list-style: none; padding: 0; margin-top: 10px;">
-        <li><a href="index.html" style="color: #94a3b8; text-decoration: none;">Home</a></li>
-        <li><a href="about.html" style="color: #94a3b8; text-decoration: none;">About</a></li>
-        <li><a href="services.html" style="color: #94a3b8; text-decoration: none;">Services</a></li>
-        <li><a href="portfolio.html" style="color: #94a3b8; text-decoration: none;">Portfolio</a></li>
-        <li><a href="faq.html" style="color: #94a3b8; text-decoration: none;">FAQ</a></li>
-        <li><a href="contact.html" style="color: #94a3b8; text-decoration: none;">Contact</a></li>
+        <li><a href="index.html" style="color: #94a3b8;">Home</a></li>
+        <li><a href="about.html" style="color: #94a3b8;">About</a></li>
+        <li><a href="services.html" style="color: #94a3b8;">Services</a></li>
+        <li><a href="faq.html" style="color: #94a3b8;">FAQ</a></li>
+        <li><a href="contact.html" style="color: #94a3b8;">Contact</a></li>
       </ul>
     </div>
 
-    <!-- Contact Info -->
+    <!-- Contact with icons -->
     <div style="flex: 1; min-width: 200px; text-align: left;">
       <h4 style="color: #facc15;">Contact</h4>
-      <p style="margin-top: 10px;"><a href="mailto:eliwebsolutions01@gmail.com" style="color: #facc15;">eliwebsolutions01@gmail.com</a></p>
-      <p><a href="tel:+254740674079" style="color: #facc15;">+254 740 674 079</a></p>
-      <p><a href="https://instagram.com/eli.web.solutions" target="_blank" style="color: #facc15;">Instagram</a> | 
-         <a href="https://linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #facc15;">LinkedIn</a></p>
+      <p style="margin-top: 10px;">
+        <a href="mailto:eliwebsolutions01@gmail.com" style="color: #facc15;">
+          📧 eliwebsolutions01@gmail.com
+        </a>
+      </p>
+      <p>
+        <a href="tel:+254740674079" style="color: #facc15;">
+          📞 +254 740 674 079
+        </a>
+      </p>
+     <p>
+  <a href="https://instagram.com/eli.web.solutions" target="_blank" style="color: #facc15;">
+    <i class="fab fa-instagram"></i> Instagram
+  </a> |
+  <a href="https://linkedin.com/in/eli-web-solutions-b13675372" target="_blank" style="color: #facc15;">
+    <i class="fab fa-linkedin"></i> LinkedIn
+  </a>
+</p>
     </div>
-
   </div>
 
   <hr style="margin: 40px 0; border: 0; border-top: 1px solid #334155;" />
-
   <p style="font-size: 13px;">&copy; 2025 Eli Web Solutions. All rights reserved.</p>
 </footer>
 
@@ -157,22 +193,33 @@
       document.getElementById("nav-links").classList.toggle("active");
     }
   </script>
-  <script>
-  function setupCarousel(carouselId, interval = 3500) {
-    let slides = document.querySelectorAll(`#${carouselId} .carousel-slide`);
-    let index = 0;
+  <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    function showNextSlide() {
-      slides[index].classList.remove("active");
-      index = (index + 1) % slides.length;
-      slides[index].classList.add("active");
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+<!-- Swiper Config -->
+<script>
+  const logoSwiper = new Swiper(".logo-swiper", {
+    loop: true,
+    autoplay: { delay: 2500, disableOnInteraction: false },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      768: { slidesPerView: 3 }
     }
+  });
 
-    setInterval(showNextSlide, interval);
-  }
-
-  setupCarousel("logo-carousel");
-  setupCarousel("poster-carousel");
+  const posterSwiper = new Swiper(".poster-swiper", {
+    loop: true,
+    autoplay: { delay: 3000, disableOnInteraction: false },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      768: { slidesPerView: 3 }
+    }
+  });
 </script>
 
 </body>
