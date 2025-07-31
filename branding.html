@@ -135,7 +135,7 @@
 </section>
 
 <footer style="background: #020617; padding: 60px 20px; color: #94a3b8;">
-  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start;">
+  <div class="footer-container" style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start;">
 
     <!-- Logo & Tagline -->
     <div style="flex: 1; min-width: 200px;">
@@ -156,12 +156,12 @@
     </div>
 
     <!-- Contact Icons -->
-     <div class="contact-icons">
-      <div style="flex: 1; min-width: 160px;">
-      <h4 style="color: #facc15; margin-bottom: 12px;">Contact</h4>
-      <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+    <div class="footer-contact-column" style="flex: 1; min-width: 160px; display: flex; flex-direction: column; align-items: flex-start;">
+       <h4 style="color: #facc15; margin-bottom: 12px;">Contact</h4>
+       <div class="contact-icons" style="display: flex; gap: 14px; flex-wrap: wrap;">
         <!-- Email -->
         <a href="mailto:eliwebsolutions01@gmail.com" title="Email">
+          <!-- SVG Icon -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#facc15" viewBox="0 0 24 24"><path d="M2 4h20v16H2z" fill="none"/><path d="M22 6.25v-1.5A1.75 1.75 0 0020.25 3H3.75A1.75 1.75 0 002 4.75v14.5A1.75 1.75 0 003.75 21h16.5A1.75 1.75 0 0022 19.25V6.25zM3.5 5.5h17L12 13.06 3.5 5.5z"/></svg>
         </a>
 
@@ -173,12 +173,11 @@
         <!-- Instagram -->
         <a href="https://instagram.com/eli.web.solutions" target="_blank" title="Instagram">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="#facc15" fill="none" stroke-width="2" viewBox="0 0 24 24">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-          <circle cx="12" cy="12" r="4"/>
-          <circle cx="17" cy="7" r="1"/>
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17" cy="7" r="1"/>
           </svg>
         </a>
-
 
         <!-- LinkedIn -->
         <a href="https://linkedin.com/in/eli-web-solutions-b13675372" target="_blank" title="LinkedIn">
@@ -188,9 +187,10 @@
     </div>
   </div>
 
-  <div class="footer-bottom">
-  <p>&copy; 2025 Eli Web Solutions. All rights reserved.</p>
-</div>
+  <!-- ✅ Properly Centered Bottom Text -->
+  <div class="footer-bottom" style="margin-top: 40px;">
+    <p style="text-align: center;">&copy; 2025 Eli Web Solutions. All rights reserved.</p>
+  </div>
 </footer>
 
   <!-- AOS & Toggle Script -->
