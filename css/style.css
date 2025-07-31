@@ -162,22 +162,6 @@ header {
   opacity: 1;
 }
 
-/* === FOOTER === */
-footer {
-  background: #020617;
-  padding: 40px 20px;
-  text-align: center;
-  color: #94a3b8;
-}
-
-footer a {
-  color: #facc15;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
@@ -226,4 +210,73 @@ footer a:hover {
   margin-top: 10px;
   color: #f8fafc;
   font-weight: bold;
+}
+/* === FOOTER === */
+footer {
+  background: #020617;
+  padding: 40px 20px;
+  text-align: center;
+  color: #94a3b8;
+}
+
+footer a {
+  color: #facc15;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-link {
+  color: #94a3b8;
+  text-decoration: none;
+  display: inline-block;
+  padding: 6px 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #facc15;
+  transform: translateX(4px);
+}
+
+footer h4 {
+  margin-bottom: 16px;
+}
+
+footer .contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start; /* will change to center on mobile via media query */
+  gap: 14px;
+  margin-top: 8px; /* Creates space between heading and icons */
+}
+
+.footer-bottom {
+  font-size: 14px;
+  color: #94a3b8;
+}
+/* Responsive footer layout */
+@media (max-width: 768px) {
+  footer .footer-container {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .footer-container > div {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  
+   footer .footer-contact-column {
+    align-items: center !important;
+    text-align: center;
+  }
+
+  footer .contact-icons {
+    justify-content: center;
+  }
 }
