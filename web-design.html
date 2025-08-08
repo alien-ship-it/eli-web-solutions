@@ -2,65 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eli Web Solutions offers website design, branding, poster design, and digital management for small businesses and startups in Kenya.">
-<meta name="keywords" content="web design Kenya, branding, poster design, website management, Eli Web Solutions">
-<meta name="author" content="Eli Web Solutions">
-<meta name="robots" content="index, follow">
-  <title>Web Design | Eli Web Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Web Design — Eli Web Solutions</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    .service-hero {
-      background: url('images/web-bg.jpg') no-repeat center center/cover;
-      padding: 120px 20px;
-      text-align: center;
-      color: #f8fafc;
-    }
-
-    .service-hero h1 {
-      font-size: 3rem;
-      color: #facc15;
-    }
-
-    .service-content {
-      padding: 60px 20px;
-      background: rgba(30, 41, 59, 0.65);
-      color: #cbd5e1;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .service-content h2 {
-      color: #facc15;
-      margin-bottom: 20px;
-    }
-
-    .service-content p {
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    .cta-btn {
-      background: #facc15;
-      color: #0f172a;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      transition: background 0.3s ease;
-    }
-
-    .cta-btn:hover {
-      background: #eab308;
-    }
-  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
+  <!-- … your nav & hero here … -->
+<header>
     <nav class="navbar">
       <div class="logo">
         <a href="index.html">
@@ -84,20 +32,56 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="service-hero">
-    <h1>Web Design & Development</h1>
+  <!-- ====== WEB DESIGN INTRO ====== -->
+  <section class="web-design-intro">
+    <div class="overlay">
+      <div class="container">
+        <h1>Web Design Services</h1>
+        <p>
+          At Eli Web Solutions, I build responsive, modern websites that tell your brand story and convert visitors into customers. Whether you need a brochure site, a dynamic blog, or a full e-commerce platform, I’ve got you covered from concept to launch.
+        </p>
+        <ul class="design-features">
+         <li>Custom layouts with HTML5 & CSS3</li>
+         <li>Interactive UI (JavaScript & CSS animations)</li>
+         <li>Mobile-first, responsive design</li>
+         <li>SEO-friendly structure & performance optimizations</li>
+        </ul>
+       <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+      </div>
+    </div>
   </section>
-  <!-- Service Content -->
-  <div class="service-content" data-aos="fade-up" data-aos-duration="800">
-    <h2>Professional Website Design</h2>
-    <p>We create visually stunning, user-friendly websites tailored to your brand and business goals. Whether it’s a simple landing page or a full ecommerce platform, we design with both beauty and performance in mind.</p>
-    <p>Our websites are responsive, fast, and optimized for SEO — built to turn visitors into loyal customers.</p>
-    <a href="contact.html" class="cta-btn">Let's Build Your Website</a>
-  </div>
 
-  <!-- Footer -->
- <footer style="background: #020617; padding: 60px 20px; color: #94a3b8;">
+  <!-- ====== PROJECT PORTFOLIO ====== -->
+  <section class="project-portfolio">
+    <div class="container">
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="projects-grid">
+        <!-- Project: ThriftKids Kenya Shop -->
+        <div class="project-card">
+          <img src="images/projects/thriftkids-homepage.jpg" alt="ThriftKids Kenya Homepage" />
+          <h3>ThriftKids Kenya Shop</h3>
+          <p>A fully custom e-commerce site with cart & payment integration.</p>
+          <a href="https://thriftkidskenya.netlify.app" target="_blank" class="btn-secondary">View Live Site</a>
+          <a href="projects/thriftkids.html" class="btn-secondary">View Case Study</a>
+        </div>
+        <!-- Project: Consultancy Theme -->
+       
+        <!-- Add more website projects here as needed -->
+      </div>
+    </div>
+  </section>
+
+  <section class="case-back">
+    <div class="container text-center">
+      <a href="services.html" class="btn-secondary">
+        &larr; Back to Services
+      </a>
+    </div>
+  </section>
+
+
+  <!-- … your footer here … -->
+ <footer style="background: rgba(2, 6, 23, 0.8); padding: 60px 20px; color: #94a3b8;">
   <div class="footer-container" style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start;">
 
     <!-- Logo & Tagline -->
@@ -154,15 +138,14 @@
   <div class="footer-bottom" style="margin-top: 40px;">
     <p style="text-align: center;">&copy; 2025 Eli Web Solutions. All rights reserved.</p>
   </div>
-</footer>
+ </footer>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
     function toggleMenu() {
       document.getElementById("nav-links").classList.toggle("active");
-    }
+   }
   </script>
+
 </body>
 </html>

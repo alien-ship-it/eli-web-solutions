@@ -1,0 +1,59 @@
+/* RESET & CONTAINER */
+* { box-sizing:border-box; margin:0; padding:0 }
+.container { max-width:1200px; margin:0 auto; padding:0 20px }
+
+/* HERO */
+.wm-hero { position:relative; width:100%; height:60vh; min-height:300px; overflow:hidden }
+.wm-hero .hero-img { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover }
+.hero-overlay { position:relative; z-index:1; width:100%; height:100%; background:rgba(2,6,23,0.5); display:flex; align-items:center; justify-content:center; padding:20px }
+.hero-overlay h1 { color:#facc15; font-size:2.5rem; text-align:center }
+.hero-overlay .subtitle { margin:12px 0 24px; color:#f1f5f9; font-size:1.2rem }
+.btn-primary { background:#facc15; color:#020617; padding:12px 24px; border-radius:6px; text-decoration:none; font-weight:bold; transition:background .3s }
+.btn-primary:hover { background:#eab308 }
+
+/* PANEL SHEET */
+.sheet { background:rgba(30, 41, 59, 0.85); padding:40px 20px; margin:40px auto; max-width:800px; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.1) }
+.sheet h2, .sheet h3 { color:#facc15; margin-bottom:16px }
+.sheet p, .sheet ul, .sheet ol { margin-bottom:24px; color:#f1f5f9; line-height:1.6 }
+.features-list { list-style:none }
+.features-list li { position:relative; padding-left:24px; margin-bottom:12px }
+.features-list li::before { content:"✔"; position:absolute; left:0; color:#facc15 }
+
+/* PACKAGES GRID */
+.packages-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+}
+.package-card {
+  background: rgba(30, 41, 59, 0.85);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.package-card:hover { transform: translateY(-4px); }
+.package-card h3 { margin-bottom:8px; color:#facc15; }
+.package-card ul { list-style:none; margin: 12px 0; padding-left: 0; }
+.package-card ul li { margin-bottom:8px; }
+.package-card .price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #facc15;
+}
+
+/* CTA BACK */
+.case-back { padding:20px 0 }
+.case-back .btn-secondary {
+  display:inline-block; background:transparent; border:2px solid #facc15;
+  color:#facc15; padding:10px 20px; border-radius:6px; text-decoration:none;
+  font-weight:bold; transition:background .3s,color .3s
+}
+.case-back .btn-secondary:hover { background:#facc15; color:#f8fafc }
+
+/* RESPONSIVE */
+@media (max-width:767px) {
+  .sheet { margin: 20px auto; padding:20px; }
+  .packages-grid { grid-template-columns: 1fr; }
+}

@@ -2,82 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eli Web Solutions offers website design, branding, poster design, and digital management for small businesses and startups in Kenya.">
-<meta name="keywords" content="web design Kenya, branding, poster design, website management, Eli Web Solutions">
-<meta name="author" content="Eli Web Solutions">
-<meta name="robots" content="index, follow">
-  <title>Poster Design | Eli Web Solutions  Event & Marketing Posters</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Poster Design — Eli Web Solutions</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-<!-- Lightbox CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    .service-hero {
-      background: url('images/posters-bg.jpg') no-repeat center center/cover;
-      padding: 120px 20px;
-      text-align: center;
-      color: #f8fafc;
-    }
-
-    .service-hero h1 {
-      font-size: 3rem;
-      color: #facc15;
-    }
-
-    .service-content {
-      padding: 60px 20px;
-      background: rgba(30, 41, 59, 0.65);
-      color: #cbd5e1;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .service-content h2 {
-      color: #facc15;
-      margin-bottom: 20px;
-    }
-
-    .service-content p {
-      line-height: 1.8;
-      margin-bottom: 20px;
-    }
-
-    .cta-btn {
-      background: #facc15;
-      color: #0f172a;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      transition: background 0.3s ease;
-    }
-
-    .cta-btn:hover {
-      background: #eab308;
-    }
-  </style>
+  <link rel="stylesheet" href="css/posters.css" />
 </head>
 <body>
+  <!-- NAVIGATION -->
   <header>
     <nav class="navbar">
       <div class="logo">
         <a href="index.html">
-          <img src="images/logo.png" alt="Eli Web Solutions Logo" style="height: 48px;" />
+          <img src="images/logo.png" alt="Eli Web Solutions Logo" style="height: 48px; width: auto;" />
         </a>
       </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
       <div class="hamburger" onclick="toggleMenu()">
         <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
           <rect width="100" height="10"></rect>
@@ -85,57 +24,111 @@
           <rect y="60" width="100" height="10"></rect>
         </svg>
       </div>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="service-hero">
-    <h1>Poster & Flyer Design</h1>
-  </section>
-  <!-- Service Content -->
-  <div class="service-content" data-aos="fade-up" data-aos-duration="800">
-    <h2>Eye-Catching Posters & Flyers</h2>
-    <p>We design bold and vibrant posters that grab attention and communicate your message effectively. Whether you're promoting an event, product, or service — we've got you covered.</p>
-    <p>Each design is custom-made to match your brand style, using high-quality visuals that look amazing both digitally and in print.</p>
-    <a href="contact.html" class="cta-btn">Request a Poster</a>
-  </div>
-  <!-- Posters Portfolio Section -->
-<section style="padding: 60px 20px; text-align: center;" data-aos="fade-up">
-  <h2 style="color: #facc15;">Highlights</h2>
-  <div class="swiper-container poster-swiper" style="margin-top: 40px;">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <a href="images/poster1.jpg" data-lightbox="posters"><img src="images/poster1.jpg" alt="Poster 1" /></a>
-        <p>Product Launch</p>
+  <!-- HERO SECTION -->
+  <section class="posters-hero">
+    <img 
+      src="images/posters-hero.jpg" 
+      alt="Collection of poster designs" 
+      class="hero-img" 
+    />
+    <div class="hero-overlay">
+      <div class="container">
+        <h1>Poster Design Showcase</h1>
+        <p class="subtitle">
+          Eye-catching poster designs that tell your story at a glance.
+        </p>
+        <a href="contact.html" class="btn-primary">
+          Request Your Custom Poster
+        </a>
       </div>
-      <div class="swiper-slide">
-        <a href="images/poster2.jpg" data-lightbox="posters"><img src="images/poster2.jpg" alt="Poster 2" /></a>
-        <p>Custom Design</p>
-      </div>
-      <div class="swiper-slide">
-        <a href="images/poster3.jpg" data-lightbox="posters"><img src="images/poster3.jpg" alt="Poster 3" /></a>
-        <p>Restaurant Poster</p>
-      </div>
-      <div class="swiper-slide">
-        <a href="images/poster4.jpg" data-lightbox="posters"><img src="images/poster4.jpg" alt="Poster 4" /></a>
-        <p>Brand awareness</p>
-      </div>
-      <div class="swiper-slide">
-        <a href="images/poster5.jpg" data-lightbox="posters"><img src="images/poster5.jpg" alt="Poster 5" /></a>
-        <p>Travel Poster</p>
-      </div>
-      <div class="swiper-slide">
-        <a href="images/poster6.jpg" data-lightbox="posters"><img src="images/poster6.jpg" alt="Poster 6" /></a>
-        <p>Custom Gaming Poster</p>
-      </div>
-      <div class="swiper-slide">
-        <a href="images/poster7.jpg" data-lightbox="posters"><img src="images/poster7.jpg" alt="Poster 7" /></a>
-        <p>Business website</p>
     </div>
-  </div>
-</section>
+  </section>
 
-  <!-- Footer -->
- <footer style="background: #020617; padding: 60px 20px; color: #94a3b8;">
+   <!-- WHAT WE OFFER (Panel Sheet) -->
+  <section class="posters-intro sheet" data-aos="fade-up">
+    <div class="container">
+      <h2>What We Offer</h2>
+      <p>
+        From promotional event posters to product launch graphics, our poster
+        designs combine bold typography, vibrant imagery, and clear messaging
+        to capture attention and drive engagement.
+      </p>
+      <ul class="features-list">
+        <li>High-resolution print-ready files</li>
+        <li>Custom illustrations & icons</li>
+        <li>Brand-consistent color palettes</li>
+        <li>Fast turnaround & revisions</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- POSTER GALLERY SLIDER -->
+  <section class="poster-gallery" data-aos="fade-up">
+    <div class="container">
+       <h2 data-aos="fade-down">Sample Posters</h2>
+      <div class="poster-slider">
+        <div class="poster-track">
+           <div class="poster-card" data-full="images/posters/poster1.jpg" data-aos="zoom-in">
+            <img src="images/posters/poster1.jpg" alt="Business Launch Poster" />
+            <h3>Business Launch</h3>
+          </div>
+          <div class="poster-card" data-full="images/posters/poster2.jpg" data-aos="zoom-in" data-aos-delay="100">
+            <img src="images/posters/poster2.jpg" alt="Custom Design Poster" />
+            <h3>Custom Design</h3>
+          </div>
+          <div class="poster-card" data-full="images/posters/poster3.jpg" data-aos="zoom-in" data-aos-delay="200">
+            <img src="images/posters/poster3.jpg" alt="Restaurant Poster" />
+            <h3>Restaurant</h3>
+          </div>
+          <div class="poster-card" data-full="images/posters/poster4.jpg" data-aos="zoom-in" data-aos-delay="300">
+            <img src="images/posters/poster4.jpg" alt="Brand Awareness Poster" />
+            <h3>Brand Awareness</h3>
+          </div>
+          <div class="poster-card" data-full="images/posters/poster5.jpg" data-aos="zoom-in" data-aos-delay="400">
+            <img src="images/posters/poster5.jpg" alt="Travel Poster" />
+            <h3>Travel</h3>
+          </div>
+          <div class="poster-card" data-full="images/posters/poster6.jpg" data-aos="zoom-in" data-aos-delay="500">
+            <img src="images/posters/poster6.jpg" alt="Gaming Poster" />
+            <h3>Gaming</h3>
+          </div>
+          <div class="poster-card" data-full="images/posters/poster7.jpg" data-aos="zoom-in" data-aos-delay="600">
+            <img src="images/posters/poster7.jpg" alt="Business Website" />
+            <h3>Business Website</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- READY TO STAND OUT (Panel Sheet) -->
+  <section class="posters-cta sheet" data-aos="fade-up">
+    <div class="container text-center">
+      <h2>Ready to Stand Out?</h2>
+      <p>Let’s create a poster that makes your event or product impossible to ignore.</p>
+      <a href="contact.html" class="btn-secondary">Get Started</a>
+    </div>
+  </section>
+
+  <!-- BACK BUTTON -->
+  <section class="case-back" data-aos="fade-up">
+    <div class="container text-center">
+      <a href="services.html" class="btn-secondary">&larr; Back to Services</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+ <footer style="background: rgba(2, 6, 23, 0.8); padding: 60px 20px; color: #94a3b8;">
   <div class="footer-container" style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start;">
 
     <!-- Logo & Tagline -->
@@ -192,44 +185,24 @@
   <div class="footer-bottom" style="margin-top: 40px;">
     <p style="text-align: center;">&copy; 2025 Eli Web Solutions. All rights reserved.</p>
   </div>
-</footer>
+ </footer>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox">
+    <span class="lb-close">&times;</span>
+    <img class="lb-img" src="" alt="Full poster" />
+  </div>
+
+ <script>
     AOS.init();
     function toggleMenu() {
       document.getElementById("nav-links").classList.toggle("active");
-    }
+   }
   </script>
-  <!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-<!-- Lightbox JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/posters.js"></script>
 
-<!-- Swiper Config -->
-<script>
-  const logoSwiper = new Swiper(".logo-swiper", {
-    loop: true,
-    autoplay: { delay: 2500, disableOnInteraction: false },
-    slidesPerView: 1,
-    spaceBetween: 20,
-    breakpoints: {
-      768: { slidesPerView: 3 }
-    }
-  });
-
-  const posterSwiper = new Swiper(".poster-swiper", {
-    loop: true,
-    autoplay: { delay: 3000, disableOnInteraction: false },
-    slidesPerView: 1,
-    spaceBetween: 20,
-    breakpoints: {
-      768: { slidesPerView: 3 }
-    }
-  });
-</script>
 
 </body>
 </html>
