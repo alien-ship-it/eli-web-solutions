@@ -1,0 +1,313 @@
+/* css/web-design.css
+   Dedicated styles for web-design.html
+*/
+
+/* ------------------------------
+   Variables / base
+   ------------------------------ */
+:root{
+  --muted: #6b7280;
+  --text: #0b1220;
+  --accent: #facc15;
+  --card-bg: rgba(30, 41, 59, 0.85);
+  --panel-bg: rgba(30, 41, 59, 0.85);
+  --overlay: rgba(2,6,23,0.55);
+  --shadow: 0 6px 18px rgba(2,6,23,0.08);
+  --container-max: 1200px;
+  --card-width-desktop: 360px; /* consistent card width */
+  --card-width-mobile: 300px;
+}
+
+/* ------------------------------
+   Reset & container
+   ------------------------------ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.container {
+  width: 90%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+/* ------------------------------
+   HERO (supports <img class="hero-img">)
+   ------------------------------ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 320px;
+  overflow: hidden;
+}
+
+/* If you include <img class="hero-img"> inside .hero */
+.hero .hero-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: flex;
+}
+
+/* overlay on top of the image */
+.hero .overlay {
+  position: relative; /* sits above the image */
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 18px;
+  text-align: center;
+}
+
+.hero .overlay .container { max-width: 900px; }
+
+.hero h1 {
+  font-size: 2.4rem;
+  color: #facc15;
+  margin-bottom: 12px;
+  line-height: 1.05;
+}
+
+.hero p {
+  color: #eef2ff;
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform .12s ease, background .12s ease;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #facc15;
+}
+
+.btn-primary:hover { transform: translateY(-2px); filter: brightness(.98); }
+
+.btn-secondary {
+  background: transparent;
+  color: #facc15;
+  border: 2px solid var(--text);
+}
+
+.btn-secondary:hover {
+  background: var(--text);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ------------------------------
+   INFO PANEL (What We Offer)
+   ------------------------------ */
+.info-panel {
+  margin: 40px auto;
+  padding: 32px;
+  max-width: 840px;
+  background: var(--panel-bg);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.info-panel h2 {
+  font-size: 1.9rem;
+  color: #facc15;
+  margin-bottom: 16px;
+}
+
+.info-panel ul {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.info-panel ul li {
+  position: relative;
+  padding-left: 26px;
+  color: #fff;
+  font-weight: 500;
+}
+.info-panel ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ------------------------------
+   PROJECT PORTFOLIO
+   ------------------------------ */
+.project-portfolio {
+  margin: 36px 0 20px;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 18px;
+  color: var(--text);
+  text-align: left;
+}
+
+/* The grid will center cards but keep consistent widths */
+/* Projects grid — center cards (single or multiple) */
+.projects-grid {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  justify-content: center; /* <-- CENTER the cards */
+  align-items: flex-start;
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* Ensure each card centers itself inside the grid cell */
+.project-card {
+  margin: 0 auto; /* keeps it centered if container changes */
+}
+
+.section-title { text-align: center; }
+
+/* Project card: consistent width */
+.project-card {
+  background: var(--card-bg);
+  width: var(--card-width-desktop);
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform .18s ease;
+}
+
+/* project thumbnail area */
+.project-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+/* content area */
+.project-card h3 {
+  margin: 14px 16px 6px;
+  font-size: 1.12rem;
+  color: #facc15;
+}
+.project-card p {
+  margin: 0 16px 16px;
+  color: #fff;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+/* button row */
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  padding: 16px;
+  margin-top: auto;
+  align-items: center;
+}
+
+/* keep buttons from stretching */
+.card-buttons .btn-secondary {
+  padding: 8px 12px;
+  font-size: 0.95rem;
+}
+
+/* hover */
+.project-card:hover { transform: translateY(-6px); }
+
+/* ------------------------------
+   BACK BUTTON
+   ------------------------------ */
+.case-back {
+  margin: 28px 0 60px;
+  text-align: center;
+}
+.case-back .btn-secondary { white-space: nowrap; }
+
+/* ------------------------------
+   FOOTER
+   ------------------------------ */
+footer {
+  background: rgba(2, 6, 23, 0.9);
+  color: #94a3b8;
+  padding: 44px 18px 28px;
+  margin-top: 40px;
+}
+.footer-container {
+  display:flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+.footer-logo img { height: 40px; margin-bottom: 10px; }
+.footer-logo p { color: #dbe7ff; max-width: 320px; font-size: 14px; line-height: 1.6; }
+
+.footer-links h4,
+.footer-contact h4 { color: var(--accent); margin-bottom: 8px; }
+.footer-links ul { list-style:none; padding:0; }
+.footer-links a.footer-link { color: #94a3b8; text-decoration:none; display:block; padding:6px 0; }
+.contact-icons { display:flex; gap:12px; align-items:center; }
+
+/* footer bottom */
+.footer-bottom {
+  margin-top: 28px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* ------------------------------
+   AOS helper tweaks
+   ------------------------------ */
+[data-aos] { opacity: 0; transform-origin: center; }
+[data-aos].aos-animate { opacity: 1; transition: opacity .6s ease, transform .6s ease; }
+
+/* ------------------------------
+   RESPONSIVE
+   ------------------------------ */
+@media (max-width: 1024px) {
+  .hero { height: 50vh; min-height: 300px; }
+  :root { --card-width-desktop: 320px; }
+  .project-card { width: var(--card-width-desktop); }
+}
+@media (max-width: 768px) {
+  /* project cards scale down on mobile but keep consistent */
+  :root { --card-width-desktop: var(--card-width-mobile); }
+  .project-card { width: var(--card-width-desktop); }
+  .project-card img { height: 180px; }
+  .hero h1 { font-size: 1.6rem; }
+  .hero p { font-size: 0.98rem; }
+  .info-panel { margin: 20px 12px; padding: 20px; }
+  .case-back { margin-bottom: 36px; }
+}
+
+/* small screens very narrow adjustments */
+@media (max-width: 420px) {
+  .container { width: 94%; padding: 0 12px; }
+  .hero { height: 45vh; min-height: 260px; }
+  .project-card img { height: 160px; }
+}

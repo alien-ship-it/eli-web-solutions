@@ -4,11 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Web Design — Eli Web Solutions</title>
+  
+  <!-- Dedicated Styles -->
+  <link rel="stylesheet" href="css/web-design.css" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
 <body>
-  <!-- … your nav & hero here … -->
-<header>
+  
+  <!-- ===== HEADER ===== -->
+   <header>
     <nav class="navbar">
       <div class="logo">
         <a href="index.html">
@@ -32,56 +39,72 @@
     </nav>
   </header>
 
-  <!-- ====== WEB DESIGN INTRO ====== -->
-  <section class="web-design-intro">
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" data-aos="fade-up">
+    <img
+      src="images/bg-network.jpg"
+      alt="Web design"
+      class="hero-img"
+    />
     <div class="overlay">
       <div class="container">
-        <h1>Web Design Services</h1>
-        <p>
-          At Eli Web Solutions, I build responsive, modern websites that tell your brand story and convert visitors into customers. Whether you need a brochure site, a dynamic blog, or a full e-commerce platform, I’ve got you covered from concept to launch.
+        <h1 data-aos="fade-down">Web Design Services</h1>
+        <p data-aos="fade-up">
+          Creating modern, responsive websites tailored to your brand.
         </p>
-        <ul class="design-features">
-         <li>Custom layouts with HTML5 & CSS3</li>
-         <li>Interactive UI (JavaScript & CSS animations)</li>
-         <li>Mobile-first, responsive design</li>
-         <li>SEO-friendly structure & performance optimizations</li>
-        </ul>
-       <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+        <a href="contact.html" class="btn-primary" data-aos="zoom-in">Get a Free Quote</a>
       </div>
     </div>
   </section>
 
-  <!-- ====== PROJECT PORTFOLIO ====== -->
+  <section class="info-panel" data-aos="fade-up">
+    <div class="container">
+       <p data-aos="zoom-in">
+          At Eli Web Solutions, I build responsive, modern websites that tell your brand story and convert visitors into customers. Whether you need a brochure site, a dynamic blog, or a full e-commerce platform, I’ve got you covered from concept to launch.
+        </p>
+    </div>
+  </section>
+
+  <!-- ===== WHAT WE OFFER ===== -->
+  <section class="info-panel" data-aos="fade-up">
+    <div class="container">
+      <h2>What We Offer</h2>
+      <ul>
+        <li data-aos="fade-right">Custom layouts with HTML5 & CSS3</li>
+        <li data-aos="fade-right" data-aos-delay="100">Interactive UI (JavaScript & CSS animations)</li>
+        <li data-aos="fade-right" data-aos-delay="200">Mobile-first, responsive design</li>
+        <li data-aos="fade-right" data-aos-delay="300">SEO-friendly structure & performance optimizations</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== SELECTED PROJECTS ===== -->
   <section class="project-portfolio">
     <div class="container">
-      <h2 class="section-title">Selected Projects</h2>
+      <h2 class="section-title" data-aos="fade-up">Selected Projects</h2>
       <div class="projects-grid">
-        <!-- Project: ThriftKids Kenya Shop -->
-        <div class="project-card">
+        <div class="project-card" data-aos="zoom-in">
           <img src="images/projects/thriftkids-homepage.jpg" alt="ThriftKids Kenya Homepage" />
           <h3>ThriftKids Kenya Shop</h3>
           <p>A fully custom e-commerce site with cart & payment integration.</p>
-          <a href="https://thriftkidskenya.netlify.app" target="_blank" class="btn-secondary">View Live Site</a>
-          <a href="projects/thriftkids.html" class="btn-secondary">View Case Study</a>
+          <div class="card-buttons">
+            <a href="https://thriftkidskenya.netlify.app" target="_blank" class="btn-secondary">View Live Site</a>
+            <a href="projects/thriftkids.html" class="btn-secondary">View Case Study</a>
+          </div>
         </div>
-        <!-- Project: Consultancy Theme -->
-       
-        <!-- Add more website projects here as needed -->
       </div>
     </div>
   </section>
 
-  <section class="case-back">
+  <!-- ===== BACK TO SERVICES ===== -->
+  <section class="case-back" data-aos="fade-up">
     <div class="container text-center">
-      <a href="services.html" class="btn-secondary">
-        &larr; Back to Services
-      </a>
+      <a href="services.html" class="btn-secondary">&larr; Back to Services</a>
     </div>
   </section>
 
-
-  <!-- … your footer here … -->
- <footer style="background: rgba(2, 6, 23, 0.8); padding: 60px 20px; color: #94a3b8;">
+  <!-- ===== FOOTER ===== -->
+  <footer style="background: rgba(2, 6, 23, 0.8); padding: 60px 20px; color: #94a3b8;">
   <div class="footer-container" style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start;">
 
     <!-- Logo & Tagline -->
@@ -140,11 +163,19 @@
   </div>
  </footer>
 
+  <!-- ===== SCRIPTS ===== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
-    AOS.init();
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 120,
+      easing: 'ease-in-out'
+    });
+
     function toggleMenu() {
       document.getElementById("nav-links").classList.toggle("active");
-   }
+    }
   </script>
 
 </body>
