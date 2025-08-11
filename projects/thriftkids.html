@@ -8,6 +8,12 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 </head>
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+     <img src="../images/logo.png" alt="Eli Web Solutions Logo" />
+    </div>
+  </div>
   
   <!-- NAVIGATION -->
   <header>
@@ -25,9 +31,9 @@
         </svg>
       </div>
       <ul id="nav-links" class="nav-links">
-        <li><a href="../index.html" class="active">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="../about.html">About</a></li>
-        <li><a href="../services.html">Services</a></li>
+        <li><a href="../services.html" class="active">Services</a></li>
         <li><a href="../faq.html">FAQ</a></li>
         <li><a href="../contact.html">Contact</a></li>
       </ul>
@@ -214,5 +220,21 @@
       document.getElementById("nav-links").classList.toggle("active");
    }
   </script>
+ <script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    const logo = preloader.querySelector("img");
+
+    // After spin completes, start bouncing
+    logo.addEventListener("animationend", () => {
+      logo.style.animation = "bounce 1.5s infinite";
+    });
+
+    // Fade out preloader when page is ready
+    setTimeout(() => {
+      preloader.classList.add("hidden");
+    }, 2000); // Slight delay so bounce is visible
+  });
+ </script>
 </body>
 </html>

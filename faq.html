@@ -2,74 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eli Web Solutions offers website design, branding, poster design, and digital management for small businesses and startups in Kenya.">
-<meta name="keywords" content="web design Kenya, branding, poster design, website management, Eli Web Solutions">
-<meta name="author" content="Eli Web Solutions">
-<meta name="robots" content="index, follow">
-  <title>FAQ | Eli Web Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ — Eli Web Solutions</title>
+  <link rel="stylesheet" href="css/faq.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    .faq-section {
-      background: rgba(30, 41, 59, 0.65);
-      padding: 60px 20px;
-      color: #f8fafc;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    .faq-item {
-      background: #0f172a;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .faq-question {
-      padding: 20px;
-      cursor: pointer;
-      font-weight: bold;
-      position: relative;
-    }
-
-    .faq-answer {
-      padding: 0 20px 20px;
-      display: none;
-      animation: fadeIn 0.3s ease;
-      color: #cbd5e1;
-    }
-
-    .faq-question::after {
-      content: "+";
-      position: absolute;
-      right: 20px;
-    }
-
-    .faq-item.active .faq-answer {
-      display: block;
-    }
-
-    .faq-item.active .faq-question::after {
-      content: "-";
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  </style>
 </head>
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+     <img src="images/logo.png" alt="Eli Web Solutions Logo" />
+    </div>
+  </div>
 
-  <!-- Reuse header -->
+  <!-- ===== HEADER ===== -->
   <header>
     <nav class="navbar">
-     <div class="logo">
-  <a href="index.html">
-    <img src="images/logo.png" alt="Eli Web Solutions Logo" style="height: 48px;" />
-  </a>
-</div>
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Eli Web Solutions Logo" style="height: 48px;" />
+        </a>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="faq.html" class="active">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
       <div class="hamburger" onclick="toggleMenu()">
         <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
           <rect width="100" height="10"></rect>
@@ -77,115 +37,190 @@
           <rect y="60" width="100" height="10"></rect>
         </svg>
       </div>
-      <ul id="nav-links" class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="faq.html" class="active">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
     </nav>
   </header>
 
-  <!-- ✅ FAQ Section -->
-  <section class="faq-section">
-    <h2 style="color: #facc15; text-align: center;">Frequently Asked Questions</h2>
-
-    <div class="faq-item">
-      <div class="faq-question">What services do you offer?</div>
-      <div class="faq-answer">We offer website design and management, branding and logo design, poster and flyer creation, and more.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question">How long does it take to complete a website?</div>
-      <div class="faq-answer">Most basic websites take 1–2 weeks depending on requirements. More advanced features may take longer.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question">Do you provide ongoing support after launch?</div>
-      <div class="faq-answer">Yes! We offer ongoing maintenance and support packages for updates, backups, and edits.</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question">How do I get started?</div>
-      <div class="faq-answer">Simply contact us through the contact page or email us directly at eliwebsolutions01@gmail.com.</div>
+  <!-- ===== HERO SECTION WITH VIDEO ===== -->
+  <section class="faq-hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="videos/hero.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="overlay">
+      <h1 style="color: #facc15;">Frequently Asked Questions</h1>
+      <p style="color: #fff;">Got questions? We’ve got answers.</p>
     </div>
   </section>
 
-  <!-- Footer -->
- <footer style="background: rgba(2, 6, 23, 0.8); padding: 60px 20px; color: #94a3b8;">
-  <div class="footer-container" style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start;">
+  <!-- ===== FAQ CONTENT ===== -->
+  <section class="faq-section">
+    <div class="faq-panel" data-aos="fade-up">
+      <h2>General Questions</h2>
 
-    <!-- Logo & Tagline -->
-    <div style="flex: 1; min-width: 200px;">
-      <img src="images/logo.png" alt="Logo" style="height: 40px; margin-bottom: 16px;" />
-      <p style="font-size: 14px; line-height: 1.6;">We build digital identities & visual brands for small businesses & startups.</p>
-    </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          What services do you offer? 
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>I offer website design, branding, graphic design, and website management services tailored to small businesses and startups.</p>
+        </div>
+      </div>
 
-    <!-- Quick Links -->
-    <div style="flex: 1; min-width: 160px;">
-      <h4 style="color: #facc15; margin-bottom: 12px;">Quick Links</h4>
-      <ul style="list-style: none; padding: 0;">
-        <li><a href="index.html" class="footer-link">Home</a></li>
-        <li><a href="about.html" class="footer-link">About</a></li>
-        <li><a href="services.html" class="footer-link">Services</a></li>
-        <li><a href="faq.html" class="footer-link">FAQ</a></li>
-        <li><a href="contact.html" class="footer-link">Contact</a></li>
-      </ul>
-    </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you work with international clients?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes! I work with clients globally and communicate via email, WhatsApp, or video calls.</p>
+        </div>
+      </div>
 
-    <!-- Contact Icons -->
-    <div class="footer-contact-column" style="flex: 1; min-width: 160px; display: flex; flex-direction: column; align-items: flex-start;">
-       <h4 style="color: #facc15; margin-bottom: 12px;">Contact</h4>
-       <div class="contact-icons" style="display: flex; gap: 14px; flex-wrap: wrap;">
-        <!-- Email -->
-        <a href="mailto:eliwebsolutions01@gmail.com" title="Email">
-          <!-- SVG Icon -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#facc15" viewBox="0 0 24 24"><path d="M2 4h20v16H2z" fill="none"/><path d="M22 6.25v-1.5A1.75 1.75 0 0020.25 3H3.75A1.75 1.75 0 002 4.75v14.5A1.75 1.75 0 003.75 21h16.5A1.75 1.75 0 0022 19.25V6.25zM3.5 5.5h17L12 13.06 3.5 5.5z"/></svg>
-        </a>
+      <div class="faq-item">
+        <button class="faq-question">
+          How long does it take to complete a project?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Timelines vary depending on the complexity, but most standard websites are completed within 2–4 weeks.</p>
+        </div>
+      </div>
 
-        <!-- Phone -->
-        <a href="tel:+254740674079" title="Call">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#facc15" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.11-.21c1.21.49 2.53.76 3.89.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22 2 13.93 2 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.36.26 2.68.76 3.89a1.003 1.003 0 01-.21 1.11l-2.2 2.2z"/></svg>
-        </a>
-
-        <!-- Instagram -->
-        <a href="https://instagram.com/eli.web.solutions" target="_blank" title="Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="#facc15" fill="none" stroke-width="2" viewBox="0 0 24 24">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17" cy="7" r="1"/>
-          </svg>
-        </a>
-
-        <!-- LinkedIn -->
-        <a href="https://linkedin.com/in/eli-web-solutions-b13675372" target="_blank" title="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#facc15" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.5S3.88 7.5 4.98 7.5 6.96 6.62 6.96 5.5 6.08 3.5 4.98 3.5zM3.5 8.5h2.96v12H3.5v-12zm5.25 0H12v1.63h.03c.49-.93 1.68-1.91 3.46-1.91 3.7 0 4.38 2.45 4.38 5.63v6.65H17v-5.89c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1v6H8.75v-12z"/></svg>
-        </a>
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you offer ongoing support?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, I offer maintenance and update packages to keep your website fresh and secure.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ✅ Properly Centered Bottom Text -->
-  <div class="footer-bottom" style="margin-top: 40px;">
-    <p style="text-align: center;">&copy; 2025 Eli Web Solutions. All rights reserved.</p>
-  </div>
-</footer>
+  <section class="faq-section">
+    <div class="faq-panel" data-aos="fade-up">
+      <h2>Services & Pricing</h2>
 
-  <!-- Scripts -->
+      <div class="faq-item">
+        <button class="faq-question">
+          How much do your services cost?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Pricing depends on the project scope. I provide a free quote after discussing your needs.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Do you require upfront payment?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, a deposit is required before work begins, with the remainder due upon project completion.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Can I request changes after the website is done?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, I offer a revision period after delivery and ongoing update packages if needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background: rgba(2, 6, 23, 0.8); padding: 60px 20px; color: #94a3b8;">
+    <div class="footer-container" style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start;">
+
+      <div style="flex: 1; min-width: 200px;">
+        <img src="images/logo.png" alt="Logo" style="height: 40px; margin-bottom: 16px;" />
+        <p style="font-size: 14px; line-height: 1.6;">We build digital identities & visual brands for small businesses & startups.</p>
+      </div>
+
+      <div style="flex: 1; min-width: 160px;">
+        <h4 style="color: #facc15; margin-bottom: 12px;">Quick Links</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About</a></li>
+          <li><a href="services.html" class="footer-link">Services</a></li>
+          <li><a href="faq.html" class="footer-link">FAQ</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact-column" style="flex: 1; min-width: 160px; display: flex; flex-direction: column; align-items: flex-start;">
+        <h4 style="color: #facc15; margin-bottom: 12px;">Contact</h4>
+        <div class="contact-icons" style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="mailto:eliwebsolutions01@gmail.com" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#facc15" viewBox="0 0 24 24"><path d="M2 4h20v16H2z" fill="none"/><path d="M22 6.25v-1.5A1.75 1.75 0 0020.25 3H3.75A1.75 1.75 0 002 4.75v14.5A1.75 1.75 0 003.75 21h16.5A1.75 1.75 0 0022 19.25V6.25zM3.5 5.5h17L12 13.06 3.5 5.5z"/></svg>
+          </a>
+          <a href="tel:+254740674079" title="Call">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#facc15" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.11-.21c1.21.49 2.53.76 3.89.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.07 22 2 13.93 2 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.36.26 2.68.76 3.89a1.003 1.003 0 01-.21 1.11l-2.2 2.2z"/></svg>
+          </a>
+          <a href="https://instagram.com/eli.web.solutions" target="_blank" title="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" stroke="#facc15" fill="none" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17" cy="7" r="1"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/eli-web-solutions-b13675372" target="_blank" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#facc15" viewBox="0 0 24 24"><path d="M4.98 3.5C3.88 3.5 3 4.38 3 5.5S3.88 7.5 4.98 7.5 6.96 6.62 6.96 5.5 6.08 3.5 4.98 3.5zM3.5 8.5h2.96v12H3.5v-12zm5.25 0H12v1.63h.03c.49-.93 1.68-1.91 3.46-1.91 3.7 0 4.38 2.45 4.38 5.63v6.65H17v-5.89c0-1.4-.03-3.2-1.95-3.2-1.96 0-2.26 1.53-2.26 3.1v6H8.75v-12z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom" style="margin-top: 40px;">
+      <p style="text-align: center;">&copy; 2025 Eli Web Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script>
+    AOS.init();
     function toggleMenu() {
-      const navLinks = document.getElementById("nav-links");
-      navLinks.classList.toggle("active");
+      document.getElementById("nav-links").classList.toggle("active");
     }
 
-    const faqItems = document.querySelectorAll(".faq-item");
-    faqItems.forEach(item => {
-      item.querySelector(".faq-question").addEventListener("click", () => {
-        item.classList.toggle("active");
+    document.querySelectorAll(".faq-question").forEach(button => {
+      button.addEventListener("click", () => {
+        button.classList.toggle("active");
+        let answer = button.nextElementSibling;
+        let icon = button.querySelector(".icon");
+        if (answer.style.maxHeight) {
+          answer.style.maxHeight = null;
+          icon.textContent = "+";
+        } else {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          icon.textContent = "−";
+        }
       });
     });
   </script>
+ <script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    const logo = preloader.querySelector("img");
+
+    // After spin completes, start bouncing
+    logo.addEventListener("animationend", () => {
+      logo.style.animation = "bounce 1.5s infinite";
+    });
+
+    // Fade out preloader when page is ready
+    setTimeout(() => {
+      preloader.classList.add("hidden");
+    }, 2000); // Slight delay so bounce is visible
+  });
+ </script>
 
 </body>
 </html>

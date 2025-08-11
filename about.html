@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="css/style.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Eli Web Solutions offers website design, branding, poster design, and digital management for small businesses and startups in Kenya.">
-<meta name="keywords" content="web design Kenya, branding, poster design, website management, Eli Web Solutions">
-<meta name="author" content="Eli Web Solutions">
-<meta name="robots" content="index, follow">
-  <title>Eli Web Solutions  Who We Are</title>
- <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
+  <title>About — Eli Web Solutions</title>
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 </head>
 <body>
+    <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+     <img src="images/logo.png" alt="Eli Web Solutions Logo" />
+    </div>
+  </div>
 
+<!-- ===== NAVBAR ===== -->
 <header>
   <nav class="navbar">
-   <div class="logo">
-  <a href="index.html">
-    <img src="images/logo.png" alt="Eli Web Solutions Logo" style="height: 48px;" />
-  </a>
-</div>
-
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Eli Web Solutions Logo" style="height: 48px;" />
+      </a>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
     <div class="hamburger" onclick="toggleMenu()">
       <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
         <rect width="100" height="10"></rect>
@@ -32,66 +38,145 @@
         <rect y="60" width="100" height="10"></rect>
       </svg>
     </div>
-
-    <ul id="nav-links" class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
   </nav>
 </header>
 
-<section style="max-width: 1000px; margin: auto; padding: 60px 20px; background: rgba(15, 23, 42, 0.65); color: #f8fafc;">
-
-  <h2 style="color: #facc15; text-align: center;">About Eli Web Solutions</h2>
-
-  <p style="line-height: 1.7; color: #cbd5e1; margin-top: 20px;">
-    Eli Web Solutions is a forward-thinking creative agency helping small businesses and startups build solid online identities. We specialize in building websites from scratch, designing logos that speak for your brand, and creating posters and flyers that capture attention at a glance.
-  </p>
-
-  <p style="line-height: 1.7; color: #cbd5e1;">
-    Our goal is to bridge creativity and functionality — delivering powerful, modern, and affordable digital solutions. Whether you're starting from zero or refreshing your brand, we're here to make your vision real.
-  </p>
-
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px;">
-    <div style="background: #1e293b; padding: 30px; border-radius: 12px; text-align: center;">
-      <i class="fas fa-rocket fa-2x" style="color: #facc15;"></i>
-      <h3 style="margin-top: 15px;">Mission</h3>
-      <p style="color: #cbd5e1;">To help businesses grow with standout websites, graphics, and brand presence.</p>
-    </div>
-
-    <div style="background: #1e293b; padding: 30px; border-radius: 12px; text-align: center;">
-      <i class="fas fa-hands-helping fa-2x" style="color: #facc15;"></i>
-      <h3 style="margin-top: 15px;">Values</h3>
-      <p style="color: #cbd5e1;">Creativity. Honesty. Simplicity. Consistent delivery and visual impact.</p>
-    </div>
-
-    <div style="background: #1e293b; padding: 30px; border-radius: 12px; text-align: center;">
-      <i class="fas fa-eye fa-2x" style="color: #facc15;"></i>
-      <h3 style="margin-top: 15px;">Vision</h3>
-      <p style="color: #cbd5e1;">To be the trusted go-to digital partner for small businesses in Kenya and beyond.</p>
-    </div>
+<!-- ===== HERO SECTION WITH VIDEO ===== -->
+<section class="hero-section">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="videos/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay">
+    <h1>About <span style="color: #facc15;">Eli Web Solutions</span></h1>
+    <p>Crafting digital identities that make businesses stand out.</p>
   </div>
-
-  <div style="text-align: center; margin-top: 50px;">
-    <img src="images/about-image.jpg" alt="About Eli Web Solutions" style="max-width: 600px; width: 100%; border-radius: 10px; filter: grayscale(30%);" />
-    <p style="font-style: italic; margin-top: 15px; color: #94a3b8;">“We don’t just build websites — we build your digital reputation.”</p>
-    <section style="margin-top: 60px;">
-  <h2 style="color: #facc15; text-align: center; margin-bottom: 30px;">Why Choose Us</h2>
-  <ul style="max-width: 800px; margin: auto; list-style: none; padding: 0; line-height: 2;">
-    <li style="color: #cbd5e1;"><i class="fas fa-check-circle" style="color: #facc15; margin-right: 10px;"></i> We build everything from scratch — no templates or shortcuts.</li>
-    <li style="color: #cbd5e1;"><i class="fas fa-check-circle" style="color: #facc15; margin-right: 10px;"></i> Affordable, high-quality work tailored for small businesses.</li>
-    <li style="color: #cbd5e1;"><i class="fas fa-check-circle" style="color: #facc15; margin-right: 10px;"></i> Fast delivery, clear communication, and zero excuses.</li>
-    <li style="color: #cbd5e1;"><i class="fas fa-check-circle" style="color: #facc15; margin-right: 10px;"></i> We care about design, function, and your success.</li>
-    <li style="color: #cbd5e1;"><i class="fas fa-check-circle" style="color: #facc15; margin-right: 10px;"></i> One-person power team — you're working directly with the expert.</li>
-  </ul>
-</section>
-  </div>
-
 </section>
 
+<!-- ===== ABOUT CONTENT ===== -->
+<section class="about-content">
+  <div class="container panel" data-aos="fade-up">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Who We Are</h2>
+        <p>
+          At Eli Web Solutions, we specialize in building modern, responsive, and visually stunning websites tailored to your brand. From clean corporate designs to vibrant e-commerce platforms, we bring your vision to life.
+        </p>
+        <p>
+          We also provide branding, poster design, and web management services — ensuring your online presence stays fresh, functional, and impactful.
+        </p>
+      </div>
+      <figure class="about-img" data-aos="fade-left">
+         <img src="images/about-image.jpg" alt="About Eli Web Solutions" />
+       <figcaption class="about-caption">Crafting websites that convert — Eli Web Solutions</figcaption>
+      </figure>
+    </div>
+  </div>
+ </section>
+  <!-- ===== Panel: Vision / Mission / Values ===== -->
+<section id="about-vision-mission-values" class="panel-sheet">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">Vision · Mission · Values</h2>
+
+    <div class="cards-grid">
+      <article class="card" data-aos="fade-up" data-aos-delay="0">
+        <h3>Vision</h3>
+        <p>To empower small businesses and creators with modern, high-performing websites and visual branding that build trust and drive growth.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="100">
+        <h3>Mission</h3>
+        <p>We design and build clear, fast, and scalable websites, paired with memorable logos and marketing assets, so you can focus on running your business.</p>
+      </article>
+
+      <article class="card" data-aos="fade-up" data-aos-delay="200">
+        <h3>Values</h3>
+        <ul class="values-list">
+          <li><strong>Clarity</strong> — simple, usable design.</li>
+          <li><strong>Honesty</strong> — no overpromises.</li>
+          <li><strong>Craft</strong> — attention to detail in every pixel.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+     <!-- ===== Panel: Why Choose Us ===== -->
+ <section id="why-choose-us" class="panel-sheet alt">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-down">Why Choose Us</h2>
+
+    <p class="lead" data-aos="fade-up" data-aos-delay="50">
+      We build websites that look great and perform.  here’s what makes Eli Web Solutions different.
+    </p>
+
+   <div class="reasons-grid">
+   <div class="reason" data-aos="fade-up" data-aos-delay="100">
+    <div class="icon" aria-hidden="true">
+      <!-- Lightning / Fast -->
+      <svg viewBox="0 0 24 24" role="img" aria-labelledby="fastTitle" xmlns="http://www.w3.org/2000/svg">
+        <title id="fastTitle">Fast and optimized</title>
+        <path fill="currentColor" d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/>
+      </svg>
+    </div>
+    <div>
+      <h4>Fast & Optimized</h4>
+      <p>Optimized builds for speed and mobile-first performance so users stay and convert.</p>
+    </div>
+   </div>
+
+   <div class="reason" data-aos="fade-up" data-aos-delay="200">
+    <div class="icon" aria-hidden="true">
+      <!-- Palette / Design -->
+      <svg viewBox="0 0 24 24" role="img" aria-labelledby="designTitle" xmlns="http://www.w3.org/2000/svg">
+        <title id="designTitle">Design with purpose</title>
+        <path fill="currentColor" d="M12 2a8 8 0 100 16c1.2 0 2.3-.3 3.3-.8.6-.3.9-1 .8-1.7-.2-1.4-1.7-2.3-3.1-1.9-.6.2-1.2-.1-1.4-.7-.3-.9.2-1.9 1-2.4.8-.5 1.6-1.2 2-2.1.4-.9.2-1.9-.5-2.6A8 8 0 0012 2zM8.5 9.5a1 1 0 110-2 1 1 0 010 2zm4 2a1 1 0 110-2 1 1 0 010 2z"/>
+      </svg>
+    </div>
+    <div>
+      <h4>Design with Purpose</h4>
+      <p>Clean visuals and brand-first design that communicates what you do in seconds.</p>
+    </div>
+   </div>
+
+   <div class="reason" data-aos="fade-up" data-aos-delay="300">
+    <div class="icon" aria-hidden="true">
+      <!-- Handshake / Client-first -->
+      <svg viewBox="0 0 24 24" role="img" aria-labelledby="clientTitle" xmlns="http://www.w3.org/2000/svg">
+        <title id="clientTitle">Client-first process</title>
+        <path fill="currentColor" d="M21 11v6a2 2 0 01-2 2h-2l-4-4-4 4H5a2 2 0 01-2-2v-6h18zM7 5h10v2H7V5z"/>
+      </svg>
+    </div>
+    <div>
+      <h4>Client-first Process</h4>
+      <p>Clear milestones, fast iterations, and training so you can manage your site after launch.</p>
+    </div>
+   </div>
+
+   <div class="reason" data-aos="fade-up" data-aos-delay="400">
+    <div class="icon" aria-hidden="true">
+      <!-- Cart / E-commerce -->
+      <svg viewBox="0 0 24 24" role="img" aria-labelledby="cartTitle" xmlns="http://www.w3.org/2000/svg">
+        <title id="cartTitle">E-commerce ready</title>
+        <path fill="currentColor" d="M7 18a2 2 0 100 4 2 2 0 000-4zm10 0a2 2 0 100 4 2 2 0 000-4zM6.2 6l1.6 8h8.4l1.6-8H6.2zM4 4h2l1 4h10l1-4h2v2H4V4z"/>
+      </svg>
+    </div>
+    <div>
+      <h4>E-commerce Ready</h4>
+      <p>Shop setups, payment integration and UX designed to boost sales.</p>
+    </div>
+   </div>
+   </div>
+
+
+    <!-- optional CTA -->
+    <div class="panel-cta" data-aos="fade-up" data-aos-delay="500">
+      <a href="services.html" class="btn-cta">See Services</a>
+    </div>
+  </div>
+ </section>
+
+
+<!-- ===== FOOTER ===== -->
 <footer style="background: rgba(2, 6, 23, 0.8); padding: 60px 20px; color: #94a3b8;">
   <div class="footer-container" style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start;">
 
@@ -119,7 +204,6 @@
        <div class="contact-icons" style="display: flex; gap: 14px; flex-wrap: wrap;">
         <!-- Email -->
         <a href="mailto:eliwebsolutions01@gmail.com" title="Email">
-          <!-- SVG Icon -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#facc15" viewBox="0 0 24 24"><path d="M2 4h20v16H2z" fill="none"/><path d="M22 6.25v-1.5A1.75 1.75 0 0020.25 3H3.75A1.75 1.75 0 002 4.75v14.5A1.75 1.75 0 003.75 21h16.5A1.75 1.75 0 0022 19.25V6.25zM3.5 5.5h17L12 13.06 3.5 5.5z"/></svg>
         </a>
 
@@ -145,22 +229,34 @@
     </div>
   </div>
 
-  <!-- ✅ Properly Centered Bottom Text -->
   <div class="footer-bottom" style="margin-top: 40px;">
     <p style="text-align: center;">&copy; 2025 Eli Web Solutions. All rights reserved.</p>
   </div>
 </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
+  AOS.init({ duration: 800, once: true });
   function toggleMenu() {
-    const navLinks = document.getElementById("nav-links");
-    navLinks.classList.toggle("active");
+    document.getElementById("nav-links").classList.toggle("active");
   }
 </script>
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    const logo = preloader.querySelector("img");
+
+    // After spin completes, start bouncing
+    logo.addEventListener("animationend", () => {
+      logo.style.animation = "bounce 1.5s infinite";
+    });
+
+    // Fade out preloader when page is ready
+    setTimeout(() => {
+      preloader.classList.add("hidden");
+    }, 2000); // Slight delay so bounce is visible
+  });
+</script>
+
 </body>
 </html>
