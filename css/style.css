@@ -60,23 +60,47 @@ header {
   color: #facc15;
 }
 
-/* === HERO SECTION === */
+/* HERO SECTION */
 .hero-section {
-  background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden; /* Prevent scrollbars from video */
+}
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(100%); /* makes video darker */
 }
 
 .hero-overlay {
+  position: relative;
+  z-index: 1;
   background: rgba(0, 0, 0, 0.6);
   padding: 40px;
   border-radius: 12px;
 }
 
-/* === CTA BUTTON === */
+/* CTA BUTTON */
 .cta-btn {
   background: #facc15;
   color: #0f172a;
@@ -475,6 +499,98 @@ footer {
 .case-back { padding:20px 0; }
 .case-back .btn-secondary { display:inline-block; background:rgba(30, 41, 59, 0.85); border:2px solid #facc15; color:#facc15; padding:10px 20px; border-radius:6px; text-decoration:none; font-weight:bold; }
 .case-back .btn-secondary:hover { background:#020617; color:#f8fafc; }
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 2s infinite 1s; /* pulse starts 1s after load */
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+}
+
+/* Preloader Container */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(10, 15, 28); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Preloader Logo Animation */
+#preloader img {
+  width: 70px; /* smaller size */
+  opacity: 0;
+  filter: drop-shadow(0 0 8px #facc15);
+  animation: fade-in 0.5s ease-out forwards,
+             spin-once 1s ease-out 0.5s forwards,
+             breathe 2.5s ease-in-out 1.5s infinite;
+}
+
+/* Fade-in effect */
+@keyframes fade-in {
+  0% { opacity: 0; transform: scale(0.85); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Spin effect */
+@keyframes spin-once {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Gentle breathing effect */
+@keyframes breathe {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-5px) scale(1.03); }
+}
 
 /* === FOOTER === */
 footer {

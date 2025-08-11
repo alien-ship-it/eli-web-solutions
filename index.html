@@ -9,6 +9,7 @@
 <meta name="robots" content="index, follow">
   <title>Eli Web Solutions  Creative Design & Digital SolutionS</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <!-- Lightbox2 CSS & JS -->
@@ -22,6 +23,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+     <img src="images/logo.png" alt="Eli Web Solutions Logo" />
+    </div>
+  </div>
 
   <!-- 🔹 Navigation with Logo -->
   <header>
@@ -49,17 +56,26 @@
   </header>
 
  <section class="hero-section">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="videos/hero.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
   <div class="hero-overlay">
     <h1>Welcome to <span style="color: #facc15;">Eli Web Solutions</span></h1>
-    <p style="font-size: 1.2rem; color: #facc15;">We build digital identities for growing businesses.</p>
-   <div style="margin-top: 30px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-  <a href="services.html" class="cta-btn">Explore Our Services</a>
-  <a href="contact.html" class="cta-btn" style="background: #0f172a; color: #facc15; border: 2px solid #facc15;">Get Started</a>
-</div>
+    <p style="font-size: 1.2rem; color: #facc15;">
+      We build digital identities for growing businesses.
+    </p>
+    <div style="margin-top: 30px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+      <a href="services.html" class="cta-btn">Explore Our Services</a>
+      <a href="contact.html" class="cta-btn" style="background: #0f172a; color: #facc15; border: 2px solid #facc15;">
+        Get Started
+      </a>
+    </div>
   </div>
-</section>
-<!-- ================= TESTIMONIALS ================= -->
-<section class="testimonials-section">
+ </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+ <section class="testimonials-section">
   <div class="container">
     <h2 class="section-title">What Our Clients Say</h2>
     <div class="testimonial-slider">
@@ -122,10 +138,10 @@
       </div>
     </div>
   </div>
-</section>
+ </section>
 
-<!-- 🔹 Filterable Portfolio Section -->
-<section style="padding: 60px 20px; text-align: center;" data-aos="fade-up">
+ <!-- 🔹 Filterable Portfolio Section -->
+ <section style="padding: 60px 20px; text-align: center;" data-aos="fade-up">
   <h2 style="color: #facc15;">Logo Showcase</h2>
   <div class="swiper-container logo-swiper" style="margin-top: 40px;">
     <div class="swiper-wrapper">
@@ -147,9 +163,9 @@
       </div>
     </div>
   </div>
-</section>
+ </section>
 
-<section style="padding: 60px 20px; text-align: center;" data-aos="fade-up">
+ <section style="padding: 60px 20px; text-align: center;" data-aos="fade-up">
   <h2 style="color: #facc15;">Poster Highlights</h2>
   <div class="swiper-container poster-swiper" style="margin-top: 40px;">
     <div class="swiper-wrapper">
@@ -183,10 +199,10 @@
       </div>
     </div>
   </div>
-</section>
+ </section>
 
-<!-- 🔹 Features / Capabilities Section -->
-<section data-aos="fade-right" data-aos-duration="800" style="padding: 60px 20px; background: rgba(15, 23, 42, 0.65); text-align: center;">
+ <!-- 🔹 Features / Capabilities Section -->
+ <section data-aos="fade-right" data-aos-duration="800" style="padding: 60px 20px; background: rgba(15, 23, 42, 0.65); text-align: center;">
   <h2 style="color: #facc15;">What Makes Us Stand Out</h2>
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
     <div style="max-width: 250px;">
@@ -205,10 +221,10 @@
       <p>All our designs are mobile-responsive — perfect across all screens and devices.</p>
     </div>
   </div>
-</section>
+ </section>
 
-<!-- 🔹 Our Process -->
-<section data-aos="fade-left" data-aos-duration="800" style="padding: 60px 20px; background: rgba(30, 41, 59, 0.65); text-align: center;">
+ <!-- 🔹 Our Process -->
+ <section data-aos="fade-left" data-aos-duration="800" style="padding: 60px 20px; background: rgba(30, 41, 59, 0.65); text-align: center;">
   <h2 style="color: #facc15;">How It Works</h2>
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px;">
     <div style="max-width: 250px;">
@@ -227,17 +243,28 @@
       <p>You review the work, we polish it, and once you're happy, we launch it live.</p>
     </div>
   </div>
-</section>
+ </section>
 
-<!-- 🔹 Contact CTA -->
-<section data-aos="fade-up" data-aos-duration="800" style="padding: 60px 20px; background: rgba(15, 23, 42, 0.65); text-align: center;">
-  <h2 style="color: #facc15;">Ready to Start Your Project?</h2>
-  <p>Whether you need a logo, website, or full brand strategy — we’re here to make it happen.</p>
-  <a href="contact.html" class="cta-btn" style="margin-top: 20px; display: inline-block;">Get in Touch</a>
-</section>
+  <!-- 🔹 Contact CTA -->
+  <section data-aos="fade-up" data-aos-duration="800" style="padding: 60px 20px; background: rgba(15, 23, 42, 0.65); text-align: center;">
+   <h2 style="color: #facc15;">Ready to Start Your Project?</h2>
+   <p>Whether you need a logo, website, or full brand strategy — we’re here to make it happen.</p>
+   <a href="contact.html" class="cta-btn" style="margin-top: 20px; display: inline-block;">Get in Touch</a>
+  </section>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/254740674079" 
+   target="_blank" 
+   class="whatsapp-float" 
+   aria-label="Chat on WhatsApp"
+   data-aos="fade-up"
+   data-aos-delay="500">
+   <img src="images/whatsapp-icon.png" alt="WhatsApp" />
+  </a>
 
-<!--Footer-->
-<footer style="background: rgba(2, 6, 23, 0.8); padding: 60px 20px; color: #94a3b8;">
+
+
+ <!--Footer-->
+ <footer style="background: rgba(2, 6, 23, 0.8); padding: 60px 20px; color: #94a3b8;">
   <div class="footer-container" style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start;">
 
     <!-- Logo & Tagline -->
@@ -334,22 +361,17 @@
     navLinks.classList.toggle("active");
   }
 </script>
-<script>
-function filterSelection(category) {
-  const items = document.querySelectorAll(".portfolio-item");
-  items.forEach(item => {
-    item.classList.remove("show");
-    if (category === "all" || item.classList.contains(category)) {
-      item.classList.add("show");
-    }
-  });
-}
-
-// Show all on load
-window.onload = () => filterSelection("all");
-</script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>AOS.init();</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 120,
+    easing: 'ease-in-out'
+  });
+</script>
+
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -376,6 +398,22 @@ window.onload = () => filterSelection("all");
     breakpoints: {
       768: { slidesPerView: 3 }
     }
+  });
+</script>
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    const logo = preloader.querySelector("img");
+
+    // After spin completes, start bouncing
+    logo.addEventListener("animationend", () => {
+      logo.style.animation = "bounce 1.5s infinite";
+    });
+
+    // Fade out preloader when page is ready
+    setTimeout(() => {
+      preloader.classList.add("hidden");
+    }, 2000); // Slight delay so bounce is visible
   });
 </script>
 

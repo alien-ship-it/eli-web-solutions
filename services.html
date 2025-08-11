@@ -2,95 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Eli Web Solutions offers website design, branding, poster design, and digital management for small businesses and startups in Kenya.">
-<meta name="keywords" content="web design Kenya, branding, poster design, website management, Eli Web Solutions">
-<meta name="author" content="Eli Web Solutions">
-<meta name="robots" content="index, follow">
-  <title>Our Services | Eli Web Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services — Eli Web Solutions</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    .services-hero {
-      background: url('images/services-bg.jpg') no-repeat center center/cover;
-      padding: 120px 20px;
-      text-align: center;
-      color: #f8fafc;
-    }
-
-    .services-hero h1 {
-      font-size: 3rem;
-      color: #facc15;
-    }
-
-    .services-section {
-      padding: 60px 20px;
-      background: rgba(15, 23, 42, 0.65);
-      color: #cbd5e1;
-      text-align: center;
-    }
-
-    .services-section p {
-      max-width: 800px;
-      margin: 20px auto;
-    }
-
-    .services-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .service-card {
-      background: rgba(30, 41, 59, 0.85);
-      padding: 30px 20px;
-      width: 260px;
-      border-radius: 12px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-    }
-
-    .service-card h3 {
-      color: #facc15;
-      margin-bottom: 15px;
-    }
-
-    .service-card p {
-      font-size: 15px;
-    }
-
-    .service-card a {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background: #facc15;
-      color: #0f172a;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-  </style>
+  <link rel="stylesheet" href="css/services.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
 </head>
 <body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-content">
+     <img src="images/logo.png" alt="Eli Web Solutions Logo" />
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
   <header>
     <nav class="navbar">
       <div class="logo">
-        <a href="index.html"><img src="images/logo.png" alt="Eli Logo" style="height: 48px;"></a>
+        <a href="index.html">
+          <img src="images/logo.png" alt="Eli Web Solutions Logo" style="height: 48px; width: auto;" />
+        </a>
       </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
       <div class="hamburger" onclick="toggleMenu()">
         <svg viewBox="0 0 100 80" width="28" height="28" fill="#f8fafc">
           <rect width="100" height="10"></rect>
@@ -98,47 +32,69 @@
           <rect y="60" width="100" height="10"></rect>
         </svg>
       </div>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="services-hero">
-    <h1>Our Services</h1>
-  </section>
-
-  <section class="services-section" data-aos="fade-up">
-    <p>
-      We offer digital services crafted to help your brand thrive online. Whether you're a startup or an established business,
-      our goal is to deliver clean, professional, and creative solutions that leave a lasting impression.
-    </p>
-
-    <div class="services-grid">
-      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-        <h3>Website Design</h3>
-        <p>Custom, responsive, and SEO-optimized websites tailored to your brand.</p>
-        <a href="web-design.html">Learn More</a>
-      </div>
-
-      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-        <h3>Logo & Branding</h3>
-        <p>Memorable logo design and full brand identity packages to set you apart.</p>
-        <a href="branding.html">Learn More</a>
-      </div>
-
-      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-        <h3>Posters & Flyers</h3>
-        <p>Creative poster and flyer designs for events, marketing, or announcements.</p>
-        <a href="posters.html">Learn More</a>
-      </div>
-
-      <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-        <h3>Website Management</h3>
-        <p>Ongoing maintenance, backups, updates, and content changes — handled for you.</p>
-        <a href="web-management.html">Learn More</a>
-      </div>
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-section">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="videos/hero.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay">
+      <h1 data-aos="fade-down">Your Vision, Our Expertise</h1>
+      <p data-aos="fade-up">
+        From stunning websites to powerful branding, we craft digital solutions that help your business grow and stand out.
+      </p>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ===== SERVICES CARDS ===== -->
+  <section class="services-grid container">
+    <div class="service-card" data-aos="fade-up">
+      <h3>Web Design</h3>
+      <p>Responsive, modern websites tailored to your business goals.</p>
+      <a href="web-design.html" class="card-link">Learn More</a>
+    </div>
+
+    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+      <h3>Posters</h3>
+      <p>Eye-catching designs for your business promotions and events.</p>
+      <a href="posters.html" class="card-link">Learn More</a>
+    </div>
+
+    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+      <h3>Branding</h3>
+      <p>Logos and visual identities that tell your brand story.</p>
+      <a href="branding.html" class="card-link">Learn More</a>
+    </div>
+
+    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+      <h3>Website Management</h3>
+      <p>Ongoing updates, security, and performance optimization.</p>
+      <a href="web-management.html" class="card-link">Learn More</a>
+    </div>
+  </section>
+
+  <!-- ===== WHY WORK WITH US ===== -->
+  <section class="why-us container" data-aos="fade-up">
+    <div class="panel-sheet">
+      <h2>Why Work With Eli Web Solutions?</h2>
+      <ul>
+        <li><strong>Tailored Designs</strong> – Every project is unique, built to fit your brand and goals.</li>
+        <li><strong>Full-Service Approach</strong> – From web development to branding, we handle it all.</li>
+        <li><strong>Ongoing Support</strong> – We’re here for updates, maintenance, and advice after launch.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
  <footer style="background: rgba(2, 6, 23, 0.8); padding: 60px 20px; color: #94a3b8;">
   <div class="footer-container" style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; align-items: flex-start;">
 
@@ -196,15 +152,39 @@
   <div class="footer-bottom" style="margin-top: 40px;">
     <p style="text-align: center;">&copy; 2025 Eli Web Solutions. All rights reserved.</p>
   </div>
-</footer>
+ </footer>
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- 🔹 Hamburger Script -->
   <script>
-    AOS.init();
-    function toggleMenu() {
-      document.getElementById("nav-links").classList.toggle("active");
-    }
+   function toggleMenu() {
+     const navLinks = document.getElementById("nav-links");
+     navLinks.classList.toggle("active");
+   }
   </script>
+ <script>
+  AOS.init({
+    duration: 800,
+    once: true,
+    offset: 120,
+    easing: 'ease-in-out'
+  });
+ </script>
+ <script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    const logo = preloader.querySelector("img");
+
+    // After spin completes, start bouncing
+    logo.addEventListener("animationend", () => {
+      logo.style.animation = "bounce 1.5s infinite";
+    });
+
+    // Fade out preloader when page is ready
+    setTimeout(() => {
+      preloader.classList.add("hidden");
+    }, 2000); // Slight delay so bounce is visible
+  });
+ </script>
 </body>
 </html>
