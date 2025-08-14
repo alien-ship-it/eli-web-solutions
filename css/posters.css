@@ -45,6 +45,23 @@
 .poster-card img { width:100%; display:block; }
 .poster-card h3 { padding:12px 0; font-size:1.1rem; }
 
+/* Poster CTA Button */
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #facc15;
+  color: #facc15;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background .3s, color .3s;
+}
+.btn-secondary:hover {
+  background: #facc15;
+  color: #f8fafc;
+}
+
 /* CTA BACK */
 .case-back { padding:20px 0; }
 .case-back .btn-secondary { display:inline-block; background:rgba(30, 41, 59, 0.85); border:2px solid #facc15; color:#facc15; padding:10px 20px; border-radius:6px; text-decoration:none; font-weight:bold; }

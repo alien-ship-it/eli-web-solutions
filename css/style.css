@@ -79,6 +79,7 @@ header {
   justify-content: center;
   text-align: center;
   overflow: hidden;
+  background: url('../images/hero-backup.jpg') no-repeat center center/cover; /* Fallback image */
 }
 
 .hero-video {
